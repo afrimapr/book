@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="literature.html"/>
+<link rel="next" href="steps1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -137,9 +137,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#default-text-below-here"><i class="fa fa-check"></i><b>2.1</b> default text below here</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="steps1.html"><a href="steps1.html"><i class="fa fa-check"></i><b>3</b> Initial step through</a></li>
+<li class="chapter" data-level="4" data-path="rrecap.html"><a href="rrecap.html"><i class="fa fa-check"></i><b>4</b> R recap</a></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
 <li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
@@ -168,24 +170,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
-<p>Planned chapters</p>
-<ol style="list-style-type: decimal">
-<li>Aim of this book</li>
-<li>Step through a simple example of process of mapmaking [cake first, show achievable]</li>
-<li>R recap - help ensure readers know foundations, data structures and manipulation</li>
-<li>Spatial data focusing on real examples : cities, roads, admin boundaries, surfaces (points lines polygons grids, sf &amp; raster)</li>
-<li>Visualising spatial data part 1 : sf, mapview, tmap</li>
-<li>Shiny interactive map applications</li>
-<li>Sources of data, what is open data (could combine with chap 4)</li>
-<li>Join non-spatial data onto spatial</li>
-<li>Raster manipulation, e.g. summarising data by areas</li>
-<li>OpenStreetMap data, what they are and how to use</li>
-<li>Creating and editing spatial data</li>
-<li>Visualising spatial data part 2, more advanced techniques</li>
-<li>Case study 1 : health facility locations</li>
-<li>Case study 2 …</li>
-</ol>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
+<div id="default-text-below-here" class="section level2">
+<h2><span class="header-section-number">2.1</span> default text below here</h2>
+<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="applications.html#applications">5</a>.</p>
 <p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="intro.html#cb3-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
 <span id="cb3-2"><a href="intro.html#cb3-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
@@ -357,6 +344,7 @@ Figure 2.1: Here is a nice figure!
 <p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span>.</p>
 
 </div>
+</div>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-xie2015">
@@ -372,7 +360,7 @@ Figure 2.1: Here is a nice figure!
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="steps1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
