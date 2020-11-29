@@ -13,3 +13,4 @@ sources-of-data
 join-non-spatial-data-onto-spatial
 raster-manipulation
 openstreetmap-data
+creating-and-editing-spatial-data
