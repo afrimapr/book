@@ -16,3 +16,4 @@ openstreetmap-data
 creating-and-editing-spatial-data
 visualising-spatial-data-part-2
 case-study-1
+case-study-2
