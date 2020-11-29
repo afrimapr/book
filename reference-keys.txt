@@ -1,6 +1,5 @@
 fig:nice-fig
 tab:nice-tab
-preface
 intro
 default-text-below-here
 steps1
