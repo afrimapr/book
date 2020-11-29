@@ -7,4 +7,3 @@ rrecap
 spatial-data-types-focusing-on-real-examples-cities-roads-admin-boundaries-surfaces
 example-one
 example-two
-final-words
