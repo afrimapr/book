@@ -15,3 +15,4 @@ raster-manipulation
 openstreetmap-data
 creating-and-editing-spatial-data
 visualising-spatial-data-part-2
+case-study-1
