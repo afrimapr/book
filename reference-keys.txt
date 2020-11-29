@@ -11,3 +11,4 @@ visualising-spatial-data-part-1-sf-mapview-tmap
 shiny-interactive-map-applications
 sources-of-data
 join-non-spatial-data-onto-spatial
+raster-manipulation
