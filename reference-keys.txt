@@ -12,3 +12,4 @@ shiny-interactive-map-applications
 sources-of-data
 join-non-spatial-data-onto-spatial
 raster-manipulation
+openstreetmap-data
