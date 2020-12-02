@@ -7,7 +7,14 @@ rrecap
 spatial-data-types-focusing-on-real-examples-cities-roads-admin-boundaries-surfaces
 example-one
 example-two
-visualising-spatial-data-part-1-sf-mapview-tmap
+visualising-1
+tmap-package
+basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-since-they-repeat-for-all-packages
+static-maps
+layers
+interactive-maps
+sf-package
+mapview-package
 shiny-interactive-map-applications
 sources-of-data
 join-non-spatial-data-onto-spatial
