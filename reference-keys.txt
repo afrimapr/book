@@ -4,6 +4,14 @@ intro
 default-text-below-here
 steps1
 rrecap
+creating-naming-and-saving-a-new-r-script
+setting-wd
+install-load-packages
+formats-of-spatial-data-content-extensions
+objects-dataframes
+load-data
+saving-dataset
+saving-exporting-maps-to-the-file
 spatial-data-types-focusing-on-real-examples-cities-roads-admin-boundaries-surfaces
 example-one
 example-two
