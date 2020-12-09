@@ -18,6 +18,7 @@ example-two
 visualising-1
 tmap-package
 basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-since-they-repeat-for-all-packages
+static-maps
 layers
 interactive-maps
 sf-package
