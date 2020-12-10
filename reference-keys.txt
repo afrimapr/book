@@ -19,8 +19,8 @@ basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-si
 static-maps
 layers
 interactive-maps
-sf-package
-mapview-package
+sf
+mapview
 shiny
 data-sources
 join
