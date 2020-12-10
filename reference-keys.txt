@@ -1,7 +1,5 @@
-fig:nice-fig
-tab:nice-tab
-intro
-default-text-below-here
+introduction
+spatial-data-outline
 steps1
 rrecap
 creating-naming-and-saving-a-new-r-script
