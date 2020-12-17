@@ -155,14 +155,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="visualising-1.html"><a href="visualising-1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: sf, mapview, tmap</a><ul>
-<li class="chapter" data-level="5.1" data-path="visualising-1.html"><a href="visualising-1.html#tmap-package"><i class="fa fa-check"></i><b>5.1</b> tmap package</a><ul>
+<li class="chapter" data-level="5.1" data-path="visualising-1.html"><a href="visualising-1.html#static-maps"><i class="fa fa-check"></i><b>5.1</b> Static maps</a><ul>
 <li class="chapter" data-level="5.1.1" data-path="visualising-1.html"><a href="visualising-1.html#basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-since-they-repeat-for-all-packages"><i class="fa fa-check"></i><b>5.1.1</b> Basics (this step can be removed if the basic steps can be put in ch.3 ‘R recap’, since they repeat for all packages)</a></li>
-<li class="chapter" data-level="5.1.2" data-path="visualising-1.html"><a href="visualising-1.html#static-maps"><i class="fa fa-check"></i><b>5.1.2</b> Static maps</a></li>
-<li class="chapter" data-level="5.1.3" data-path="visualising-1.html"><a href="visualising-1.html#layers"><i class="fa fa-check"></i><b>5.1.3</b> Layers</a></li>
-<li class="chapter" data-level="5.1.4" data-path="visualising-1.html"><a href="visualising-1.html#interactive-maps"><i class="fa fa-check"></i><b>5.1.4</b> Interactive maps</a></li>
+<li class="chapter" data-level="5.1.2" data-path="visualising-1.html"><a href="visualising-1.html#layers"><i class="fa fa-check"></i><b>5.1.2</b> Layers</a></li>
+<li class="chapter" data-level="5.1.3" data-path="visualising-1.html"><a href="visualising-1.html#interactive-maps"><i class="fa fa-check"></i><b>5.1.3</b> Interactive maps</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="visualising-1.html"><a href="visualising-1.html#sf"><i class="fa fa-check"></i><b>5.2</b> sf</a></li>
-<li class="chapter" data-level="5.3" data-path="visualising-1.html"><a href="visualising-1.html#mapview"><i class="fa fa-check"></i><b>5.3</b> mapview</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>6</b> Shiny interactive map applications</a></li>
 <li class="chapter" data-level="7" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>7</b> Sources of data</a></li>
@@ -196,14 +193,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="visualising-1" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Visualising spatial data part 1: sf, mapview, tmap</h1>
-<p>In this section we will learn:</p>
+<p>In this section we use tmap, sf and mapview packages to visualise spatial data. In particular this section focuses on:</p>
 <ol style="list-style-type: decimal">
-<li>How to create a static map
-<ul>
-<li>Filled with colours based on the categorical variable</li>
-<li>Filled with colours based on the continuous variable</li>
-</ul></li>
-<li>How to create an ordered and unordered list</li>
+<li>Creating static maps</li>
+<li>Add layers to the maps</li>
+<li>Creating interactive maps</li>
 </ol>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
@@ -211,8 +205,8 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <div class="blue">
 <p><strong>Hint</strong>: In order to work properly a list requires an empty line beforehand.</p>
 </div>
-<div id="tmap-package" class="section level2">
-<h2><span class="header-section-number">5.1</span> tmap package</h2>
+<div id="static-maps" class="section level2">
+<h2><span class="header-section-number">5.1</span> Static maps</h2>
 <div id="basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-since-they-repeat-for-all-packages" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Basics (this step can be removed if the basic steps can be put in ch.3 ‘R recap’, since they repeat for all packages)</h3>
 <p>Set up the working directory with the command <code>setwd("path to your directory")</code> or with the <code>openProject</code> function as follows (recommended):</p>
@@ -235,34 +229,25 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb5-6"><a href="visualising-1.html#cb5-6"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 <p>Create a dataset</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="visualising-1.html#cb6-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
-</div>
-<div id="static-maps" class="section level3">
-<h3><span class="header-section-number">5.1.2</span> Static maps</h3>
 <p>Create an empty contour map of the continent</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="visualising-1.html#cb7-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
 <span id="cb7-2"><a href="visualising-1.html#cb7-2"></a><span class="st">  </span><span class="kw">tm_borders</span>()</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>Add fill based on last census data and add labels for country names</p>
+</div>
+<div id="layers" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Layers</h3>
+<p>Fill map using data on last census data and add labels for country names</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="visualising-1.html#cb8-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
 <span id="cb8-2"><a href="visualising-1.html#cb8-2"></a><span class="st">  </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
 <span id="cb8-3"><a href="visualising-1.html#cb8-3"></a><span class="st">  </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
 <span id="cb8-4"><a href="visualising-1.html#cb8-4"></a><span class="st">  </span><span class="kw">tm_text</span>(<span class="st">&quot;admin&quot;</span>, <span class="dt">size =</span> <span class="fl">0.52</span>,  <span class="dt">fontface=</span><span class="st">&quot;bold&quot;</span>, <span class="dt">auto.placement =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
-<div id="layers" class="section level3">
-<h3><span class="header-section-number">5.1.3</span> Layers</h3>
-</div>
 <div id="interactive-maps" class="section level3">
-<h3><span class="header-section-number">5.1.4</span> Interactive maps</h3>
-</div>
-</div>
-<div id="sf" class="section level2">
-<h2><span class="header-section-number">5.2</span> sf</h2>
-</div>
-<div id="mapview" class="section level2">
-<h2><span class="header-section-number">5.3</span> mapview</h2>
+<h3><span class="header-section-number">5.1.3</span> Interactive maps</h3>
 <p>Mapview package allows for an interactive viewing of spatial objects in R.</p>
 
+</div>
 </div>
 </div>
             </section>
