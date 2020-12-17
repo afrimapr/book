@@ -231,41 +231,33 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb5-3"><a href="visualising-1.html#cb5-3"></a><span class="kw">library</span>(rnaturalearth)</span>
 <span id="cb5-4"><a href="visualising-1.html#cb5-4"></a><span class="kw">library</span>(rnaturalearthdata)</span>
 <span id="cb5-5"><a href="visualising-1.html#cb5-5"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
 <p>Create a dataset</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="visualising-1.html#cb9-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="visualising-1.html#cb6-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 </div>
 <div id="static-maps" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Static maps</h3>
 <p>Map with colour fill based on the continuous variable</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="visualising-1.html#cb10-1"></a><span class="kw">ggplot</span>(africa) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb10-2"><a href="visualising-1.html#cb10-2"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>lastcensus)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb10-3"><a href="visualising-1.html#cb10-3"></a><span class="st">  </span><span class="kw">coord_sf</span>(<span class="dt">datum =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb10-4"><a href="visualising-1.html#cb10-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Last census&quot;</span>) <span class="op">+</span></span>
-<span id="cb10-5"><a href="visualising-1.html#cb10-5"></a><span class="st">  </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="visualising-1.html#cb7-1"></a><span class="kw">ggplot</span>(africa) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-2"><a href="visualising-1.html#cb7-2"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>lastcensus)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-3"><a href="visualising-1.html#cb7-3"></a><span class="st">  </span><span class="kw">coord_sf</span>(<span class="dt">datum =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-4"><a href="visualising-1.html#cb7-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Last census&quot;</span>) <span class="op">+</span></span>
+<span id="cb7-5"><a href="visualising-1.html#cb7-5"></a><span class="st">  </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>Crate a categorical variable</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="visualising-1.html#cb11-1"></a>africa &lt;-<span class="st"> </span>africa <span class="op">%&gt;%</span></span>
-<span id="cb11-2"><a href="visualising-1.html#cb11-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cuts =</span> <span class="kw">case_when</span>(</span>
-<span id="cb11-3"><a href="visualising-1.html#cb11-3"></a>    lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">1970</span> <span class="op">~</span><span class="st"> &quot;1970 or earlier&quot;</span>,</span>
-<span id="cb11-4"><a href="visualising-1.html#cb11-4"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">1970</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2002</span> <span class="op">~</span><span class="st"> &quot;between 1970 and 2002&quot;</span>,</span>
-<span id="cb11-5"><a href="visualising-1.html#cb11-5"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">2002</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2008</span> <span class="op">~</span><span class="st"> &quot;between 2002 and 2008&quot;</span>,</span>
-<span id="cb11-6"><a href="visualising-1.html#cb11-6"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">2008</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2010</span> <span class="op">~</span><span class="st"> &quot;between 2008 and 2010&quot;</span>,</span>
-<span id="cb11-7"><a href="visualising-1.html#cb11-7"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">2010</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2012</span> <span class="op">~</span><span class="st"> &quot;between 2010 and 2012&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="visualising-1.html#cb8-1"></a>africa &lt;-<span class="st"> </span>africa <span class="op">%&gt;%</span></span>
+<span id="cb8-2"><a href="visualising-1.html#cb8-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cuts =</span> <span class="kw">case_when</span>(</span>
+<span id="cb8-3"><a href="visualising-1.html#cb8-3"></a>    lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">1970</span> <span class="op">~</span><span class="st"> &quot;1970 or earlier&quot;</span>,</span>
+<span id="cb8-4"><a href="visualising-1.html#cb8-4"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">1970</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2002</span> <span class="op">~</span><span class="st"> &quot;between 1970 and 2002&quot;</span>,</span>
+<span id="cb8-5"><a href="visualising-1.html#cb8-5"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">2002</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2008</span> <span class="op">~</span><span class="st"> &quot;between 2002 and 2008&quot;</span>,</span>
+<span id="cb8-6"><a href="visualising-1.html#cb8-6"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">2008</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2010</span> <span class="op">~</span><span class="st"> &quot;between 2008 and 2010&quot;</span>,</span>
+<span id="cb8-7"><a href="visualising-1.html#cb8-7"></a>    lastcensus <span class="op">&gt;</span><span class="st"> </span><span class="dv">2010</span> <span class="op">&amp;</span><span class="st"> </span>lastcensus <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2012</span> <span class="op">~</span><span class="st"> &quot;between 2010 and 2012&quot;</span>))</span></code></pre></div>
 <p>Map with colour fill based on the categorical variable</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="visualising-1.html#cb12-1"></a><span class="kw">ggplot</span>(africa) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb12-2"><a href="visualising-1.html#cb12-2"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>cuts)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb12-3"><a href="visualising-1.html#cb12-3"></a><span class="st">  </span><span class="kw">coord_sf</span>(<span class="dt">datum =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb12-4"><a href="visualising-1.html#cb12-4"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></span>
-<span id="cb12-5"><a href="visualising-1.html#cb12-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Last census&quot;</span>) <span class="op">+</span></span>
-<span id="cb12-6"><a href="visualising-1.html#cb12-6"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;red4&quot;</span>, <span class="st">&quot;red1&quot;</span>, <span class="st">&quot;tomato1&quot;</span>, <span class="st">&quot;gold&quot;</span>,<span class="st">&quot;darkolivegreen2&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="visualising-1.html#cb9-1"></a><span class="kw">ggplot</span>(africa) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-2"><a href="visualising-1.html#cb9-2"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>cuts)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-3"><a href="visualising-1.html#cb9-3"></a><span class="st">  </span><span class="kw">coord_sf</span>(<span class="dt">datum =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-4"><a href="visualising-1.html#cb9-4"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></span>
+<span id="cb9-5"><a href="visualising-1.html#cb9-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Last census&quot;</span>) <span class="op">+</span></span>
+<span id="cb9-6"><a href="visualising-1.html#cb9-6"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;red4&quot;</span>, <span class="st">&quot;red1&quot;</span>, <span class="st">&quot;tomato1&quot;</span>, <span class="st">&quot;gold&quot;</span>,<span class="st">&quot;darkolivegreen2&quot;</span>))</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <div id="layers" class="section level3">
