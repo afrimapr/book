@@ -238,12 +238,9 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 <div id="static-maps" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Static maps</h3>
-<p>Map with colour fill based on the continuous variable</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="visualising-1.html#cb7-1"></a><span class="kw">ggplot</span>(africa) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb7-2"><a href="visualising-1.html#cb7-2"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>lastcensus)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb7-3"><a href="visualising-1.html#cb7-3"></a><span class="st">  </span><span class="kw">coord_sf</span>(<span class="dt">datum =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb7-4"><a href="visualising-1.html#cb7-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Last census&quot;</span>) <span class="op">+</span></span>
-<span id="cb7-5"><a href="visualising-1.html#cb7-5"></a><span class="st">  </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+<p>Create an empty contour map of the continent</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="visualising-1.html#cb7-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb7-2"><a href="visualising-1.html#cb7-2"></a><span class="st">  </span><span class="kw">tm_borders</span>()</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>Crate a categorical variable</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="visualising-1.html#cb8-1"></a>africa &lt;-<span class="st"> </span>africa <span class="op">%&gt;%</span></span>
