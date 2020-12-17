@@ -219,18 +219,20 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="visualising-1.html#cb3-1"></a>rstudioapi<span class="op">::</span><span class="kw">openProject</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
 <p>Install required packages</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="visualising-1.html#cb4-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb4-2"><a href="visualising-1.html#cb4-2"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
-<span id="cb4-3"><a href="visualising-1.html#cb4-3"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
-<span id="cb4-4"><a href="visualising-1.html#cb4-4"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
-<span id="cb4-5"><a href="visualising-1.html#cb4-5"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
-<span id="cb4-6"><a href="visualising-1.html#cb4-6"></a>  )</span>
-<span id="cb4-7"><a href="visualising-1.html#cb4-7"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span></code></pre></div>
+<span id="cb4-2"><a href="visualising-1.html#cb4-2"></a>  <span class="st">&quot;tmap&quot;</span>               <span class="co"># map-making package</span></span>
+<span id="cb4-3"><a href="visualising-1.html#cb4-3"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
+<span id="cb4-4"><a href="visualising-1.html#cb4-4"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
+<span id="cb4-5"><a href="visualising-1.html#cb4-5"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
+<span id="cb4-6"><a href="visualising-1.html#cb4-6"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
+<span id="cb4-7"><a href="visualising-1.html#cb4-7"></a>  )</span>
+<span id="cb4-8"><a href="visualising-1.html#cb4-8"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span></code></pre></div>
 <p>Load the packages</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="visualising-1.html#cb5-1"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="visualising-1.html#cb5-2"></a><span class="kw">library</span>(sf)</span>
-<span id="cb5-3"><a href="visualising-1.html#cb5-3"></a><span class="kw">library</span>(rnaturalearth)</span>
-<span id="cb5-4"><a href="visualising-1.html#cb5-4"></a><span class="kw">library</span>(rnaturalearthdata)</span>
-<span id="cb5-5"><a href="visualising-1.html#cb5-5"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="visualising-1.html#cb5-1"></a><span class="kw">library</span>(tmap)</span>
+<span id="cb5-2"><a href="visualising-1.html#cb5-2"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb5-3"><a href="visualising-1.html#cb5-3"></a><span class="kw">library</span>(sf)</span>
+<span id="cb5-4"><a href="visualising-1.html#cb5-4"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb5-5"><a href="visualising-1.html#cb5-5"></a><span class="kw">library</span>(rnaturalearthdata)</span>
+<span id="cb5-6"><a href="visualising-1.html#cb5-6"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 <p>Create a dataset</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="visualising-1.html#cb6-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 </div>
