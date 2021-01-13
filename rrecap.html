@@ -141,13 +141,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="steps1.html"><a href="steps1.html"><i class="fa fa-check"></i><b>2</b> Step through a simple example of process of mapmaking</a></li>
 <li class="chapter" data-level="3" data-path="rrecap.html"><a href="rrecap.html"><i class="fa fa-check"></i><b>3</b> R recap</a><ul>
-<li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#setting-wd"><i class="fa fa-check"></i><b>3.1</b> Setting wd</a></li>
-<li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#install-load-packages"><i class="fa fa-check"></i><b>3.2</b> Install &amp; load packages</a></li>
-<li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.3</b> Formats of spatial data (content, extensions)</a></li>
-<li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#objects-dataframes"><i class="fa fa-check"></i><b>3.4</b> Objects &amp; dataframes</a></li>
-<li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#load-data"><i class="fa fa-check"></i><b>3.5</b> Load data</a></li>
-<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.6</b> Saving dataset</a></li>
-<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.7</b> Saving &amp; exporting maps to the file</a></li>
+<li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#creating-naming-and-saving-a-new-r-script"><i class="fa fa-check"></i><b>3.1</b> Creating, naming and saving a new R script</a></li>
+<li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#setting-wd"><i class="fa fa-check"></i><b>3.2</b> Setting wd</a></li>
+<li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#install-load-packages"><i class="fa fa-check"></i><b>3.3</b> Install &amp; load packages</a></li>
+<li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.4</b> Formats of spatial data (content, extensions)</a></li>
+<li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#objects-dataframes"><i class="fa fa-check"></i><b>3.5</b> Objects &amp; dataframes</a></li>
+<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#load-data"><i class="fa fa-check"></i><b>3.6</b> Load data</a></li>
+<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.7</b> Saving dataset</a></li>
+<li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.8</b> Saving &amp; exporting maps to the file</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Spatial data types focusing on real examples: cities, roads, admin boundaries, surfaces</a><ul>
 <li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
@@ -193,35 +194,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="rrecap" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> R recap</h1>
-<p>This section provides a brief recap of the basic steps that are required or useful to do before staring on the project.
-## Creating, naming and saving a new R script
-The R script is a plain text file that allows you to save the R code containing both, command and comments. Saving the R script allows you to reuse your R code and creates a reproducible record of your work. Therefore, it is a good practice to create, name and save it at the very beginning of your project.</p>
+<p>This section provides a brief recap of the basic steps that are required or useful to do before staring on the project.</p>
+<div id="creating-naming-and-saving-a-new-r-script" class="section level2">
+<h2><span class="header-section-number">3.1</span> Creating, naming and saving a new R script</h2>
+<p>The R script is a plain text file that allows you to save the R code containing both, command and comments. Saving the R script allows you to reuse your R code and creates a reproducible record of your work. Therefore, it is a good practice to create, name and save it at the very beginning of your project.
+To create a new script</p>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 <div class="blue">
 <p><strong>Hint</strong>: To add comments next to your commands simply write a hashtag (#) beforehand. This will stop R from executing this specific part.</p>
 </div>
+</div>
 <div id="setting-wd" class="section level2">
-<h2><span class="header-section-number">3.1</span> Setting wd</h2>
+<h2><span class="header-section-number">3.2</span> Setting wd</h2>
 </div>
 <div id="install-load-packages" class="section level2">
-<h2><span class="header-section-number">3.2</span> Install &amp; load packages</h2>
+<h2><span class="header-section-number">3.3</span> Install &amp; load packages</h2>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">
-<h2><span class="header-section-number">3.3</span> Formats of spatial data (content, extensions)</h2>
+<h2><span class="header-section-number">3.4</span> Formats of spatial data (content, extensions)</h2>
 </div>
 <div id="objects-dataframes" class="section level2">
-<h2><span class="header-section-number">3.4</span> Objects &amp; dataframes</h2>
+<h2><span class="header-section-number">3.5</span> Objects &amp; dataframes</h2>
 </div>
 <div id="load-data" class="section level2">
-<h2><span class="header-section-number">3.5</span> Load data</h2>
+<h2><span class="header-section-number">3.6</span> Load data</h2>
 </div>
 <div id="saving-dataset" class="section level2">
-<h2><span class="header-section-number">3.6</span> Saving dataset</h2>
+<h2><span class="header-section-number">3.7</span> Saving dataset</h2>
 </div>
 <div id="saving-exporting-maps-to-the-file" class="section level2">
-<h2><span class="header-section-number">3.7</span> Saving &amp; exporting maps to the file</h2>
+<h2><span class="header-section-number">3.8</span> Saving &amp; exporting maps to the file</h2>
 
 </div>
 </div>
