@@ -1,4 +1,4 @@
-introduction
+intro
 spatial-data-outline
 steps1
 rrecap
@@ -11,9 +11,7 @@ objects-dataframes
 load-data
 saving-dataset
 saving-exporting-maps-to-the-file
-applications
-example-one
-example-two
+data_types
 visualising-1
 static-maps
 basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-since-they-repeat-for-all-packages
@@ -21,11 +19,11 @@ layers-for-the-static-maps
 interactive-maps
 layers-for-the-interactive-maps
 shiny
-data-sources
-join
+data_sources
+joining
 raster
-osm
-edit
-visualising-2
-cs1
-cs2
+openstreetmap
+data_editing
+visualising2
+case_study1
+case_study2
