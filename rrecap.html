@@ -141,8 +141,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="steps1.html"><a href="steps1.html"><i class="fa fa-check"></i><b>2</b> Step through a simple example of process of mapmaking</a></li>
 <li class="chapter" data-level="3" data-path="rrecap.html"><a href="rrecap.html"><i class="fa fa-check"></i><b>3</b> R recap</a><ul>
-<li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#creating-naming-and-saving-a-new-r-script"><i class="fa fa-check"></i><b>3.1</b> Creating, naming and saving a new R script</a></li>
-<li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#setting-wd"><i class="fa fa-check"></i><b>3.2</b> Setting wd</a></li>
+<li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#setting-wd"><i class="fa fa-check"></i><b>3.1</b> Setting wd</a></li>
+<li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#creating-naming-and-saving-a-new-r-script"><i class="fa fa-check"></i><b>3.2</b> Creating, naming and saving a new R script</a></li>
 <li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#install-load-packages"><i class="fa fa-check"></i><b>3.3</b> Install &amp; load packages</a></li>
 <li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.4</b> Formats of spatial data (content, extensions)</a></li>
 <li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#objects-dataframes"><i class="fa fa-check"></i><b>3.5</b> Objects &amp; dataframes</a></li>
@@ -195,8 +195,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="rrecap" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> R recap</h1>
 <p>This section provides a brief recap of the basic steps that are required or useful to do before staring on the project.</p>
+<div id="setting-wd" class="section level2">
+<h2><span class="header-section-number">3.1</span> Setting wd</h2>
+</div>
 <div id="creating-naming-and-saving-a-new-r-script" class="section level2">
-<h2><span class="header-section-number">3.1</span> Creating, naming and saving a new R script</h2>
+<h2><span class="header-section-number">3.2</span> Creating, naming and saving a new R script</h2>
 <p>The R script is a plain text file that allows you to save the R code containing both, commands and comments. Saving the R script allows you to reuse your R code and creates a reproducible record of your work. Therefore, it is a good practice to create, name and save it at the very beginning of your project. <br/><br/>
 You can crate a new R script by clicking the <strong>New File</strong> icon in the top right corner of the RStudio toolbar, which will open a list with different file options. Choose the <strong>R Script</strong> from the menu and the blank script will open in the main RStudio window.</p>
 <style>
@@ -205,9 +208,13 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 <div class="yellow">
 <p><strong>Shortcut</strong>: New R script can also be opened by <em>Shift+Ctrl+N</em>.</p>
 </div>
+<p>You can now save your R script by clicking on the Save icon at the top of the <strong>Script Editor</strong>, this will prompt a <em>Save File</em> window where you can change the name of your script. Note that the file extension for R scripts is <strong>.R</strong>. At this point you can also choose a folder where to save your new file. By default, RStudio will try to save your new script in the current working directory. Once the name and file location are chosen, simply click the <strong>Save</strong> button.</p>
+<style>
+div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
+</style>
+<div class="yellow">
+<p><strong>Shortcut</strong>: As you work along your R script document, you can quickly save changes by pressing <em>Ctrl+S</em>.</p>
 </div>
-<div id="setting-wd" class="section level2">
-<h2><span class="header-section-number">3.2</span> Setting wd</h2>
 </div>
 <div id="install-load-packages" class="section level2">
 <h2><span class="header-section-number">3.3</span> Install &amp; load packages</h2>

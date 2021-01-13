@@ -2,8 +2,8 @@ introduction
 spatial-data-outline
 steps1
 rrecap
-creating-naming-and-saving-a-new-r-script
 setting-wd
+creating-naming-and-saving-a-new-r-script
 install-load-packages
 formats-of-spatial-data-content-extensions
 objects-dataframes
