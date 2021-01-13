@@ -141,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="steps1.html"><a href="steps1.html"><i class="fa fa-check"></i><b>2</b> Step through a simple example of process of mapmaking</a></li>
 <li class="chapter" data-level="3" data-path="rrecap.html"><a href="rrecap.html"><i class="fa fa-check"></i><b>3</b> R recap</a><ul>
-<li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#setting-wd"><i class="fa fa-check"></i><b>3.1</b> Setting wd</a></li>
+<li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#setting-working-directory"><i class="fa fa-check"></i><b>3.1</b> Setting working directory</a></li>
 <li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#creating-naming-and-saving-a-new-r-script"><i class="fa fa-check"></i><b>3.2</b> Creating, naming and saving a new R script</a></li>
 <li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#install-load-packages"><i class="fa fa-check"></i><b>3.3</b> Install &amp; load packages</a></li>
 <li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.4</b> Formats of spatial data (content, extensions)</a></li>
@@ -195,8 +195,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="rrecap" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> R recap</h1>
 <p>This section provides a brief recap of the basic steps that are required or useful to do before staring on the project.</p>
-<div id="setting-wd" class="section level2">
-<h2><span class="header-section-number">3.1</span> Setting wd</h2>
+<div id="setting-working-directory" class="section level2">
+<h2><span class="header-section-number">3.1</span> Setting working directory</h2>
+<p>At the beginning of each project it is crucial to determine the working directory for your project. A working directory is a folder where all your files associated with the project will be stored. For example, original datasets, saved datasets as well as plots, graphs or maps created and exported from R. Hence, working directory not only allows you to gather and access the files produced along the work but also load the existing datasets into the RStudio.<br/><br/></p>
+<p>You can set up the working directory with the <code>openProject</code> function as follows (recommended):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rrecap.html#cb3-1"></a>rstudioapi<span class="op">::</span><span class="kw">openProject</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
+<p>Alternatively, you can use the following command:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rrecap.html#cb4-1"></a><span class="kw">setwd</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
+<p>While the former option will set up and open the working directory for your project, the latter simply determines the default folder for each specific R script.</p>
 </div>
 <div id="creating-naming-and-saving-a-new-r-script" class="section level2">
 <h2><span class="header-section-number">3.2</span> Creating, naming and saving a new R script</h2>
@@ -215,6 +221,7 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 <div class="yellow">
 <p><strong>Shortcut</strong>: As you work along your R script document, you can quickly save changes by pressing <em>Ctrl+S</em>.</p>
 </div>
+<p>##Executing code</p>
 </div>
 <div id="install-load-packages" class="section level2">
 <h2><span class="header-section-number">3.3</span> Install &amp; load packages</h2>
