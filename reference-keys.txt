@@ -5,10 +5,10 @@ rrecap
 setting-working-directory
 creating-naming-and-saving-a-new-r-script
 executing-the-code
-install-load-packages
+install-and-load-packages
+load-data
 formats-of-spatial-data-content-extensions
 objects-dataframes
-load-data
 saving-dataset
 saving-exporting-maps-to-the-file
 data-types

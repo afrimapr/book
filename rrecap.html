@@ -144,10 +144,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="rrecap.html"><a href="rrecap.html#setting-working-directory"><i class="fa fa-check"></i><b>3.1</b> Setting working directory</a></li>
 <li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#creating-naming-and-saving-a-new-r-script"><i class="fa fa-check"></i><b>3.2</b> Creating, naming and saving a new R script</a></li>
 <li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#executing-the-code"><i class="fa fa-check"></i><b>3.3</b> Executing the code</a></li>
-<li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#install-load-packages"><i class="fa fa-check"></i><b>3.4</b> Install &amp; load packages</a></li>
-<li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.5</b> Formats of spatial data (content, extensions)</a></li>
-<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#objects-dataframes"><i class="fa fa-check"></i><b>3.6</b> Objects &amp; dataframes</a></li>
-<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#load-data"><i class="fa fa-check"></i><b>3.7</b> Load data</a></li>
+<li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#install-and-load-packages"><i class="fa fa-check"></i><b>3.4</b> Install and load packages</a></li>
+<li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#load-data"><i class="fa fa-check"></i><b>3.5</b> Load data</a></li>
+<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.6</b> Formats of spatial data (content, extensions)</a></li>
+<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#objects-dataframes"><i class="fa fa-check"></i><b>3.7</b> Objects &amp; dataframes</a></li>
 <li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.8</b> Saving dataset</a></li>
 <li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.9</b> Saving &amp; exporting maps to the file</a></li>
 </ul></li>
@@ -242,21 +242,32 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 </div>
 <p>If you do not select any code and press <strong>Run</strong>, RStudio will run the line of code where the cursor is located. The code which has been exectued will appear in the <strong>Console</strong>, usually located at the bottom part of the window.</p>
 <p>In RStudio it is also possible to add comments next to your commands simply using a hashtag (#) beforehand. This will stop R from executing this specific part:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="rrecap.html#cb5-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">6</span> <span class="co">#Using R as a calculator</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="rrecap.html#cb5-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">6</span> <span class="co"># Using R as a calculator</span></span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rrecap.html#cb7-1"></a><span class="co">#3+6</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rrecap.html#cb7-1"></a><span class="co"># 3+6</span></span></code></pre></div>
 </div>
-<div id="install-load-packages" class="section level2">
-<h2><span class="header-section-number">3.4</span> Install &amp; load packages</h2>
-</div>
-<div id="formats-of-spatial-data-content-extensions" class="section level2">
-<h2><span class="header-section-number">3.5</span> Formats of spatial data (content, extensions)</h2>
-</div>
-<div id="objects-dataframes" class="section level2">
-<h2><span class="header-section-number">3.6</span> Objects &amp; dataframes</h2>
+<div id="install-and-load-packages" class="section level2">
+<h2><span class="header-section-number">3.4</span> Install and load packages</h2>
 </div>
 <div id="load-data" class="section level2">
-<h2><span class="header-section-number">3.7</span> Load data</h2>
+<h2><span class="header-section-number">3.5</span> Load data</h2>
+<p>There are different approaches that can be used to import your datasets, depending on where the data is located. Here we consider two possibilities:</p>
+<ol style="list-style-type: decimal">
+<li>Dataset is included in the R package.<br/>
+If the dataset is already part of the R package, it will be automatically read in when the package is installed and loaded into R.
+For example:</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a><span class="kw">install.packages</span>(afrilearndata) <span class="co">#data package</span></span>
+<span id="cb8-2"><a href="rrecap.html#cb8-2"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Dataset is stored as a separate .txt or .csv file.</li>
+</ol>
+</div>
+<div id="formats-of-spatial-data-content-extensions" class="section level2">
+<h2><span class="header-section-number">3.6</span> Formats of spatial data (content, extensions)</h2>
+</div>
+<div id="objects-dataframes" class="section level2">
+<h2><span class="header-section-number">3.7</span> Objects &amp; dataframes</h2>
 </div>
 <div id="saving-dataset" class="section level2">
 <h2><span class="header-section-number">3.8</span> Saving dataset</h2>
