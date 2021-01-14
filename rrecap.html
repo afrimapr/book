@@ -252,6 +252,16 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 <div id="load-data" class="section level2">
 <h2><span class="header-section-number">3.5</span> Load data</h2>
 <p>There are different approaches that can be used to import your datasets, depending on where the data is located and in what file type it is stored. The easiest case is when the dataset is already part of the R package, as it will be automatically read in when the package is installed and loaded into R. For example:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a>packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb8-2"><a href="rrecap.html#cb8-2"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
+<span id="cb8-3"><a href="rrecap.html#cb8-3"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
+<span id="cb8-4"><a href="rrecap.html#cb8-4"></a>  )</span>
+<span id="cb8-5"><a href="rrecap.html#cb8-5"></a><span class="kw">install.packages</span>(packages_to_install)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rrecap.html#cb9-1"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb9-2"><a href="rrecap.html#cb9-2"></a><span class="kw">library</span>(rnaturalearthdata)</span></code></pre></div>
+<p>Create dataset called <em>africa</em>, provided in the package:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a>africa =<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent=</span><span class="st">&quot;africa&quot;</span>, <span class="dt">returnclass=</span><span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
+<p>here describe elements of the function</p>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">
 <h2><span class="header-section-number">3.6</span> Formats of spatial data (content, extensions)</h2>
