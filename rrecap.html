@@ -251,17 +251,105 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 </div>
 <div id="load-data" class="section level2">
 <h2><span class="header-section-number">3.5</span> Load data</h2>
-<p>There are different approaches that can be used to import your datasets, depending on where the data is located and in what file type it is stored. The easiest case is when the dataset is already part of the R package, as it will be automatically read in when the package is installed and loaded into R. For example:</p>
+<p>There are different approaches that can be used to import your datasets, depending on where the data is located and in what file type it is stored. The easiest case is when the dataset is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/>
+For example, install packages containing dataset:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a>packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb8-2"><a href="rrecap.html#cb8-2"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
+<span id="cb8-2"><a href="rrecap.html#cb8-2"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     </span>
 <span id="cb8-3"><a href="rrecap.html#cb8-3"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
 <span id="cb8-4"><a href="rrecap.html#cb8-4"></a>  )</span>
 <span id="cb8-5"><a href="rrecap.html#cb8-5"></a><span class="kw">install.packages</span>(packages_to_install)</span></code></pre></div>
+<p>Load them:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rrecap.html#cb9-1"></a><span class="kw">library</span>(rnaturalearth)</span>
 <span id="cb9-2"><a href="rrecap.html#cb9-2"></a><span class="kw">library</span>(rnaturalearthdata)</span></code></pre></div>
-<p>Create dataset called <em>africa</em>, provided in the package:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a>africa =<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent=</span><span class="st">&quot;africa&quot;</span>, <span class="dt">returnclass=</span><span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
-<p>here describe elements of the function</p>
+<p>To view what datasets are available in a given package:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a><span class="kw">data</span>(<span class="dt">package=</span><span class="st">&quot;rnaturalearthdata&quot;</span>)</span></code></pre></div>
+<p>Create spatial dataset called <em>africa</em>, provided in the package:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a>africa =<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent=</span><span class="st">&quot;africa&quot;</span>, <span class="dt">returnclass=</span><span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
+<p>Please note, the function <em>ne_countries</em> is specific for this package and different packages may use other functions to load the dataset into clobal environment.</p>
+<p>You can view and explore the dataset:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rrecap.html#cb12-1"></a><span class="kw">head</span>(africa)</span></code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 63 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: -5.470565 ymin: -26.82854 xmax: 30.75226 ymax: 15.11616
+## CRS:            +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0
+##    scalerank      featurecla labelrank               sovereignt sov_a3 adm0_dif
+## 1          1 Admin-0 country         3                   Angola    AGO        0
+## 11         1 Admin-0 country         6                  Burundi    BDI        0
+## 13         1 Admin-0 country         5                    Benin    BEN        0
+## 14         1 Admin-0 country         3             Burkina Faso    BFA        0
+## 25         1 Admin-0 country         4                 Botswana    BWA        0
+## 26         1 Admin-0 country         4 Central African Republic    CAF        0
+##    level              type                    admin adm0_a3 geou_dif
+## 1      2 Sovereign country                   Angola     AGO        0
+## 11     2 Sovereign country                  Burundi     BDI        0
+## 13     2 Sovereign country                    Benin     BEN        0
+## 14     2 Sovereign country             Burkina Faso     BFA        0
+## 25     2 Sovereign country                 Botswana     BWA        0
+## 26     2 Sovereign country Central African Republic     CAF        0
+##                     geounit gu_a3 su_dif                  subunit su_a3
+## 1                    Angola   AGO      0                   Angola   AGO
+## 11                  Burundi   BDI      0                  Burundi   BDI
+## 13                    Benin   BEN      0                    Benin   BEN
+## 14             Burkina Faso   BFA      0             Burkina Faso   BFA
+## 25                 Botswana   BWA      0                 Botswana   BWA
+## 26 Central African Republic   CAF      0 Central African Republic   CAF
+##    brk_diff                 name                name_long brk_a3
+## 1         0               Angola                   Angola    AGO
+## 11        0              Burundi                  Burundi    BDI
+## 13        0                Benin                    Benin    BEN
+## 14        0         Burkina Faso             Burkina Faso    BFA
+## 25        0             Botswana                 Botswana    BWA
+## 26        0 Central African Rep. Central African Republic    CAF
+##                brk_name brk_group abbrev postal                   formal_en
+## 1                Angola      &lt;NA&gt;   Ang.     AO People&#39;s Republic of Angola
+## 11              Burundi      &lt;NA&gt;   Bur.     BI         Republic of Burundi
+## 13                Benin      &lt;NA&gt;  Benin     BJ           Republic of Benin
+## 14         Burkina Faso      &lt;NA&gt;   B.F.     BF                Burkina Faso
+## 25             Botswana      &lt;NA&gt;   Bwa.     BW        Republic of Botswana
+## 26 Central African Rep.      &lt;NA&gt; C.A.R.     CF    Central African Republic
+##    formal_fr note_adm0 note_brk                name_sort name_alt mapcolor7
+## 1       &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;                   Angola     &lt;NA&gt;         3
+## 11      &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;                  Burundi     &lt;NA&gt;         2
+## 13      &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;                    Benin     &lt;NA&gt;         1
+## 14      &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;             Burkina Faso     &lt;NA&gt;         2
+## 25      &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt;                 Botswana     &lt;NA&gt;         6
+## 26      &lt;NA&gt;      &lt;NA&gt;     &lt;NA&gt; Central African Republic     &lt;NA&gt;         5
+##    mapcolor8 mapcolor9 mapcolor13  pop_est gdp_md_est pop_year lastcensus
+## 1          2         6          1 12799293     110300       NA       1970
+## 11         2         5          8  8988091       3102       NA       2008
+## 13         2         2         12  8791832      12830       NA       2002
+## 14         1         5         11 15746232      17820       NA       2006
+## 25         5         7          3  1990876      27060       NA       2011
+## 26         6         6          9  4511488       3198       NA       2003
+##    gdp_year                   economy             income_grp wikipedia fips_10
+## 1        NA 7. Least developed region 3. Upper middle income        NA    &lt;NA&gt;
+## 11       NA 7. Least developed region          5. Low income        NA    &lt;NA&gt;
+## 13       NA 7. Least developed region          5. Low income        NA    &lt;NA&gt;
+## 14       NA 7. Least developed region          5. Low income        NA    &lt;NA&gt;
+## 25       NA      6. Developing region 3. Upper middle income        NA    &lt;NA&gt;
+## 26       NA 7. Least developed region          5. Low income        NA    &lt;NA&gt;
+##    iso_a2 iso_a3 iso_n3 un_a3 wb_a2 wb_a3 woe_id adm0_a3_is adm0_a3_us
+## 1      AO    AGO    024   024    AO   AGO     NA        AGO        AGO
+## 11     BI    BDI    108   108    BI   BDI     NA        BDI        BDI
+## 13     BJ    BEN    204   204    BJ   BEN     NA        BEN        BEN
+## 14     BF    BFA    854   854    BF   BFA     NA        BFA        BFA
+## 25     BW    BWA    072   072    BW   BWA     NA        BWA        BWA
+## 26     CF    CAF    140   140    CF   CAF     NA        CAF        CAF
+##    adm0_a3_un adm0_a3_wb continent region_un       subregion          region_wb
+## 1          NA         NA    Africa    Africa   Middle Africa Sub-Saharan Africa
+## 11         NA         NA    Africa    Africa  Eastern Africa Sub-Saharan Africa
+## 13         NA         NA    Africa    Africa  Western Africa Sub-Saharan Africa
+## 14         NA         NA    Africa    Africa  Western Africa Sub-Saharan Africa
+## 25         NA         NA    Africa    Africa Southern Africa Sub-Saharan Africa
+## 26         NA         NA    Africa    Africa   Middle Africa Sub-Saharan Africa
+##    name_len long_len abbrev_len tiny homepart                       geometry
+## 1         6        6          4   NA        1 MULTIPOLYGON (((16.32653 -5...
+## 11        7        7          4   NA        1 MULTIPOLYGON (((29.34 -4.49...
+## 13        5        5          5   NA        1 MULTIPOLYGON (((2.691702 6....
+## 14       12       12          4   NA        1 MULTIPOLYGON (((-2.827496 9...
+## 25        8        8          4   NA        1 MULTIPOLYGON (((25.64916 -1...
+## 26       20       24          6   NA        1 MULTIPOLYGON (((15.27946 7....</code></pre>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">
 <h2><span class="header-section-number">3.6</span> Formats of spatial data (content, extensions)</h2>
