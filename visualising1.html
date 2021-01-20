@@ -229,14 +229,17 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb14-5"><a href="visualising1.html#cb14-5"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
 <span id="cb14-6"><a href="visualising1.html#cb14-6"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
 <span id="cb14-7"><a href="visualising1.html#cb14-7"></a>  )</span>
-<span id="cb14-8"><a href="visualising1.html#cb14-8"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span></code></pre></div>
+<span id="cb14-8"><a href="visualising1.html#cb14-8"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span>
+<span id="cb14-9"><a href="visualising1.html#cb14-9"></a></span>
+<span id="cb14-10"><a href="visualising1.html#cb14-10"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
 <p>Load the packages</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="visualising1.html#cb15-1"></a><span class="kw">library</span>(tmap)</span>
 <span id="cb15-2"><a href="visualising1.html#cb15-2"></a><span class="kw">library</span>(ggplot2)</span>
 <span id="cb15-3"><a href="visualising1.html#cb15-3"></a><span class="kw">library</span>(sf)</span>
-<span id="cb15-4"><a href="visualising1.html#cb15-4"></a><span class="kw">library</span>(rnaturalearth)</span>
-<span id="cb15-5"><a href="visualising1.html#cb15-5"></a><span class="kw">library</span>(rnaturalearthdata)</span>
-<span id="cb15-6"><a href="visualising1.html#cb15-6"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<span id="cb15-4"><a href="visualising1.html#cb15-4"></a><span class="kw">library</span>(afrilearndata)</span>
+<span id="cb15-5"><a href="visualising1.html#cb15-5"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb15-6"><a href="visualising1.html#cb15-6"></a><span class="kw">library</span>(rnaturalearthdata)</span>
+<span id="cb15-7"><a href="visualising1.html#cb15-7"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 <p>Create a dataset</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="visualising1.html#cb16-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 <p>Create an empty contour map of the continent</p>
