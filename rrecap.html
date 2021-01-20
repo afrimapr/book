@@ -253,21 +253,20 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 <h2><span class="header-section-number">3.5</span> Load data</h2>
 <p>There are different approaches that can be used to import your datasets, depending on where the data is located and in what file type it is stored. The easiest case is when the dataset is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/>
 For example, install packages containing dataset:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a>packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb8-2"><a href="rrecap.html#cb8-2"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     </span>
-<span id="cb8-3"><a href="rrecap.html#cb8-3"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
-<span id="cb8-4"><a href="rrecap.html#cb8-4"></a>  )</span>
-<span id="cb8-5"><a href="rrecap.html#cb8-5"></a><span class="kw">install.packages</span>(packages_to_install)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
 <p>Load them:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rrecap.html#cb9-1"></a><span class="kw">library</span>(rnaturalearth)</span>
-<span id="cb9-2"><a href="rrecap.html#cb9-2"></a><span class="kw">library</span>(rnaturalearthdata)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rrecap.html#cb9-1"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
 <p>To view what datasets are available in a given package:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a><span class="kw">data</span>(<span class="dt">package=</span><span class="st">&quot;rnaturalearthdata&quot;</span>)</span></code></pre></div>
-<p>Create spatial dataset called <em>africa</em>, provided in the package:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a>africa =<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent=</span><span class="st">&quot;africa&quot;</span>, <span class="dt">returnclass=</span><span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
-<p>Please note, the function <em>ne_countries</em> is specific for this package and different packages may use other functions to load the dataset into clobal environment.</p>
-<p>You can view and explore the dataset using:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rrecap.html#cb12-1"></a><span class="kw">head</span>(africa)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a><span class="kw">data</span>(<span class="dt">package=</span><span class="st">&quot;afrilearndata&quot;</span>)</span></code></pre></div>
+<p>You can view and explore the ‘africapitals’ dataset using:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a><span class="kw">head</span>(africapitals)</span></code></pre></div>
+<pre><code>##       capitalname countryname     pop iso3c      geometry
+## 280         Abuja     Nigeria  178462   NGA    7.17, 9.18
+## 308         Accra       Ghana 2029143   GHA   -0.20, 5.56
+## 382   Addis Abeba    Ethiopia 2823167   ETH   38.74, 9.03
+## 996       Algiers     Algeria 2029936   DZA   3.04, 36.77
+## 1584 Antananarivo  Madagascar 1463754   MDG 47.51, -18.89
+## 2193       Asmara     Eritrea  578860   ERI  38.94, 15.33</code></pre>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">
 <h2><span class="header-section-number">3.6</span> Formats of spatial data (content, extensions)</h2>
