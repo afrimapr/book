@@ -152,9 +152,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6.3" data-path="rrecap.html"><a href="rrecap.html#logical"><i class="fa fa-check"></i><b>3.6.3</b> Logical</a></li>
 <li class="chapter" data-level="3.6.4" data-path="rrecap.html"><a href="rrecap.html#factors"><i class="fa fa-check"></i><b>3.6.4</b> Factors</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.7</b> Formats of spatial data (content, extensions)</a></li>
-<li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.8</b> Saving dataset</a></li>
-<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.9</b> Saving &amp; exporting maps to the file</a></li>
+<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#basic-objects-and-data-structures"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
+<li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#list"><i class="fa fa-check"></i><b>3.7.2</b> List</a></li>
+<li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#dataframe"><i class="fa fa-check"></i><b>3.7.3</b> Dataframe</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.8</b> Formats of spatial data (content, extensions)</a></li>
+<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.9</b> Saving dataset</a></li>
+<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.10</b> Saving &amp; exporting maps to the file</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types focusing on real examples: cities, roads, admin boundaries, surfaces</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#points-e.g.-cities"><i class="fa fa-check"></i><b>4.1</b> Points e.g. cities</a></li>
@@ -355,18 +360,51 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb35-3"><a href="rrecap.html#cb35-3"></a>b</span></code></pre></div>
 <pre><code>## [1] A B B C D C C
 ## Levels: A B C D</code></pre>
-<p>The numbers as well as strings in the example above serve as labels of different levels.
-## Basic objects and data structures</p>
+<p>The numbers and strings, in the example above, serve as labels of different levels.</p>
+</div>
+</div>
+<div id="basic-objects-and-data-structures" class="section level2">
+<h2><span class="header-section-number">3.7</span> Basic objects and data structures</h2>
+<p>In this section we explain the basic data structures that we often work with in R. These include a vector, list, matrix and a dataframe.</p>
+<div id="vector" class="section level3">
+<h3><span class="header-section-number">3.7.1</span> Vector</h3>
+<p>Vector is a one dimensional structure which contains elements of the same type. Usually a <code>combine</code> function is used to create a vector such that:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="rrecap.html#cb37-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
+<p>It is also possible to create a vector with text-based obejcts, for example with capitals from our <code>afrilearndata</code>:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rrecap.html#cb38-1"></a>capitals &lt;-<span class="st"> </span>africapitals<span class="op">$</span>capitalname</span></code></pre></div>
+<p>We can <code>print</code> content of our vector to see what it contains:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="rrecap.html#cb39-1"></a><span class="kw">print</span>(capitals)</span></code></pre></div>
+<pre><code>##  [1] &quot;Abuja&quot;        &quot;Accra&quot;        &quot;Addis Abeba&quot;  &quot;Algiers&quot;      &quot;Antananarivo&quot;
+##  [6] &quot;Asmara&quot;       &quot;Bamako&quot;       &quot;Bangui&quot;       &quot;Banjul&quot;       &quot;Bissau&quot;      
+## [11] &quot;Brazzaville&quot;  &quot;Bujumbura&quot;    &quot;Cairo&quot;        &quot;Conakry&quot;      &quot;Dakar&quot;       
+## [16] &quot;Dodoma&quot;       &quot;Freetown&quot;     &quot;Gaborone&quot;     &quot;Harare&quot;       &quot;Jibuti&quot;      
+## [21] &quot;Kampala&quot;      &quot;Khartoum&quot;     &quot;Kigali&quot;       &quot;Kinshasa&quot;     &quot;Libreville&quot;  
+## [26] &quot;Lilongwe&quot;     &quot;Lome&quot;         &quot;Luanda&quot;       &quot;Lusaka&quot;       &quot;Malabo&quot;      
+## [31] &quot;Maputo&quot;       &quot;Maseru&quot;       &quot;Mbabane&quot;      &quot;Mogadishu&quot;    &quot;Monrovia&quot;    
+## [36] &quot;N&#39;Djamena&quot;    &quot;Nairobi&quot;      &quot;Niamey&quot;       &quot;Nouakchott&quot;   &quot;Ouagadougou&quot; 
+## [41] &quot;Porto Novo&quot;   &quot;Pretoria&quot;     &quot;Rabat&quot;        &quot;Tripoli&quot;      &quot;Tunis&quot;       
+## [46] &quot;Windhoek&quot;     &quot;Yamoussoukro&quot; &quot;Yaounde&quot;      &quot;al-&#39;Ayun&quot;     &quot;Juba&quot;</code></pre>
+<p>Another important feature is to see what types of objects the vector stores. We can see that our text-based objects are <em>characters</em> using <code>typeof</code> function:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="rrecap.html#cb41-1"></a><span class="kw">typeof</span>(capitals)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="list" class="section level3">
+<h3><span class="header-section-number">3.7.2</span> List</h3>
+<p>List can be though of as a container where various types of objects can be stored at the same type (unlike in vector).
+### Matrix</p>
+</div>
+<div id="dataframe" class="section level3">
+<h3><span class="header-section-number">3.7.3</span> Dataframe</h3>
 </div>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">
-<h2><span class="header-section-number">3.7</span> Formats of spatial data (content, extensions)</h2>
+<h2><span class="header-section-number">3.8</span> Formats of spatial data (content, extensions)</h2>
 </div>
 <div id="saving-dataset" class="section level2">
-<h2><span class="header-section-number">3.8</span> Saving dataset</h2>
+<h2><span class="header-section-number">3.9</span> Saving dataset</h2>
 </div>
 <div id="saving-exporting-maps-to-the-file" class="section level2">
-<h2><span class="header-section-number">3.9</span> Saving &amp; exporting maps to the file</h2>
+<h2><span class="header-section-number">3.10</span> Saving &amp; exporting maps to the file</h2>
 
 </div>
 </div>
