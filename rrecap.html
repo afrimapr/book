@@ -154,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#basic-objects-and-data-structures"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a><ul>
 <li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
-<li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#list"><i class="fa fa-check"></i><b>3.7.2</b> List</a></li>
+<li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.7.2</b> Matrix</a></li>
 <li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#dataframe"><i class="fa fa-check"></i><b>3.7.3</b> Dataframe</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.8</b> Formats of spatial data (content, extensions)</a></li>
@@ -370,7 +370,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <h3><span class="header-section-number">3.7.1</span> Vector</h3>
 <p>Vector is a one dimensional structure which contains elements of the same type. Usually a <code>combine</code> function is used to create a vector such that:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="rrecap.html#cb37-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
-<p>It is also possible to create a vector with text-based obejcts, for example with capitals from our <code>afrilearndata</code>:</p>
+<p>It is also possible to create a vector with text-based objects, for example with capitals from our <code>afrilearndata</code>:</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rrecap.html#cb38-1"></a>capitals &lt;-<span class="st"> </span>africapitals<span class="op">$</span>capitalname</span></code></pre></div>
 <p>We can <code>print</code> content of our vector to see what it contains:</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="rrecap.html#cb39-1"></a><span class="kw">print</span>(capitals)</span></code></pre></div>
@@ -388,10 +388,25 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="rrecap.html#cb41-1"></a><span class="kw">typeof</span>(capitals)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
-<div id="list" class="section level3">
-<h3><span class="header-section-number">3.7.2</span> List</h3>
-<p>List can be though of as a container where various types of objects can be stored at the same type (unlike in vector).
-### Matrix</p>
+<div id="matrix" class="section level3">
+<h3><span class="header-section-number">3.7.2</span> Matrix</h3>
+<p>Matrix can be though of as an upgraded version of a vector, where vector is an one-dimensional array and two-dimensional array. We can create a matrix that has three columns and five rows with the following:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="rrecap.html#cb43-1"></a><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dt">ncol=</span><span class="dv">3</span>, <span class="dt">nrow=</span><span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+## [4,]   10   11   12
+## [5,]   13   14   15</code></pre>
+<p>By default, the elements in the matrix will be arranged by column, so <code>byrow=TRUE</code> segregates the elements in the matrix row-wise.<br/></p>
+<p>We can also exploit the fact that matrix is an upgraded vector by binding them column- or row-wise, as long as they have the same length:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="rrecap.html#cb45-1"></a>vector1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;water&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;juice&quot;</span>)</span>
+<span id="cb45-2"><a href="rrecap.html#cb45-2"></a>vector2 &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
+<span id="cb45-3"><a href="rrecap.html#cb45-3"></a><span class="kw">cbind</span>(vector1, vector2) <span class="co">#for row-wise binding we would use rbind()</span></span></code></pre></div>
+<pre><code>##      vector1 vector2
+## [1,] &quot;water&quot; &quot;1&quot;    
+## [2,] &quot;milk&quot;  &quot;2&quot;    
+## [3,] &quot;juice&quot; &quot;3&quot;</code></pre>
 </div>
 <div id="dataframe" class="section level3">
 <h3><span class="header-section-number">3.7.3</span> Dataframe</h3>

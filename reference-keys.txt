@@ -14,7 +14,7 @@ logical
 factors
 basic-objects-and-data-structures
 vector
-list
+matrix
 dataframe
 formats-of-spatial-data-content-extensions
 saving-dataset
