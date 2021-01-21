@@ -146,10 +146,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#executing-the-code"><i class="fa fa-check"></i><b>3.3</b> Executing the code</a></li>
 <li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#install-and-load-packages"><i class="fa fa-check"></i><b>3.4</b> Install and load packages</a></li>
 <li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#load-data"><i class="fa fa-check"></i><b>3.5</b> Load data</a></li>
-<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.6</b> Formats of spatial data (content, extensions)</a></li>
-<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#objects-dataframes"><i class="fa fa-check"></i><b>3.7</b> Objects &amp; dataframes</a></li>
-<li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.8</b> Saving dataset</a></li>
-<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.9</b> Saving &amp; exporting maps to the file</a></li>
+<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#basic-data-types"><i class="fa fa-check"></i><b>3.6</b> Basic data types</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="rrecap.html"><a href="rrecap.html#numeric-and-integer"><i class="fa fa-check"></i><b>3.6.1</b> Numeric and integer</a></li>
+<li class="chapter" data-level="3.6.2" data-path="rrecap.html"><a href="rrecap.html#characters"><i class="fa fa-check"></i><b>3.6.2</b> Characters</a></li>
+<li class="chapter" data-level="3.6.3" data-path="rrecap.html"><a href="rrecap.html#logical"><i class="fa fa-check"></i><b>3.6.3</b> Logical</a></li>
+<li class="chapter" data-level="3.6.4" data-path="rrecap.html"><a href="rrecap.html#factors"><i class="fa fa-check"></i><b>3.6.4</b> Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#basic-objects-and-data-structures"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a></li>
+<li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.8</b> Formats of spatial data (content, extensions)</a></li>
+<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.9</b> Saving dataset</a></li>
+<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#saving-exporting-maps-to-the-file"><i class="fa fa-check"></i><b>3.10</b> Saving &amp; exporting maps to the file</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types focusing on real examples: cities, roads, admin boundaries, surfaces</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#points-e.g.-cities"><i class="fa fa-check"></i><b>4.1</b> Points e.g. cities</a></li>
@@ -268,17 +274,40 @@ For example, install packages containing dataset:</p>
 ## 1584 Antananarivo  Madagascar 1463754   MDG 47.51, -18.89
 ## 2193       Asmara     Eritrea  578860   ERI  38.94, 15.33</code></pre>
 </div>
-<div id="formats-of-spatial-data-content-extensions" class="section level2">
-<h2><span class="header-section-number">3.6</span> Formats of spatial data (content, extensions)</h2>
+<div id="basic-data-types" class="section level2">
+<h2><span class="header-section-number">3.6</span> Basic data types</h2>
+<p>In this section we explore a basic set of possible data types that you can encounter in a dataframe. The division presented below is based on the types of values that data stores. The most popular data types are:</p>
+<ul>
+<li>Numeric: containing numbers</li>
+<li>Character: containing text</li>
+<li>Logical (so-called Boolean): containing <code>TRUE/FALSE</code> values</li>
+<li>Factor: containing categorical variables</li>
+</ul>
+<p>We will look at these in turns.</p>
+<div id="numeric-and-integer" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Numeric and integer</h3>
 </div>
-<div id="objects-dataframes" class="section level2">
-<h2><span class="header-section-number">3.7</span> Objects &amp; dataframes</h2>
+<div id="characters" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Characters</h3>
+</div>
+<div id="logical" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> Logical</h3>
+</div>
+<div id="factors" class="section level3">
+<h3><span class="header-section-number">3.6.4</span> Factors</h3>
+</div>
+</div>
+<div id="basic-objects-and-data-structures" class="section level2">
+<h2><span class="header-section-number">3.7</span> Basic objects and data structures</h2>
+</div>
+<div id="formats-of-spatial-data-content-extensions" class="section level2">
+<h2><span class="header-section-number">3.8</span> Formats of spatial data (content, extensions)</h2>
 </div>
 <div id="saving-dataset" class="section level2">
-<h2><span class="header-section-number">3.8</span> Saving dataset</h2>
+<h2><span class="header-section-number">3.9</span> Saving dataset</h2>
 </div>
 <div id="saving-exporting-maps-to-the-file" class="section level2">
-<h2><span class="header-section-number">3.9</span> Saving &amp; exporting maps to the file</h2>
+<h2><span class="header-section-number">3.10</span> Saving &amp; exporting maps to the file</h2>
 
 </div>
 </div>

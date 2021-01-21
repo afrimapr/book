@@ -7,8 +7,13 @@ creating-naming-and-saving-a-new-r-script
 executing-the-code
 install-and-load-packages
 load-data
+basic-data-types
+numeric-and-integer
+characters
+logical
+factors
+basic-objects-and-data-structures
 formats-of-spatial-data-content-extensions
-objects-dataframes
 saving-dataset
 saving-exporting-maps-to-the-file
 data-types
