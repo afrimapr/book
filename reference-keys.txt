@@ -12,7 +12,6 @@ numeric-and-integer
 characters
 logical
 factors
-basic-objects-and-data-structures
 formats-of-spatial-data-content-extensions
 saving-dataset
 saving-exporting-maps-to-the-file
