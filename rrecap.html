@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#basic-objects-and-data-structures"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a><ul>
 <li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
 <li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.7.2</b> Matrix</a></li>
-<li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#dataframe"><i class="fa fa-check"></i><b>3.7.3</b> Dataframe</a></li>
+<li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#data-frame"><i class="fa fa-check"></i><b>3.7.3</b> Data frame</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#formats-of-spatial-data-content-extensions"><i class="fa fa-check"></i><b>3.8</b> Formats of spatial data (content, extensions)</a></li>
 <li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#saving-dataset"><i class="fa fa-check"></i><b>3.9</b> Saving dataset</a></li>
@@ -408,8 +408,14 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ## [2,] &quot;milk&quot;  &quot;2&quot;    
 ## [3,] &quot;juice&quot; &quot;3&quot;</code></pre>
 </div>
-<div id="dataframe" class="section level3">
-<h3><span class="header-section-number">3.7.3</span> Dataframe</h3>
+<div id="data-frame" class="section level3">
+<h3><span class="header-section-number">3.7.3</span> Data frame</h3>
+<p>Data frame is a two dimensional array, similar to a matrix. You can create a simple data frame from vectors above, using <code>data.frame</code> function: function:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="rrecap.html#cb47-1"></a><span class="kw">data.frame</span>(vector1, vector2) <span class="co">#for row-wise binding we would use rbind()</span></span></code></pre></div>
+<pre><code>##   vector1 vector2
+## 1   water       1
+## 2    milk       2
+## 3   juice       3</code></pre>
 </div>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">

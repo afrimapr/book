@@ -15,7 +15,7 @@ factors
 basic-objects-and-data-structures
 vector
 matrix
-dataframe
+data-frame
 formats-of-spatial-data-content-extensions
 saving-dataset
 saving-exporting-maps-to-the-file
