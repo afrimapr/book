@@ -410,13 +410,26 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 <div id="data-frame" class="section level3">
 <h3><span class="header-section-number">3.7.3</span> Data frame</h3>
-<p>Data frame is a two dimensional array, similar to a matrix. However, it can contain different data types and columns as well as rows within the data frame are named. You can create a simple data frame from vectors above, using <code>data.frame</code> function:</p>
+<p>Data frame is a two dimensional array, similar to a matrix. However, it can contain different data types. Beyond, columns as well as rows within the data frame are named. You can create a simple data frame with two columns and three rows, using vectors above, with <code>data.frame</code> function:</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="rrecap.html#cb47-1"></a><span class="kw">data.frame</span>(vector1, vector2)</span></code></pre></div>
 <pre><code>##   vector1 vector2
 ## 1   water       1
 ## 2    milk       2
 ## 3   juice       3</code></pre>
-<p>If you compare the output of the example above where we used the <code>cbind</code> function to create a matrix, to the result of the <code>data.frame</code> function, we can clearly see the difference between a matrix and a data frame. Where matrix is homogeneous and data frame is heterogeneous in terms of data type. All the values in the matrix are characters while the first column in data frame contains factors and the second one integers.</p>
+<p>If you compare the output of the example above where we used the <code>cbind</code> function to create a matrix, to the result of the <code>data.frame</code> function, we can clearly see the difference between a matrix and a data frame. Where matrix is homogeneous and data frame is heterogeneous in terms of data type. All the values in the matrix are characters while the first column in data frame contains factors and the second one integers. <br/></p>
+<p>To view a specific column in a data frame we can use <em>$</em> such that:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="rrecap.html#cb49-1"></a>df_<span class="dv">1</span> =<span class="st"> </span><span class="kw">data.frame</span>(vector1, vector2) <span class="co">#create data frame called df_1</span></span>
+<span id="cb49-2"><a href="rrecap.html#cb49-2"></a>df_<span class="dv">1</span><span class="op">$</span>vector1</span></code></pre></div>
+<pre><code>## [1] &quot;water&quot; &quot;milk&quot;  &quot;juice&quot;</code></pre>
+<p>We can see that columns in the <em>df_1</em> adapted names of the vectors.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="rrecap.html#cb51-1"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;vector1&quot; &quot;vector2&quot;</code></pre>
+<p>We can change the column headers by their <em>names</em> or their <em>index</em> such that:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="rrecap.html#cb53-1"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="kw">names</span>(df_<span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;vector1&quot;</span>] &lt;-<span class="st"> &quot;drinks&quot;</span></span>
+<span id="cb53-2"><a href="rrecap.html#cb53-2"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;amount&quot;</span></span>
+<span id="cb53-3"><a href="rrecap.html#cb53-3"></a></span>
+<span id="cb53-4"><a href="rrecap.html#cb53-4"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;drinks&quot; &quot;amount&quot;</code></pre>
 </div>
 </div>
 <div id="formats-of-spatial-data-content-extensions" class="section level2">
