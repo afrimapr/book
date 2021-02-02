@@ -23,11 +23,11 @@ lines-e.g.-roads
 polygons-e.g.-admin-boundaries
 raster-e.g.-modelled-population-estimates
 visualising1
-static-maps
-basics-this-step-can-be-removed-if-the-basic-steps-can-be-put-in-ch.3-r-recap-since-they-repeat-for-all-packages
-layers-for-the-static-maps
-interactive-maps
+quick-interactive-maps-with-mapview
 layers-for-the-interactive-maps
+static-maps-with-tmap
+layers-for-the-static-maps
+interactive-maps-with-tmap
 shiny
 data-sources
 hdx
