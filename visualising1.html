@@ -167,10 +167,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: tmap and mapview</a><ul>
 <li class="chapter" data-level="5.1" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>5.1</b> Quick interactive maps with mapview</a></li>
-<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#layers-for-the-interactive-maps"><i class="fa fa-check"></i><b>5.2</b> Layers for the interactive maps</a></li>
-<li class="chapter" data-level="5.3" data-path="visualising1.html"><a href="visualising1.html#static-maps-with-tmap"><i class="fa fa-check"></i><b>5.3</b> Static maps with tmap</a></li>
-<li class="chapter" data-level="5.4" data-path="visualising1.html"><a href="visualising1.html#layers-for-the-static-maps"><i class="fa fa-check"></i><b>5.4</b> Layers for the static maps</a></li>
-<li class="chapter" data-level="5.5" data-path="visualising1.html"><a href="visualising1.html#interactive-maps-with-tmap"><i class="fa fa-check"></i><b>5.5</b> Interactive maps with tmap</a></li>
+<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#static-maps-with-tmap"><i class="fa fa-check"></i><b>5.2</b> Static maps with tmap</a></li>
+<li class="chapter" data-level="5.3" data-path="visualising1.html"><a href="visualising1.html#layers-for-the-static-maps"><i class="fa fa-check"></i><b>5.3</b> Layers for the static maps</a></li>
+<li class="chapter" data-level="5.4" data-path="visualising1.html"><a href="visualising1.html#interactive-maps-with-tmap"><i class="fa fa-check"></i><b>5.4</b> Interactive maps with tmap</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>6</b> Shiny interactive map applications</a></li>
 <li class="chapter" data-level="7" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>7</b> Sources of data</a><ul>
@@ -239,11 +238,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 *sp</p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="visualising1.html#cb57-1"></a><span class="co">#mapview(africa)</span></span></code></pre></div>
 </div>
-<div id="layers-for-the-interactive-maps" class="section level2">
-<h2><span class="header-section-number">5.2</span> Layers for the interactive maps</h2>
-</div>
 <div id="static-maps-with-tmap" class="section level2">
-<h2><span class="header-section-number">5.3</span> Static maps with tmap</h2>
+<h2><span class="header-section-number">5.2</span> Static maps with tmap</h2>
 <p>Create a dataset</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="visualising1.html#cb58-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 <p>Create an empty contour map of the continent</p>
@@ -252,7 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 </div>
 <div id="layers-for-the-static-maps" class="section level2">
-<h2><span class="header-section-number">5.4</span> Layers for the static maps</h2>
+<h2><span class="header-section-number">5.3</span> Layers for the static maps</h2>
 <p>Fill map using data on last census data and add labels for country names</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="visualising1.html#cb60-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
 <span id="cb60-2"><a href="visualising1.html#cb60-2"></a><span class="st">  </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
@@ -262,7 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>colour pallet TBD</p>
 </div>
 <div id="interactive-maps-with-tmap" class="section level2">
-<h2><span class="header-section-number">5.5</span> Interactive maps with tmap</h2>
+<h2><span class="header-section-number">5.4</span> Interactive maps with tmap</h2>
 
 </div>
 </div>

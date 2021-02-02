@@ -24,7 +24,6 @@ polygons-e.g.-admin-boundaries
 raster-e.g.-modelled-population-estimates
 visualising1
 quick-interactive-maps-with-mapview
-layers-for-the-interactive-maps
 static-maps-with-tmap
 layers-for-the-static-maps
 interactive-maps-with-tmap
