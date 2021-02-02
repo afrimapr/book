@@ -212,16 +212,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 5</span> Visualising spatial data part 1: tmap and mapview</h1>
 <p>In this section we will visualise spatial data, in particular we will use <code>tmap</code> and <code>mapview</code> to crate both static and interactive maps. This chapter requires the following packages (some of them we used already):</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="visualising1.html#cb55-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb55-2"><a href="visualising1.html#cb55-2"></a>  <span class="st">&quot;mapview&quot;</span>            <span class="co"># map-making package</span></span>
-<span id="cb55-3"><a href="visualising1.html#cb55-3"></a>  <span class="st">&quot;tmap&quot;</span>               <span class="co"># map-making package</span></span>
+<span id="cb55-2"><a href="visualising1.html#cb55-2"></a>  <span class="st">&quot;mapview&quot;</span>            <span class="co"># map-making package for interactive maps</span></span>
+<span id="cb55-3"><a href="visualising1.html#cb55-3"></a>  <span class="st">&quot;tmap&quot;</span>               <span class="co"># map-making package for static and interactive maps</span></span>
 <span id="cb55-4"><a href="visualising1.html#cb55-4"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
 <span id="cb55-5"><a href="visualising1.html#cb55-5"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
 <span id="cb55-6"><a href="visualising1.html#cb55-6"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
 <span id="cb55-7"><a href="visualising1.html#cb55-7"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
 <span id="cb55-8"><a href="visualising1.html#cb55-8"></a>  )</span>
 <span id="cb55-9"><a href="visualising1.html#cb55-9"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span>
-<span id="cb55-10"><a href="visualising1.html#cb55-10"></a></span>
-<span id="cb55-11"><a href="visualising1.html#cb55-11"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
+<span id="cb55-10"><a href="visualising1.html#cb55-10"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
 <p>Next, we need to load the packages:</p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="visualising1.html#cb56-1"></a><span class="kw">library</span>(tmap)</span>
 <span id="cb56-2"><a href="visualising1.html#cb56-2"></a><span class="kw">library</span>(mapview)</span>
@@ -233,7 +232,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb56-8"><a href="visualising1.html#cb56-8"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 <div id="quick-interactive-maps-with-mapview" class="section level2">
 <h2><span class="header-section-number">5.1</span> Quick interactive maps with mapview</h2>
-<p>Mapview package allows for an interactive viewing of spatial objects in R.</p>
+<p>Mapview package allows quickly and easily create interactive maps of spatial data. Therefore, it is useful when we want to quickly explore the data visually without excessive care about the quality of the presentation. However, if we need static maps or interactive maps which are more elaborate we might want to consider other options such as <code>tmap package</code> which will be presented later in this chapter.<br/></p>
+<p>The typical spatial objects types supported by <code>mapview</code> package are:</p>
+<p><em>sf
+</em>raster
+*sp</p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="visualising1.html#cb57-1"></a><span class="co">#mapview(africa)</span></span></code></pre></div>
 </div>
 <div id="layers-for-the-interactive-maps" class="section level2">
