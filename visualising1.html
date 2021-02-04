@@ -240,10 +240,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>raster</li>
 <li>sp</li>
 </ul>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="visualising1.html#cb57-1"></a><span class="co">#mapview(africa)</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="visualising1.html#cb57-1"></a><span class="co">#mapview(africountries)</span></span></code></pre></div>
 </div>
 <div id="static-maps-with-tmap" class="section level2">
 <h2><span class="header-section-number">5.2</span> Static maps with tmap</h2>
+<p>In this section we will explore the possibilities of <code>tmap</code> in creating static maps, which is a flexible, yet user-friendly package. Its syntax is similar to <code>ggplot2</code> (plot-making package), where additional features of the map are simply build up on top of the basic structure. It will be demonstrated below, where we will start off with a simple contour map and then we will add more</p>
 <p>Create a dataset</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="visualising1.html#cb58-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 <p>Create an empty contour map of the continent</p>
@@ -265,6 +266,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="interactive-maps-with-tmap" class="section level2">
 <h2><span class="header-section-number">5.3</span> Interactive maps with tmap</h2>
+<p><code>tmap</code> offers versatility not only for creating static maps as we see above but it also allows us to make customised interactive maps conveniently by simply changing the mode of operation from static to dynamic using <code>tmap_mode()</code></p>
 
 </div>
 </div>
