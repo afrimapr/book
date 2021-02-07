@@ -40,3 +40,8 @@ visualising2
 case-study1
 health-facility-locations-probably
 case-study2
+template
+overall-goal-of-the-chapter
+episode-1-topic-1
+episode-2-topic-2
+episode-3-topic-3
