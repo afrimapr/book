@@ -41,8 +41,9 @@ case-study1
 health-facility-locations-probably
 case-study2
 template
+linking-section-1
 overall-goal-of-the-chapter
 episode-1-topic-1
 episode-2-topic-2
 episode-3-topic-3
-feedback-request-on-what-was-useful-to-the-reader-learner-and-what-can-be-improved
+linking-section-2
