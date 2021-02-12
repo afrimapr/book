@@ -16,7 +16,6 @@ basic-objects-and-data-structures
 vector
 matrix
 data-frame
-formats-of-spatial-data-content-extensions
 data-types
 points-e.g.-cities
 lines-e.g.-roads
