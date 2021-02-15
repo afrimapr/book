@@ -145,16 +145,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="rrecap.html"><a href="rrecap.html#creating-naming-and-saving-a-new-r-script"><i class="fa fa-check"></i><b>3.2</b> Creating, naming and saving a new R script</a></li>
 <li class="chapter" data-level="3.3" data-path="rrecap.html"><a href="rrecap.html#executing-the-code"><i class="fa fa-check"></i><b>3.3</b> Executing the code</a></li>
 <li class="chapter" data-level="3.4" data-path="rrecap.html"><a href="rrecap.html#install-and-load-packages"><i class="fa fa-check"></i><b>3.4</b> Install and load packages</a></li>
-<li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#basic-data-types"><i class="fa fa-check"></i><b>3.5</b> Basic data types</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="rrecap.html"><a href="rrecap.html#numeric-and-integer"><i class="fa fa-check"></i><b>3.5.1</b> Numeric and integer</a></li>
-<li class="chapter" data-level="3.5.2" data-path="rrecap.html"><a href="rrecap.html#characters"><i class="fa fa-check"></i><b>3.5.2</b> Characters</a></li>
-<li class="chapter" data-level="3.5.3" data-path="rrecap.html"><a href="rrecap.html#logical"><i class="fa fa-check"></i><b>3.5.3</b> Logical</a></li>
-<li class="chapter" data-level="3.5.4" data-path="rrecap.html"><a href="rrecap.html#factors"><i class="fa fa-check"></i><b>3.5.4</b> Factors</a></li>
+<li class="chapter" data-level="3.5" data-path="rrecap.html"><a href="rrecap.html#load-data"><i class="fa fa-check"></i><b>3.5</b> Load data</a></li>
+<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#basic-data-types"><i class="fa fa-check"></i><b>3.6</b> Basic data types</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="rrecap.html"><a href="rrecap.html#numeric-and-integer"><i class="fa fa-check"></i><b>3.6.1</b> Numeric and integer</a></li>
+<li class="chapter" data-level="3.6.2" data-path="rrecap.html"><a href="rrecap.html#characters"><i class="fa fa-check"></i><b>3.6.2</b> Characters</a></li>
+<li class="chapter" data-level="3.6.3" data-path="rrecap.html"><a href="rrecap.html#logical"><i class="fa fa-check"></i><b>3.6.3</b> Logical</a></li>
+<li class="chapter" data-level="3.6.4" data-path="rrecap.html"><a href="rrecap.html#factors"><i class="fa fa-check"></i><b>3.6.4</b> Factors</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="rrecap.html"><a href="rrecap.html#basic-objects-and-data-structures"><i class="fa fa-check"></i><b>3.6</b> Basic objects and data structures</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.6.1</b> Vector</a></li>
-<li class="chapter" data-level="3.6.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.6.2</b> Matrix</a></li>
-<li class="chapter" data-level="3.6.3" data-path="rrecap.html"><a href="rrecap.html#data-frame"><i class="fa fa-check"></i><b>3.6.3</b> Data frame</a></li>
+<li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#basic-objects-and-data-structures"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
+<li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.7.2</b> Matrix</a></li>
+<li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#data-frame"><i class="fa fa-check"></i><b>3.7.3</b> Data frame</a></li>
+<li class="chapter" data-level="3.7.4" data-path="rrecap.html"><a href="rrecap.html#getting-help-with-r"><i class="fa fa-check"></i><b>3.7.4</b> Getting help with R</a></li>
+<li class="chapter" data-level="3.7.5" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.7.5</b> Wrap up</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types focusing on real examples: cities, roads, admin boundaries, surfaces</a><ul>
@@ -227,6 +230,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>import data set into R space</li>
 <li>identify and characterise different data types</li>
 <li>classify and contrast various data structures</li>
+<li>accessing and using <code>help</code> within R</li>
 </ul>
 <div id="setting-working-directory" class="section level2">
 <h2><span class="header-section-number">3.1</span> Setting working directory</h2>
@@ -285,9 +289,11 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p>To download and install packages directly from remote repositories such as GitHub, we can use previously loaded <code>remote</code> package and load them as usual:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span>
 <span id="cb10-2"><a href="rrecap.html#cb10-2"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
-<p>In the example, above we use double-colon operator <em>::</em> to call function <code>install_github</code> from name space <em>remotes</em>. Only functions which are included in the packages can be retrieved in this manner.
-## Load data
-There are different approaches that can be used to import your data sets, depending on where the data is located and in what file type it is stored. The easiest case is when the data set is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/>
+<p>In the example, above we use double-colon operator <em>::</em> to call function <code>install_github</code> from name space<code>remotes</code>. Only functions which are included in the packages can be retrieved in this manner.</p>
+</div>
+<div id="load-data" class="section level2">
+<h2><span class="header-section-number">3.5</span> Load data</h2>
+<p>There are different approaches that can be used to import your data sets, depending on where the data is located and in what file type it is stored. The easiest case is when the data set is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/>
 For example, install packages containing data set:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
 <p>Load them:</p>
@@ -307,7 +313,7 @@ For example, install packages containing data set:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="rrecap.html#cb16-1"></a>dataset &lt;-<span class="st"> </span>africapitals</span></code></pre></div>
 </div>
 <div id="basic-data-types" class="section level2">
-<h2><span class="header-section-number">3.5</span> Basic data types</h2>
+<h2><span class="header-section-number">3.6</span> Basic data types</h2>
 <p>In this section we explore a basic set of possible object types that you can encounter in a dataframe. The division presented below is based on the types of values that data (object) stores. The most popular data types are:</p>
 <ul>
 <li>Numeric</li>
@@ -331,7 +337,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p><strong>Hint</strong>: To assign a value to an object two operators can be used interchangeably: <code>&lt;-</code> or <code>=</code>.</p>
 </div>
 <div id="numeric-and-integer" class="section level3">
-<h3><span class="header-section-number">3.5.1</span> Numeric and integer</h3>
+<h3><span class="header-section-number">3.6.1</span> Numeric and integer</h3>
 <p><em>Numeric data</em> stores real numbers. This means that the object <code>x</code> from above is in fact 11.000000, where the zeros are not printed, by default. It is also possible to store value as whole number in a class object called <code>integer</code>. An integer can be created from a <code>numeric</code> object in the following way:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="rrecap.html#cb21-1"></a>x &lt;-<span class="st"> </span><span class="fl">13.5</span></span>
 <span id="cb21-2"><a href="rrecap.html#cb21-2"></a>z &lt;-<span class="st"> </span><span class="kw">as.integer</span>(x)</span>
@@ -340,7 +346,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p>Please note, even though the numeric value is a decimal number the integer by default rounds downwards, hence both <em>13.1</em> and <em>13.9</em> will result in integer equal <em>13</em>.</p>
 </div>
 <div id="characters" class="section level3">
-<h3><span class="header-section-number">3.5.2</span> Characters</h3>
+<h3><span class="header-section-number">3.6.2</span> Characters</h3>
 <p>Character objects store text, usually referred to as a <code>string</code>. String can be a letter, word or even a sentence.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="rrecap.html#cb23-1"></a>x &lt;-<span class="st"> &quot;adult&quot;</span> </span>
 <span id="cb23-2"><a href="rrecap.html#cb23-2"></a>y &lt;-<span class="st"> &quot;A&quot;</span></span>
@@ -359,7 +365,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="logical" class="section level3">
-<h3><span class="header-section-number">3.5.3</span> Logical</h3>
+<h3><span class="header-section-number">3.6.3</span> Logical</h3>
 <p>Logical objects can take values <code>TRUE</code> or <code>FALSE</code>, where <code>TRUE</code> is an equivalent of 1 whereas <code>FALSE</code> is an equivalent of 0. In these sense, they can be thought of as numerical values.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rrecap.html#cb30-1"></a>x &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
 <span id="cb30-2"><a href="rrecap.html#cb30-2"></a>y &lt;-<span class="st"> </span><span class="dv">3</span><span class="op">+</span><span class="ot">TRUE</span></span>
@@ -373,7 +379,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <pre><code>## [1] TRUE</code></pre>
 </div>
 <div id="factors" class="section level3">
-<h3><span class="header-section-number">3.5.4</span> Factors</h3>
+<h3><span class="header-section-number">3.6.4</span> Factors</h3>
 <p>Factors are categorical variables with associated <code>levels</code>. They can store both, numbers:</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rrecap.html#cb36-1"></a>a &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">times=</span><span class="dv">3</span>) <span class="co"># create a vector of numbers from 1 to 3, repeated 3 times</span></span>
 <span id="cb36-2"><a href="rrecap.html#cb36-2"></a>a &lt;-<span class="st"> </span><span class="kw">as.factor</span>(a)</span>
@@ -390,10 +396,10 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 </div>
 <div id="basic-objects-and-data-structures" class="section level2">
-<h2><span class="header-section-number">3.6</span> Basic objects and data structures</h2>
+<h2><span class="header-section-number">3.7</span> Basic objects and data structures</h2>
 <p>In this section we explain the basic data structures that we often work with in R. These include a vector, list, matrix and a data frame.</p>
 <div id="vector" class="section level3">
-<h3><span class="header-section-number">3.6.1</span> Vector</h3>
+<h3><span class="header-section-number">3.7.1</span> Vector</h3>
 <p>Vector is a one dimensional structure which contains elements of the same type. Usually a <code>combine</code> function is used to create a vector such that:</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="rrecap.html#cb40-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
 <p>It is also possible to create a vector with text-based objects, for example with capitals from our <code>afrilearndata</code>:</p>
@@ -415,7 +421,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
 <div id="matrix" class="section level3">
-<h3><span class="header-section-number">3.6.2</span> Matrix</h3>
+<h3><span class="header-section-number">3.7.2</span> Matrix</h3>
 <p>Matrix can be though of as an upgraded version of a vector, where vector is an one-dimensional array and two-dimensional array. We can create a matrix that has three columns and five rows with the following:</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rrecap.html#cb46-1"></a><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dt">ncol=</span><span class="dv">3</span>, <span class="dt">nrow=</span><span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
@@ -435,7 +441,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ## [3,] &quot;juice&quot; &quot;3&quot;</code></pre>
 </div>
 <div id="data-frame" class="section level3">
-<h3><span class="header-section-number">3.6.3</span> Data frame</h3>
+<h3><span class="header-section-number">3.7.3</span> Data frame</h3>
 <p>Data frame is a two dimensional array, similar to a matrix. However, it can contain different data types, unlike matrix. Beyond, columns as well as rows within the data frame are named. In a data frame a column is a variable and row is an observation. You can create a simple data frame with two columns and three rows, using vectors above, with <code>data.frame</code> function:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="rrecap.html#cb50-1"></a><span class="kw">data.frame</span>(vector1, vector2)</span></code></pre></div>
 <pre><code>##   vector1 vector2
@@ -455,6 +461,15 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb56-2"><a href="rrecap.html#cb56-2"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;amount&quot;</span></span>
 <span id="cb56-3"><a href="rrecap.html#cb56-3"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;drinks&quot; &quot;amount&quot;</code></pre>
+</div>
+<div id="getting-help-with-r" class="section level3">
+<h3><span class="header-section-number">3.7.4</span> Getting help with R</h3>
+<p>R is a very powerful software with many different packages and functions which are continuously being developed and added. Therefore, it is difficult, if not impossible, to be familiar with all the packages and functions that are currently available.
+To get help with different functions and packages
+R provides an extensive documentation <code>help()</code> function in R provides ex</p>
+</div>
+<div id="wrap-up" class="section level3">
+<h3><span class="header-section-number">3.7.5</span> Wrap up</h3>
 
 </div>
 </div>
