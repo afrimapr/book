@@ -156,9 +156,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
 <li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.7.2</b> Matrix</a></li>
 <li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#data-frame"><i class="fa fa-check"></i><b>3.7.3</b> Data frame</a></li>
-<li class="chapter" data-level="3.7.4" data-path="rrecap.html"><a href="rrecap.html#getting-help-with-r"><i class="fa fa-check"></i><b>3.7.4</b> Getting help with R</a></li>
-<li class="chapter" data-level="3.7.5" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.7.5</b> Wrap up</a></li>
 </ul></li>
+<li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#getting-help-with-r-help"><i class="fa fa-check"></i><b>3.8</b> Getting help with R Help</a></li>
+<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.9</b> Wrap up</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types focusing on real examples: cities, roads, admin boundaries, surfaces</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#points-e.g.-cities"><i class="fa fa-check"></i><b>4.1</b> Points e.g. cities</a></li>
@@ -462,16 +462,22 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb56-3"><a href="rrecap.html#cb56-3"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;drinks&quot; &quot;amount&quot;</code></pre>
 </div>
-<div id="getting-help-with-r" class="section level3">
-<h3><span class="header-section-number">3.7.4</span> Getting help with R</h3>
-<p>R is a very powerful software with many different packages and functions which are continuously being developed and added. Therefore, it is difficult, if not impossible, to be familiar with all the packages and functions that are currently available. Hence, in order to learn more about
-To get help with different functions and packages
-R provides an extensive documentation <code>help()</code> function in R provides ex</p>
 </div>
-<div id="wrap-up" class="section level3">
-<h3><span class="header-section-number">3.7.5</span> Wrap up</h3>
+<div id="getting-help-with-r-help" class="section level2">
+<h2><span class="header-section-number">3.8</span> Getting help with R Help</h2>
+<p>R is a powerful software with many different packages and functions which are continuously developed and added. Therefore, it is difficult, if not impossible, to be familiar with all the functions that are currently available. Hence, in order to learn more about them R provides extensive documentation which can be accessed with <code>help()</code> function, <code>? operator</code> or by clicking in <em>Help</em> panel in the bottom-right corner. For example, to learn what is matrix:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="rrecap.html#cb58-1"></a><span class="kw">help</span>(matrix)</span></code></pre></div>
+<p>Alternatively, it is possible to use <code>?</code> in front of the searched item and the R documentation will appear in right-bottom pane. For example, to read more on how to use help function itself we can use:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="rrecap.html#cb59-1"></a>?help</span></code></pre></div>
+<p>Importantly, in order to get help regarding objects with unusual names such as the operators, it is necessary to use quotation marks:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="rrecap.html#cb60-1"></a>?<span class="st">&quot;&amp;&quot;</span></span>
+<span id="cb60-2"><a href="rrecap.html#cb60-2"></a></span>
+<span id="cb60-3"><a href="rrecap.html#cb60-3"></a><span class="kw">help</span>(<span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<p>Finally, the Internet also provides several reliable sources such as official <a href="r-project.org">R website</a> or <a href="rdocumentation.org">documentation pages</a> where you can find help.</p>
+</div>
+<div id="wrap-up" class="section level2">
+<h2><span class="header-section-number">3.9</span> Wrap up</h2>
 
-</div>
 </div>
 </div>
             </section>

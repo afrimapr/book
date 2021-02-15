@@ -16,7 +16,7 @@ basic-objects-and-data-structures
 vector
 matrix
 data-frame
-getting-help-with-r
+getting-help-with-r-help
 wrap-up
 data-types
 points-e.g.-cities
