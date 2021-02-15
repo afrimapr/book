@@ -293,14 +293,14 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 <div id="load-data" class="section level2">
 <h2><span class="header-section-number">3.5</span> Load data</h2>
-<p>There are different approaches that can be used to import your data sets, depending on where the data is located and in what file type it is stored. The easiest case is when the data set is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/>
-For example, install packages containing data set:</p>
+<p>There are different approaches that can be used to import your data sets, depending on where the data is located and in what file type it is stored. The easiest case is when the data set is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/></p>
+<p>For example, install packages containing data set:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
 <p>Load them:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rrecap.html#cb12-1"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
-<p>To view what datasets are available in a given package:</p>
+<p>To view what data sets are available in a given package:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rrecap.html#cb13-1"></a><span class="kw">data</span>(<span class="dt">package=</span><span class="st">&quot;afrilearndata&quot;</span>)</span></code></pre></div>
-<p>We can view and explore the <code>africapitals</code> dataset using:</p>
+<p>We can view and explore the <code>africapitals</code> data set using:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="rrecap.html#cb14-1"></a><span class="kw">head</span>(africapitals)</span></code></pre></div>
 <pre><code>##       capitalname countryname     pop iso3c      geometry
 ## 280         Abuja     Nigeria  178462   NGA    7.17, 9.18
@@ -464,7 +464,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 <div id="getting-help-with-r" class="section level3">
 <h3><span class="header-section-number">3.7.4</span> Getting help with R</h3>
-<p>R is a very powerful software with many different packages and functions which are continuously being developed and added. Therefore, it is difficult, if not impossible, to be familiar with all the packages and functions that are currently available.
+<p>R is a very powerful software with many different packages and functions which are continuously being developed and added. Therefore, it is difficult, if not impossible, to be familiar with all the packages and functions that are currently available. Hence, in order to learn more about
 To get help with different functions and packages
 R provides an extensive documentation <code>help()</code> function in R provides ex</p>
 </div>
