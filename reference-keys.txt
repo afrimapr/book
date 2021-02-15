@@ -6,7 +6,6 @@ setting-working-directory
 creating-naming-and-saving-a-new-r-script
 executing-the-code
 install-and-load-packages
-load-data
 basic-data-types
 numeric-and-integer
 characters
