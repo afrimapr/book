@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Visualising spatial data part 1: tmap and mapview | The afrimapr book</title>
+  <title>Chapter 4 Visualising spatial data part 1: tmap and mapview | The afrimapr book</title>
   <meta name="description" content="An introduction to making maps from African data in R." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Visualising spatial data part 1: tmap and mapview | The afrimapr book" />
+  <meta property="og:title" content="Chapter 4 Visualising spatial data part 1: tmap and mapview | The afrimapr book" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Visualising spatial data part 1: tmap and mapview | The afrimapr book" />
+  <meta name="twitter:title" content="Chapter 4 Visualising spatial data part 1: tmap and mapview | The afrimapr book" />
   
   <meta name="twitter:description" content="An introduction to making maps from African data in R." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="The afrimapr team" />
 
 
-<meta name="date" content="2021-02-15" />
+<meta name="date" content="2021-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-types.html"/>
+<link rel="prev" href="rrecap.html"/>
 <link rel="next" href="shiny.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -159,45 +159,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#getting-help-with-r-help"><i class="fa fa-check"></i><b>3.8</b> Getting help with R Help</a></li>
 <li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.9</b> Wrap up</a></li>
+<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#overall-goal-of-the-chapter"><i class="fa fa-check"></i><b>3.10</b> Overall goal of the chapter</a></li>
+<li class="chapter" data-level="3.11" data-path="rrecap.html"><a href="rrecap.html#episode-1-points-cities"><i class="fa fa-check"></i><b>3.11</b> Episode 1: points (cities)</a></li>
+<li class="chapter" data-level="3.12" data-path="rrecap.html"><a href="rrecap.html#episode-2-lines-e.g.-roads"><i class="fa fa-check"></i><b>3.12</b> Episode 2: Lines e.g. roads</a></li>
+<li class="chapter" data-level="3.13" data-path="rrecap.html"><a href="rrecap.html#episode-3-polygons-e.g.-admin-boundaries"><i class="fa fa-check"></i><b>3.13</b> Episode 3: Polygons e.g. admin boundaries</a></li>
+<li class="chapter" data-level="3.14" data-path="rrecap.html"><a href="rrecap.html#episode-4-raster-e.g.-modelled-population-estimates"><i class="fa fa-check"></i><b>3.14</b> Episode 4: Raster e.g. modelled population estimates</a></li>
+<li class="chapter" data-level="3.15" data-path="rrecap.html"><a href="rrecap.html#summarykey-points"><i class="fa fa-check"></i><b>3.15</b> Summary/key points</a></li>
+<li class="chapter" data-level="3.16" data-path="rrecap.html"><a href="rrecap.html#further-resources"><i class="fa fa-check"></i><b>3.16</b> Further resources</a></li>
+<li class="chapter" data-level="3.17" data-path="rrecap.html"><a href="rrecap.html#feedback"><i class="fa fa-check"></i><b>3.17</b> Feedback</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types focusing on real examples: cities, roads, admin boundaries, surfaces</a><ul>
-<li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#points-e.g.-cities"><i class="fa fa-check"></i><b>4.1</b> Points e.g. cities</a></li>
-<li class="chapter" data-level="4.2" data-path="data-types.html"><a href="data-types.html#lines-e.g.-roads"><i class="fa fa-check"></i><b>4.2</b> Lines e.g. roads</a></li>
-<li class="chapter" data-level="4.3" data-path="data-types.html"><a href="data-types.html#polygons-e.g.-admin-boundaries"><i class="fa fa-check"></i><b>4.3</b> Polygons e.g. admin boundaries</a></li>
-<li class="chapter" data-level="4.4" data-path="data-types.html"><a href="data-types.html#raster-e.g.-modelled-population-estimates"><i class="fa fa-check"></i><b>4.4</b> Raster e.g. modelled population estimates</a></li>
+<li class="chapter" data-level="4" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>4</b> Visualising spatial data part 1: tmap and mapview</a><ul>
+<li class="chapter" data-level="4.1" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>4.1</b> Quick interactive maps with mapview</a></li>
+<li class="chapter" data-level="4.2" data-path="visualising1.html"><a href="visualising1.html#static-maps-with-tmap"><i class="fa fa-check"></i><b>4.2</b> Static maps with tmap</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="visualising1.html"><a href="visualising1.html#layers-for-the-static-maps"><i class="fa fa-check"></i><b>4.2.1</b> Layers for the static maps</a></li>
+<li class="chapter" data-level="4.2.2" data-path="visualising1.html"><a href="visualising1.html#colour-pallet"><i class="fa fa-check"></i><b>4.2.2</b> Colour pallet</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: tmap and mapview</a><ul>
-<li class="chapter" data-level="5.1" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>5.1</b> Quick interactive maps with mapview</a></li>
-<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#static-maps-with-tmap"><i class="fa fa-check"></i><b>5.2</b> Static maps with tmap</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="visualising1.html"><a href="visualising1.html#layers-for-the-static-maps"><i class="fa fa-check"></i><b>5.2.1</b> Layers for the static maps</a></li>
-<li class="chapter" data-level="5.2.2" data-path="visualising1.html"><a href="visualising1.html#colour-pallet"><i class="fa fa-check"></i><b>5.2.2</b> Colour pallet</a></li>
+<li class="chapter" data-level="4.3" data-path="visualising1.html"><a href="visualising1.html#interactive-maps-with-tmap"><i class="fa fa-check"></i><b>4.3</b> Interactive maps with tmap</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="visualising1.html"><a href="visualising1.html#interactive-maps-with-tmap"><i class="fa fa-check"></i><b>5.3</b> Interactive maps with tmap</a></li>
+<li class="chapter" data-level="5" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>5</b> Shiny interactive map applications</a></li>
+<li class="chapter" data-level="6" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>6</b> Sources of data</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="data-sources.html"><a href="data-sources.html#hdx"><i class="fa fa-check"></i><b>6.0.1</b> HDX</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>6</b> Shiny interactive map applications</a></li>
-<li class="chapter" data-level="7" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>7</b> Sources of data</a><ul>
-<li class="chapter" data-level="7.0.1" data-path="data-sources.html"><a href="data-sources.html#hdx"><i class="fa fa-check"></i><b>7.0.1</b> HDX</a></li>
+<li class="chapter" data-level="7" data-path="joining.html"><a href="joining.html"><i class="fa fa-check"></i><b>7</b> Join non-spatial data onto spatial</a></li>
+<li class="chapter" data-level="8" data-path="raster.html"><a href="raster.html"><i class="fa fa-check"></i><b>8</b> Raster manipulation</a></li>
+<li class="chapter" data-level="9" data-path="openstreetmap.html"><a href="openstreetmap.html"><i class="fa fa-check"></i><b>9</b> OpenStreetMap data</a></li>
+<li class="chapter" data-level="10" data-path="data-editing.html"><a href="data-editing.html"><i class="fa fa-check"></i><b>10</b> Creating and editing spatial data</a><ul>
+<li class="chapter" data-level="10.1" data-path="data-editing.html"><a href="data-editing.html#create-a-vector-file-from-scratch"><i class="fa fa-check"></i><b>10.1</b> Create a vector file from scratch</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="joining.html"><a href="joining.html"><i class="fa fa-check"></i><b>8</b> Join non-spatial data onto spatial</a></li>
-<li class="chapter" data-level="9" data-path="raster.html"><a href="raster.html"><i class="fa fa-check"></i><b>9</b> Raster manipulation</a></li>
-<li class="chapter" data-level="10" data-path="openstreetmap.html"><a href="openstreetmap.html"><i class="fa fa-check"></i><b>10</b> OpenStreetMap data</a></li>
-<li class="chapter" data-level="11" data-path="data-editing.html"><a href="data-editing.html"><i class="fa fa-check"></i><b>11</b> Creating and editing spatial data</a><ul>
-<li class="chapter" data-level="11.1" data-path="data-editing.html"><a href="data-editing.html#create-a-vector-file-from-scratch"><i class="fa fa-check"></i><b>11.1</b> Create a vector file from scratch</a></li>
+<li class="chapter" data-level="11" data-path="visualising2.html"><a href="visualising2.html"><i class="fa fa-check"></i><b>11</b> Visualising spatial data part 2</a></li>
+<li class="chapter" data-level="12" data-path="case-study1.html"><a href="case-study1.html"><i class="fa fa-check"></i><b>12</b> Case study 1</a><ul>
+<li class="chapter" data-level="12.1" data-path="case-study1.html"><a href="case-study1.html#health-facility-locations-probably"><i class="fa fa-check"></i><b>12.1</b> Health facility locations (probably)</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="visualising2.html"><a href="visualising2.html"><i class="fa fa-check"></i><b>12</b> Visualising spatial data part 2</a></li>
-<li class="chapter" data-level="13" data-path="case-study1.html"><a href="case-study1.html"><i class="fa fa-check"></i><b>13</b> Case study 1</a><ul>
-<li class="chapter" data-level="13.1" data-path="case-study1.html"><a href="case-study1.html#health-facility-locations-probably"><i class="fa fa-check"></i><b>13.1</b> Health facility locations (probably)</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="case-study2.html"><a href="case-study2.html"><i class="fa fa-check"></i><b>14</b> Case study 2</a></li>
+<li class="chapter" data-level="13" data-path="case-study2.html"><a href="case-study2.html"><i class="fa fa-check"></i><b>13</b> Case study 2</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="15" data-path="template.html"><a href="template.html"><i class="fa fa-check"></i><b>15</b> Template chapter</a><ul>
-<li class="chapter" data-level="15.1" data-path="template.html"><a href="template.html#linking-section-1"><i class="fa fa-check"></i><b>15.1</b> Linking section 1</a></li>
-<li class="chapter" data-level="15.2" data-path="template.html"><a href="template.html#overall-goal-of-the-chapter"><i class="fa fa-check"></i><b>15.2</b> Overall goal of the chapter</a></li>
-<li class="chapter" data-level="15.3" data-path="template.html"><a href="template.html#episode-1-topic-1"><i class="fa fa-check"></i><b>15.3</b> Episode 1 (topic 1)</a></li>
-<li class="chapter" data-level="15.4" data-path="template.html"><a href="template.html#episode-2-topic-2"><i class="fa fa-check"></i><b>15.4</b> Episode 2 (topic 2)</a></li>
-<li class="chapter" data-level="15.5" data-path="template.html"><a href="template.html#episode-3-topic-3"><i class="fa fa-check"></i><b>15.5</b> Episode 3 (topic 3)</a></li>
-<li class="chapter" data-level="15.6" data-path="template.html"><a href="template.html#linking-section-2"><i class="fa fa-check"></i><b>15.6</b> Linking section 2</a></li>
-<li class="chapter" data-level="15.7" data-path="template.html"><a href="template.html#feedback-request-on-what-was-useful-to-the-reader-learner-and-what-can-be-improved"><i class="fa fa-check"></i><b>15.7</b> Feedback request on what was useful to the reader (learner) and what can be improved</a></li>
+<li class="chapter" data-level="14" data-path="template.html"><a href="template.html"><i class="fa fa-check"></i><b>14</b> Template chapter</a><ul>
+<li class="chapter" data-level="14.1" data-path="template.html"><a href="template.html#linking-section-1"><i class="fa fa-check"></i><b>14.1</b> Linking section 1</a></li>
+<li class="chapter" data-level="14.2" data-path="template.html"><a href="template.html#overall-goal-of-the-chapter-1"><i class="fa fa-check"></i><b>14.2</b> Overall goal of the chapter</a></li>
+<li class="chapter" data-level="14.3" data-path="template.html"><a href="template.html#episode-1-topic-1"><i class="fa fa-check"></i><b>14.3</b> Episode 1 (topic 1)</a></li>
+<li class="chapter" data-level="14.4" data-path="template.html"><a href="template.html#episode-2-topic-2"><i class="fa fa-check"></i><b>14.4</b> Episode 2 (topic 2)</a></li>
+<li class="chapter" data-level="14.5" data-path="template.html"><a href="template.html#episode-3-topic-3"><i class="fa fa-check"></i><b>14.5</b> Episode 3 (topic 3)</a></li>
+<li class="chapter" data-level="14.6" data-path="template.html"><a href="template.html#linking-section-2"><i class="fa fa-check"></i><b>14.6</b> Linking section 2</a></li>
+<li class="chapter" data-level="14.7" data-path="template.html"><a href="template.html#feedback-request-on-what-was-useful-to-the-reader-learner-and-what-can-be-improved"><i class="fa fa-check"></i><b>14.7</b> Feedback request on what was useful to the reader (learner) and what can be improved</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/afrimapr/book" target="blank">Published with bookdown</a></li>
@@ -220,29 +222,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="visualising1" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Visualising spatial data part 1: tmap and mapview</h1>
+<h1><span class="header-section-number">Chapter 4</span> Visualising spatial data part 1: tmap and mapview</h1>
 <p>In this section we will visualise spatial data, in particular we will use <code>tmap</code> and <code>mapview</code> to crate both static and interactive maps. This chapter requires the following packages (some of them we used already):</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="visualising1.html#cb63-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb63-2"><a href="visualising1.html#cb63-2"></a>  <span class="st">&quot;mapview&quot;</span>,            <span class="co"># map-making package for interactive maps</span></span>
-<span id="cb63-3"><a href="visualising1.html#cb63-3"></a>  <span class="st">&quot;tmap&quot;</span>,               <span class="co"># map-making package for static and interactive maps</span></span>
-<span id="cb63-4"><a href="visualising1.html#cb63-4"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
-<span id="cb63-5"><a href="visualising1.html#cb63-5"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
-<span id="cb63-6"><a href="visualising1.html#cb63-6"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
-<span id="cb63-7"><a href="visualising1.html#cb63-7"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
-<span id="cb63-8"><a href="visualising1.html#cb63-8"></a>  )</span>
-<span id="cb63-9"><a href="visualising1.html#cb63-9"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span>
-<span id="cb63-10"><a href="visualising1.html#cb63-10"></a><span class="co">#remotes::install_github(&quot;afrimapr/afrilearndata&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="visualising1.html#cb94-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb94-2"><a href="visualising1.html#cb94-2"></a>  <span class="st">&quot;mapview&quot;</span>,            <span class="co"># map-making package for interactive maps</span></span>
+<span id="cb94-3"><a href="visualising1.html#cb94-3"></a>  <span class="st">&quot;tmap&quot;</span>,               <span class="co"># map-making package for static and interactive maps</span></span>
+<span id="cb94-4"><a href="visualising1.html#cb94-4"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
+<span id="cb94-5"><a href="visualising1.html#cb94-5"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
+<span id="cb94-6"><a href="visualising1.html#cb94-6"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
+<span id="cb94-7"><a href="visualising1.html#cb94-7"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
+<span id="cb94-8"><a href="visualising1.html#cb94-8"></a>  )</span>
+<span id="cb94-9"><a href="visualising1.html#cb94-9"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span>
+<span id="cb94-10"><a href="visualising1.html#cb94-10"></a><span class="co">#remotes::install_github(&quot;afrimapr/afrilearndata&quot;)</span></span></code></pre></div>
 <p>Next, we need to load the packages:</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="visualising1.html#cb64-1"></a><span class="kw">library</span>(tmap)</span>
-<span id="cb64-2"><a href="visualising1.html#cb64-2"></a><span class="kw">library</span>(mapview)</span>
-<span id="cb64-3"><a href="visualising1.html#cb64-3"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb64-4"><a href="visualising1.html#cb64-4"></a><span class="kw">library</span>(sf)</span>
-<span id="cb64-5"><a href="visualising1.html#cb64-5"></a><span class="kw">library</span>(afrilearndata)</span>
-<span id="cb64-6"><a href="visualising1.html#cb64-6"></a><span class="kw">library</span>(rnaturalearth)</span>
-<span id="cb64-7"><a href="visualising1.html#cb64-7"></a><span class="kw">library</span>(rnaturalearthdata)</span>
-<span id="cb64-8"><a href="visualising1.html#cb64-8"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="visualising1.html#cb95-1"></a><span class="kw">library</span>(tmap)</span>
+<span id="cb95-2"><a href="visualising1.html#cb95-2"></a><span class="kw">library</span>(mapview)</span>
+<span id="cb95-3"><a href="visualising1.html#cb95-3"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb95-4"><a href="visualising1.html#cb95-4"></a><span class="kw">library</span>(sf)</span>
+<span id="cb95-5"><a href="visualising1.html#cb95-5"></a><span class="kw">library</span>(afrilearndata)</span>
+<span id="cb95-6"><a href="visualising1.html#cb95-6"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb95-7"><a href="visualising1.html#cb95-7"></a><span class="kw">library</span>(rnaturalearthdata)</span>
+<span id="cb95-8"><a href="visualising1.html#cb95-8"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 <div id="quick-interactive-maps-with-mapview" class="section level2">
-<h2><span class="header-section-number">5.1</span> Quick interactive maps with mapview</h2>
+<h2><span class="header-section-number">4.1</span> Quick interactive maps with mapview</h2>
 <p><code>Mapview package</code> allows quickly and easily create interactive maps of spatial data. Therefore, it is useful when we want to quickly explore the data visually without excessive care about the quality of the presentation. However, if we need static maps or interactive maps which are more elaborate we might want to consider other options such as <code>tmap package</code> which will be presented later in this chapter.<br/></p>
 <p>The typical spatial objects types supported by <code>mapview</code> package are:</p>
 <ul>
@@ -250,32 +252,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>raster</li>
 <li>sp</li>
 </ul>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="visualising1.html#cb65-1"></a><span class="co">#mapview(africountries)</span></span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="visualising1.html#cb96-1"></a><span class="co">#mapview(africountries)</span></span></code></pre></div>
 </div>
 <div id="static-maps-with-tmap" class="section level2">
-<h2><span class="header-section-number">5.2</span> Static maps with tmap</h2>
+<h2><span class="header-section-number">4.2</span> Static maps with tmap</h2>
 <p>In this section we will explore the possibilities of <code>tmap</code> in creating static maps, which is a flexible, yet user-friendly package. Its syntax is similar to <code>ggplot2</code> (plot-making package), where additional features of the map are simply build up on top of the basic structure. It will be demonstrated below, where we will start off with a simple contour map and then we will add more</p>
 <p>Create a dataset</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="visualising1.html#cb66-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="visualising1.html#cb97-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 <p>Create an empty contour map of the continent</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="visualising1.html#cb67-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb67-2"><a href="visualising1.html#cb67-2"></a><span class="st">  </span><span class="kw">tm_borders</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="visualising1.html#cb98-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb98-2"><a href="visualising1.html#cb98-2"></a><span class="st">  </span><span class="kw">tm_borders</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
 <div id="layers-for-the-static-maps" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> Layers for the static maps</h3>
+<h3><span class="header-section-number">4.2.1</span> Layers for the static maps</h3>
 <p>Fill map using data on last census data and add labels for country names</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="visualising1.html#cb68-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb68-2"><a href="visualising1.html#cb68-2"></a><span class="st">  </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
-<span id="cb68-3"><a href="visualising1.html#cb68-3"></a><span class="st">  </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
-<span id="cb68-4"><a href="visualising1.html#cb68-4"></a><span class="st">  </span><span class="kw">tm_text</span>(<span class="st">&quot;admin&quot;</span>, <span class="dt">size =</span> <span class="fl">0.52</span>,  <span class="dt">fontface=</span><span class="st">&quot;bold&quot;</span>, <span class="dt">auto.placement =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="visualising1.html#cb99-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb99-2"><a href="visualising1.html#cb99-2"></a><span class="st">  </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
+<span id="cb99-3"><a href="visualising1.html#cb99-3"></a><span class="st">  </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
+<span id="cb99-4"><a href="visualising1.html#cb99-4"></a><span class="st">  </span><span class="kw">tm_text</span>(<span class="st">&quot;admin&quot;</span>, <span class="dt">size =</span> <span class="fl">0.52</span>,  <span class="dt">fontface=</span><span class="st">&quot;bold&quot;</span>, <span class="dt">auto.placement =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
 </div>
 <div id="colour-pallet" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Colour pallet</h3>
+<h3><span class="header-section-number">4.2.2</span> Colour pallet</h3>
 </div>
 </div>
 <div id="interactive-maps-with-tmap" class="section level2">
-<h2><span class="header-section-number">5.3</span> Interactive maps with tmap</h2>
+<h2><span class="header-section-number">4.3</span> Interactive maps with tmap</h2>
 <p><code>tmap</code> offers versatility not only for creating static maps as we see above but it also allows us to make customised interactive maps conveniently by simply changing the mode of operation from static to dynamic using <code>tmap_mode()</code></p>
 
 </div>
@@ -285,7 +287,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rrecap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
