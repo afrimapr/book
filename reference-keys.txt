@@ -18,6 +18,7 @@ matrix
 data-frame
 getting-help-with-r-help
 wrap-up
+data-types
 overall-goal-of-the-chapter
 episode-1-points-cities
 episode-2-lines-e.g.-roads
