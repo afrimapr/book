@@ -18,6 +18,7 @@ matrix
 data-frame
 getting-help-with-r-help
 wrap-up
+feedback
 data-types
 overall-goal-of-the-chapter
 episode-1-points-cities
@@ -26,7 +27,7 @@ episode-3-polygons-e.g.-admin-boundaries
 episode-4-raster-e.g.-modelled-population-estimates
 summarykey-points
 further-resources
-feedback
+feedback-1
 visualising1
 quick-interactive-maps-with-mapview
 static-maps-with-tmap
