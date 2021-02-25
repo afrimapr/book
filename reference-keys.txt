@@ -43,6 +43,7 @@ user-story
 further-resources
 feedback-1
 visualising1
+overall-goal-of-the-chapter-1
 quick-interactive-maps-with-mapview
 static-maps-with-tmap
 layers-for-the-static-maps
@@ -62,7 +63,7 @@ health-facility-locations-probably
 case-study2
 template
 linking-section-1
-overall-goal-of-the-chapter-1
+overall-goal-of-the-chapter-2
 episode-1-topic-1
 episode-2-topic-2
 episode-3-topic-3
