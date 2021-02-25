@@ -250,7 +250,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="rrecap" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> R recap</h1>
 <p>Previous section demonstrated what can be achieved with the learning materials provided in this book and gave an example of capabilities of packages that are used. In contrast, this section presents basic steps that are required (or simply a good practice) to take before starting the project where it provides a brief recap of R fundamentals such as data types and structures, objects and commands. It aims at building a starting point for those who are new to R and provide basic background knowledge that the reader can build on, while progressing through the further chapters of this book. It will be particularly useful to beginners, who have minimal knowledge of R. Therefore, more advanced readers can move forward to the next chapter where spatial data types are looked into. <br/></p>
-<p>This chapter proposes several <strong>learning objectives</strong>. In particular, at the end of this chapter, the reader will be able to:</p>
+<style>
+div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
+</style>
+<div class="green">
+<h3 id="learning-objectives" class="unnumbered">Learning objectives</h3>
 <ul>
 <li>create a working directory for his/her project</li>
 <li>create, name and save a new R script</li>
@@ -261,6 +265,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>classify and contrast various data structures</li>
 <li>accessing and using <code>help</code> within R</li>
 </ul>
+</div>
 <div id="setting-working-directory" class="section level2">
 <h2><span class="header-section-number">3.1</span> Setting working directory</h2>
 <p>At the beginning of each project it is crucial to determine the working directory for your project. A working directory is a folder where all your files associated with the project will be stored. For example, original data sets, saved data sets as well as plots, graphs or maps created and exported from R. Hence, working directory not only allows you to gather and access the files produced along the work but also load the existing data sets into the RStudio.<br/><br/></p>
@@ -513,30 +518,30 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ## 
 ## dt.frm&gt; (d &lt;- data.frame(x = 1, y = 1:10, fac = fac))
 ##    x  y fac
-## 1  1  1   B
-## 2  1  2   A
+## 1  1  1   A
+## 2  1  2   B
 ## 3  1  3   B
 ## 4  1  4   B
-## 5  1  5   B
+## 5  1  5   A
 ## 6  1  6   B
-## 7  1  7   B
+## 7  1  7   A
 ## 8  1  8   A
-## 9  1  9   C
+## 9  1  9   A
 ## 10 1 10   C
 ## 
 ## dt.frm&gt; ## The &quot;same&quot; with automatic column names:
 ## dt.frm&gt; data.frame(1, 1:10, sample(L3, 10, replace = TRUE))
 ##    X1 X1.10 sample.L3..10..replace...TRUE.
-## 1   1     1                              C
+## 1   1     1                              B
 ## 2   1     2                              A
-## 3   1     3                              A
-## 4   1     4                              A
-## 5   1     5                              A
-## 6   1     6                              B
+## 3   1     3                              B
+## 4   1     4                              B
+## 5   1     5                              C
+## 6   1     6                              A
 ## 7   1     7                              C
-## 8   1     8                              C
-## 9   1     9                              A
-## 10  1    10                              C
+## 8   1     8                              A
+## 9   1     9                              C
+## 10  1    10                              A
 ## 
 ## dt.frm&gt; is.data.frame(d)
 ## [1] TRUE
@@ -544,15 +549,15 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ## dt.frm&gt; ## do not convert to factor, using I() :
 ## dt.frm&gt; (dd &lt;- cbind(d, char = I(letters[1:10])))
 ##    x  y fac char
-## 1  1  1   B    a
-## 2  1  2   A    b
+## 1  1  1   A    a
+## 2  1  2   B    b
 ## 3  1  3   B    c
 ## 4  1  4   B    d
-## 5  1  5   B    e
+## 5  1  5   A    e
 ## 6  1  6   B    f
-## 7  1  7   B    g
+## 7  1  7   A    g
 ## 8  1  8   A    h
-## 9  1  9   C    i
+## 9  1  9   A    i
 ## 10 1 10   C    j
 ## 
 ## dt.frm&gt; rbind(class = sapply(dd, class), mode = sapply(dd, mode))
