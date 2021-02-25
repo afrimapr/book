@@ -180,18 +180,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.2" data-path="data-types.html"><a href="data-types.html#exercise-1-1"><i class="fa fa-check"></i><b>4.4.2</b> Exercise 1</a></li>
 <li class="chapter" data-level="4.4.3" data-path="data-types.html"><a href="data-types.html#exercise-2-different-data-game-reserves"><i class="fa fa-check"></i><b>4.4.3</b> Exercise 2 (different data: game reserves)</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="data-types.html"><a href="data-types.html#episode_4_raster"><i class="fa fa-check"></i><b>4.5</b> Episode 4: Raster</a></li>
-<li class="chapter" data-level="4.6" data-path="data-types.html"><a href="data-types.html#example-3"><i class="fa fa-check"></i><b>4.6</b> Example</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="data-types.html"><a href="data-types.html#exercise-1-2"><i class="fa fa-check"></i><b>4.6.1</b> Exercise 1</a></li>
-<li class="chapter" data-level="4.6.2" data-path="data-types.html"><a href="data-types.html#exercise-2-different-data-elevation-data"><i class="fa fa-check"></i><b>4.6.2</b> Exercise 2 (different data: elevation data?)</a></li>
+<li class="chapter" data-level="4.5" data-path="data-types.html"><a href="data-types.html#episode_4_raster"><i class="fa fa-check"></i><b>4.5</b> Episode 4: Raster</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="data-types.html"><a href="data-types.html#example-3"><i class="fa fa-check"></i><b>4.5.1</b> Example</a></li>
+<li class="chapter" data-level="4.5.2" data-path="data-types.html"><a href="data-types.html#exercise-1-2"><i class="fa fa-check"></i><b>4.5.2</b> Exercise 1</a></li>
+<li class="chapter" data-level="4.5.3" data-path="data-types.html"><a href="data-types.html#exercise-2-different-data-elevation-data"><i class="fa fa-check"></i><b>4.5.3</b> Exercise 2 (different data: elevation data?)</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#summarykey-points"><i class="fa fa-check"></i><b>4.7</b> Summary/key points</a></li>
-<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#final-exercises-to-be-done"><i class="fa fa-check"></i><b>4.8</b> Final Exercises (to be done)</a><ul>
-<li class="chapter" data-level="4.8.1" data-path="data-types.html"><a href="data-types.html#visualise"><i class="fa fa-check"></i><b>4.8.1</b> 1 Visualise</a></li>
-<li class="chapter" data-level="4.8.2" data-path="data-types.html"><a href="data-types.html#user-story"><i class="fa fa-check"></i><b>4.8.2</b> 2 User story</a></li>
+<li class="chapter" data-level="4.6" data-path="data-types.html"><a href="data-types.html#summarykey-points"><i class="fa fa-check"></i><b>4.6</b> Summary/key points</a></li>
+<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#final-exercises-to-be-done"><i class="fa fa-check"></i><b>4.7</b> Final Exercises (to be done)</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="data-types.html"><a href="data-types.html#visualise"><i class="fa fa-check"></i><b>4.7.1</b> 1 Visualise</a></li>
+<li class="chapter" data-level="4.7.2" data-path="data-types.html"><a href="data-types.html#user-story"><i class="fa fa-check"></i><b>4.7.2</b> 2 User story</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="data-types.html"><a href="data-types.html#further-resources"><i class="fa fa-check"></i><b>4.9</b> Further resources</a></li>
-<li class="chapter" data-level="4.10" data-path="data-types.html"><a href="data-types.html#feedback-1"><i class="fa fa-check"></i><b>4.10</b> Feedback</a></li>
+<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#further-resources"><i class="fa fa-check"></i><b>4.8</b> Further resources</a></li>
+<li class="chapter" data-level="4.9" data-path="data-types.html"><a href="data-types.html#feedback-1"><i class="fa fa-check"></i><b>4.9</b> Feedback</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: tmap and mapview</a><ul>
 <li class="chapter" data-level="5.1" data-path="visualising1.html"><a href="visualising1.html#overall-goal-of-the-chapter-1"><i class="fa fa-check"></i><b>5.1</b> Overall goal of the chapter</a></li>
@@ -598,9 +598,8 @@ div.green { background-color:palegreen; border-radius: 5px; padding: 20px;}
 <p>To read in raster data, we need to install and load the ‘raster’ package.</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="data-types.html#cb88-1"></a><span class="co">#install.packages(&quot;raster&quot;) #install sf package</span></span>
 <span id="cb88-2"><a href="data-types.html#cb88-2"></a><span class="kw">library</span>(raster) <span class="co"># load raster package</span></span></code></pre></div>
-</div>
-<div id="example-3" class="section level2">
-<h2><span class="header-section-number">4.6</span> Example</h2>
+<div id="example-3" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Example</h3>
 <p>To show raster data, in this example we use population data from 2000 and 2020.</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="data-types.html#cb89-1"></a><span class="co">#print(afripop2000) #printing information on the raster data file</span></span></code></pre></div>
 <p>The population raster data from 2000 contains 434 rows, 413 columns and a total of 179242 grid cells with geometry type <strong>RasterLayer </strong>.</p>
@@ -631,15 +630,16 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb93-7"><a href="data-types.html#cb93-7"></a><span class="co">#tm_shape(africapitals) +</span></span>
 <span id="cb93-8"><a href="data-types.html#cb93-8"></a><span class="co">#    tm_symbols(col = &quot;blue&quot;, alpha=0.4, scale = .6 )+</span></span>
 <span id="cb93-9"><a href="data-types.html#cb93-9"></a><span class="co">#tm_legend(show = FALSE)</span></span></code></pre></div>
+</div>
 <div id="exercise-1-2" class="section level3">
-<h3><span class="header-section-number">4.6.1</span> Exercise 1</h3>
+<h3><span class="header-section-number">4.5.2</span> Exercise 1</h3>
 </div>
 <div id="exercise-2-different-data-elevation-data" class="section level3">
-<h3><span class="header-section-number">4.6.2</span> Exercise 2 (different data: elevation data?)</h3>
+<h3><span class="header-section-number">4.5.3</span> Exercise 2 (different data: elevation data?)</h3>
 </div>
 </div>
 <div id="summarykey-points" class="section level2">
-<h2><span class="header-section-number">4.7</span> Summary/key points</h2>
+<h2><span class="header-section-number">4.6</span> Summary/key points</h2>
 <ul>
 <li>Points are ..</li>
 <li>Lines are ..</li>
@@ -648,16 +648,16 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </ul>
 </div>
 <div id="final-exercises-to-be-done" class="section level2">
-<h2><span class="header-section-number">4.8</span> Final Exercises (to be done)</h2>
+<h2><span class="header-section-number">4.7</span> Final Exercises (to be done)</h2>
 <div id="visualise" class="section level3">
-<h3><span class="header-section-number">4.8.1</span> 1 Visualise</h3>
+<h3><span class="header-section-number">4.7.1</span> 1 Visualise</h3>
 </div>
 <div id="user-story" class="section level3">
-<h3><span class="header-section-number">4.8.2</span> 2 User story</h3>
+<h3><span class="header-section-number">4.7.2</span> 2 User story</h3>
 </div>
 </div>
 <div id="further-resources" class="section level2">
-<h2><span class="header-section-number">4.9</span> Further resources</h2>
+<h2><span class="header-section-number">4.8</span> Further resources</h2>
 <p>If you are interested in learning more about the different spatial data types, please visit:</p>
 <ul>
 <li><p><a href="https://datacarpentry.org/geospatial-workshop/">Geospatial workshop</a></p></li>
@@ -667,7 +667,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </ul>
 </div>
 <div id="feedback-1" class="section level2">
-<h2><span class="header-section-number">4.10</span> Feedback</h2>
+<h2><span class="header-section-number">4.9</span> Feedback</h2>
 <ul>
 <li>Request on what was useful to the reader (learner) and what can be improved</li>
 </ul>
