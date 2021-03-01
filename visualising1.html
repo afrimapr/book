@@ -24,7 +24,7 @@
 <meta name="author" content="The afrimapr team" />
 
 
-<meta name="date" content="2021-02-25" />
+<meta name="date" content="2021-03-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -268,25 +268,24 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 </ul>
 </div>
 <p>This chapter requires the following packages (some of them we used already):</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="visualising1.html#cb94-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
-<span id="cb94-2"><a href="visualising1.html#cb94-2"></a>  <span class="st">&quot;mapview&quot;</span>,            <span class="co"># map-making package for interactive maps</span></span>
-<span id="cb94-3"><a href="visualising1.html#cb94-3"></a>  <span class="st">&quot;tmap&quot;</span>,               <span class="co"># map-making package for static and interactive maps</span></span>
-<span id="cb94-4"><a href="visualising1.html#cb94-4"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
-<span id="cb94-5"><a href="visualising1.html#cb94-5"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
-<span id="cb94-6"><a href="visualising1.html#cb94-6"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
-<span id="cb94-7"><a href="visualising1.html#cb94-7"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
-<span id="cb94-8"><a href="visualising1.html#cb94-8"></a>  )</span>
-<span id="cb94-9"><a href="visualising1.html#cb94-9"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span>
-<span id="cb94-10"><a href="visualising1.html#cb94-10"></a><span class="co">#remotes::install_github(&quot;afrimapr/afrilearndata&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="visualising1.html#cb92-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb92-2"><a href="visualising1.html#cb92-2"></a>  <span class="st">&quot;mapview&quot;</span>,            <span class="co"># map-making package for interactive maps</span></span>
+<span id="cb92-3"><a href="visualising1.html#cb92-3"></a> <span class="co"># &quot;tmap&quot;,               # map-making package for static and interactive maps</span></span>
+<span id="cb92-4"><a href="visualising1.html#cb92-4"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
+<span id="cb92-5"><a href="visualising1.html#cb92-5"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
+<span id="cb92-6"><a href="visualising1.html#cb92-6"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
+<span id="cb92-7"><a href="visualising1.html#cb92-7"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>  <span class="co"># data package</span></span>
+<span id="cb92-8"><a href="visualising1.html#cb92-8"></a>  )</span>
+<span id="cb92-9"><a href="visualising1.html#cb92-9"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span></code></pre></div>
 <p>Next, we need to load the packages:</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="visualising1.html#cb95-1"></a><span class="kw">library</span>(tmap)</span>
-<span id="cb95-2"><a href="visualising1.html#cb95-2"></a><span class="kw">library</span>(mapview)</span>
-<span id="cb95-3"><a href="visualising1.html#cb95-3"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb95-4"><a href="visualising1.html#cb95-4"></a><span class="kw">library</span>(sf)</span>
-<span id="cb95-5"><a href="visualising1.html#cb95-5"></a><span class="kw">library</span>(afrilearndata)</span>
-<span id="cb95-6"><a href="visualising1.html#cb95-6"></a><span class="kw">library</span>(rnaturalearth)</span>
-<span id="cb95-7"><a href="visualising1.html#cb95-7"></a><span class="kw">library</span>(rnaturalearthdata)</span>
-<span id="cb95-8"><a href="visualising1.html#cb95-8"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="visualising1.html#cb93-1"></a><span class="co">#library(tmap)</span></span>
+<span id="cb93-2"><a href="visualising1.html#cb93-2"></a><span class="kw">library</span>(mapview)</span>
+<span id="cb93-3"><a href="visualising1.html#cb93-3"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb93-4"><a href="visualising1.html#cb93-4"></a><span class="kw">library</span>(sf)</span>
+<span id="cb93-5"><a href="visualising1.html#cb93-5"></a><span class="kw">library</span>(afrilearndata)</span>
+<span id="cb93-6"><a href="visualising1.html#cb93-6"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb93-7"><a href="visualising1.html#cb93-7"></a><span class="kw">library</span>(rnaturalearthdata)</span>
+<span id="cb93-8"><a href="visualising1.html#cb93-8"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
 </div>
 <div id="quick-interactive-maps-with-mapview" class="section level2">
 <h2><span class="header-section-number">5.2</span> Quick interactive maps with mapview</h2>
@@ -297,25 +296,23 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <li>raster</li>
 <li>sp</li>
 </ul>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="visualising1.html#cb96-1"></a><span class="co">#mapview(africountries)</span></span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="visualising1.html#cb94-1"></a><span class="co">#mapview(africountries)</span></span></code></pre></div>
 </div>
 <div id="static-maps-with-tmap" class="section level2">
 <h2><span class="header-section-number">5.3</span> Static maps with tmap</h2>
 <p>In this section we will explore the possibilities of <code>tmap</code> in creating static maps, which is a flexible, yet user-friendly package. Its syntax is similar to <code>ggplot2</code> (plot-making package), where additional features of the map are simply build up on top of the basic structure. It will be demonstrated below, where we will start off with a simple contour map and then we will add more</p>
 <p>Create a dataset</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="visualising1.html#cb97-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="visualising1.html#cb95-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span></code></pre></div>
 <p>Create an empty contour map of the continent</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="visualising1.html#cb98-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb98-2"><a href="visualising1.html#cb98-2"></a><span class="st">  </span><span class="kw">tm_borders</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="visualising1.html#cb96-1"></a><span class="co"># tm_shape(africa)+</span></span>
+<span id="cb96-2"><a href="visualising1.html#cb96-2"></a><span class="co">#  tm_borders()</span></span></code></pre></div>
 <div id="layers-for-the-static-maps" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Layers for the static maps</h3>
 <p>Fill map using data on last census data and add labels for country names</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="visualising1.html#cb99-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb99-2"><a href="visualising1.html#cb99-2"></a><span class="st">  </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
-<span id="cb99-3"><a href="visualising1.html#cb99-3"></a><span class="st">  </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
-<span id="cb99-4"><a href="visualising1.html#cb99-4"></a><span class="st">  </span><span class="kw">tm_text</span>(<span class="st">&quot;admin&quot;</span>, <span class="dt">size =</span> <span class="fl">0.52</span>,  <span class="dt">fontface=</span><span class="st">&quot;bold&quot;</span>, <span class="dt">auto.placement =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="visualising1.html#cb97-1"></a><span class="co"># tm_shape(africa)+</span></span>
+<span id="cb97-2"><a href="visualising1.html#cb97-2"></a><span class="co">#  tm_fill(col=&quot;lastcensus&quot;, title=&quot;Year of last census&quot;, legend.format = list(format=&quot;s&quot;))+</span></span>
+<span id="cb97-3"><a href="visualising1.html#cb97-3"></a><span class="co">#  tm_borders()+</span></span>
+<span id="cb97-4"><a href="visualising1.html#cb97-4"></a><span class="co">#  tm_text(&quot;admin&quot;, size = 0.52,  fontface=&quot;bold&quot;, auto.placement = TRUE)</span></span></code></pre></div>
 </div>
 <div id="colour-pallet" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Colour pallet</h3>
@@ -377,7 +374,7 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });
