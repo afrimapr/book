@@ -21,7 +21,7 @@ wrap-up
 feedback
 data-types
 overall-goal-of-the-chapter
-the-episodes
+list-of-episodes-1
 episode_1_points
 example
 exercise-still-need-to-work-on-these
@@ -39,8 +39,7 @@ example-3
 exercise-1-2
 exercise-2-different-data-elevation-data
 summarykey-points
-final-exercises-to-be-done
-visualise
+wrap-up-with-final-exercises
 user-story
 further-resources
 feedback-1
