@@ -51,7 +51,7 @@ layers-for-the-static-maps
 colour-pallet
 interactive-maps-with-tmap
 further-resources-1
-exercise-solutions
+solutions_ch5
 shiny
 data-sources
 hdx
@@ -72,5 +72,5 @@ episode_2_template
 episode_3_template
 further-resources-2
 wrap-up-1
-exercise-solutions-1
+exercise-solutions
 feedback-2
