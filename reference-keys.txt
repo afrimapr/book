@@ -69,5 +69,5 @@ episode_1_template
 episode_2_template
 episode_3_template
 further-resources-1
-linking-section-2
+wrap-up-1
 feedback-2
