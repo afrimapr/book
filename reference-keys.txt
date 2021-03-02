@@ -47,8 +47,8 @@ visualising1
 overall-goal-of-the-chapter-1
 quick-interactive-maps-with-mapview
 static-maps-with-tmap
-layers-for-the-static-maps
 colour-pallet
+layers-for-the-static-maps
 interactive-maps-with-tmap
 further-resources-1
 solutions_ch5
