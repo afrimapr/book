@@ -370,19 +370,26 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 </div>
 <div id="layers-for-the-static-maps" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Layers for the static maps</h3>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="co">#data(africountries)</span></span>
-<span id="cb109-2"><a href="visualising1.html#cb109-2"></a><span class="co">#data(africapitals)</span></span>
-<span id="cb109-3"><a href="visualising1.html#cb109-3"></a><span class="co"># tmap_mode(&quot;view&quot;) #switches to interactive mode</span></span>
-<span id="cb109-4"><a href="visualising1.html#cb109-4"></a><span class="co"># tm_shape(africa)+  #creates a map from previous chapter in an interactive mode</span></span>
-<span id="cb109-5"><a href="visualising1.html#cb109-5"></a><span class="co">#   tm_borders()</span></span></code></pre></div>
+<p><code>tmap</code> not only allows us to add extra layers to a single map by building on a basic structure, but it also enables us to join maps from different datasets. We first create an object called <em>countries</em> which is a single map with African countries:</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="kw">data</span>(africountries)</span>
+<span id="cb109-2"><a href="visualising1.html#cb109-2"></a></span>
+<span id="cb109-3"><a href="visualising1.html#cb109-3"></a>countries =<span class="st"> </span><span class="kw">tm_shape</span>(africountries)<span class="op">+</span><span class="st">  </span></span>
+<span id="cb109-4"><a href="visualising1.html#cb109-4"></a><span class="st">  </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</span></code></pre></div>
+<p>Then we use it as an argument to merge it with a map containing the location of capitals.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="kw">data</span>(africapitals)</span>
+<span id="cb110-2"><a href="visualising1.html#cb110-2"></a></span>
+<span id="cb110-3"><a href="visualising1.html#cb110-3"></a>countries<span class="op">+</span></span>
+<span id="cb110-4"><a href="visualising1.html#cb110-4"></a><span class="st">  </span><span class="kw">tm_shape</span>(africapitals)<span class="op">+</span><span class="st">  </span><span class="co">#uses dataset with capitals</span></span>
+<span id="cb110-5"><a href="visualising1.html#cb110-5"></a><span class="st">  </span><span class="kw">tm_dots</span>(<span class="dt">size=</span><span class="fl">0.15</span>)       <span class="co">#adds dots on the map</span></span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
 </div>
 </div>
 <div id="interactive-maps-with-tmap" class="section level2">
 <h2><span class="header-section-number">5.4</span> Interactive maps with tmap</h2>
 <p><code>tmap</code> offers versatility not only for creating static maps as we have seen above but it also allows us to make customised interactive maps conveniently by simply changing the mode of operation from static <em>plot</em> to dynamic <em>view</em> using <code>tmap_mode()</code></p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="co"># tmap_mode(&quot;view&quot;) #switches to interactive mode</span></span>
-<span id="cb110-2"><a href="visualising1.html#cb110-2"></a><span class="co"># tm_shape(africa)+  #creates a map from previous chapter in an interactive mode</span></span>
-<span id="cb110-3"><a href="visualising1.html#cb110-3"></a><span class="co">#   tm_borders()</span></span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="visualising1.html#cb111-1"></a><span class="co"># tmap_mode(&quot;view&quot;) #switches to interactive mode</span></span>
+<span id="cb111-2"><a href="visualising1.html#cb111-2"></a><span class="co"># tm_shape(africa)+  #creates a map from previous chapter in an interactive mode</span></span>
+<span id="cb111-3"><a href="visualising1.html#cb111-3"></a><span class="co">#   tm_borders()</span></span></code></pre></div>
 </div>
 <div id="further-resources-1" class="section level2">
 <h2><span class="header-section-number">5.5</span> Further resources</h2>
@@ -392,20 +399,20 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <ul>
 <li>Exercise 1</li>
 </ul>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="visualising1.html#cb111-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb111-2"><a href="visualising1.html#cb111-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;yellow&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="st">&quot;solid&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="visualising1.html#cb112-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb112-2"><a href="visualising1.html#cb112-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;yellow&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="st">&quot;solid&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
 <ul>
 <li>Exercise 2</li>
 </ul>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="visualising1.html#cb112-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb112-2"><a href="visualising1.html#cb112-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>,<span class="dt">alpha =</span> <span class="fl">0.3</span>)<span class="op">+</span></span>
-<span id="cb112-3"><a href="visualising1.html#cb112-3"></a><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="visualising1.html#cb113-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb113-2"><a href="visualising1.html#cb113-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>,<span class="dt">alpha =</span> <span class="fl">0.3</span>)<span class="op">+</span></span>
+<span id="cb113-3"><a href="visualising1.html#cb113-3"></a><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
 <ul>
 <li>Exercise 3</li>
 </ul>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="visualising1.html#cb113-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb113-2"><a href="visualising1.html#cb113-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;gdp_md_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;GDP&quot;</span>,  <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>, <span class="dv">100000</span>,<span class="dv">200000</span>, <span class="dv">300000</span>, <span class="dv">500000</span>))<span class="op">+</span></span>
-<span id="cb113-3"><a href="visualising1.html#cb113-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="visualising1.html#cb114-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb114-2"><a href="visualising1.html#cb114-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;gdp_md_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;GDP&quot;</span>,  <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>, <span class="dv">100000</span>,<span class="dv">200000</span>, <span class="dv">300000</span>, <span class="dv">500000</span>))<span class="op">+</span></span>
+<span id="cb114-3"><a href="visualising1.html#cb114-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
 
 </div>
 </div>
