@@ -50,6 +50,7 @@ static-maps-with-tmap
 layers-for-the-static-maps
 colour-pallet
 interactive-maps-with-tmap
+further-resources-1
 shiny
 data-sources
 hdx
@@ -68,6 +69,6 @@ overall-goal-of-the-chapter-2
 episode_1_template
 episode_2_template
 episode_3_template
-further-resources-1
+further-resources-2
 wrap-up-1
 feedback-2
