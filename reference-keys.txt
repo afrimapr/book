@@ -68,5 +68,6 @@ overall-goal-of-the-chapter-2
 episode_1_template
 episode_2_template
 episode_3_template
+further-resources-1
 linking-section-2
-feedback-request-on-what-was-useful-to-the-reader-learner-and-what-can-be-improved
+feedback-2
