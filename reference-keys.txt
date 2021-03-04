@@ -29,7 +29,7 @@ exercise-2
 episode_2_lines
 example-1
 exercise-1-1
-exercise-2-different-data-rivers-in-africa
+exercise-2-rivers-in-africa-flight-paths
 episode_3_polygons
 example-2
 exercise-1-2
