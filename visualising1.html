@@ -333,11 +333,14 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <p><strong>Exercise 1</strong>: Change the settings to obtain a yellow, non-transparent map with solid line borders of width 3, as showed below.</p>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-72-1.png" width="25%" /></p>
 </div>
-<p>(The solution to the exercises are provided at the <a href="visualising1.html#solutions_ch5">end of the chapter</a>)</p>
-<ul>
-<li><strong>Exercise 2</strong>: create a blue map with transparency of 0.3, dotted, non-transparent, red borders, such as one below:<br />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-73-1.png" width="25%" /></li>
-</ul>
+<p>The solution to the exercises are provided at the <a href="visualising1.html#solutions_ch5">end of the chapter</a></p>
+<style>
+div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
+</style>
+<div class="purple">
+<p><strong>Exercise 2</strong>: Create a blue map with transparency of 0.3, dotted, non-transparent, red borders, such as the one below.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-73-1.png" width="25%" /></p>
+</div>
 <p>As we already know a basic structure required to build a static map, we can proceed to a more advanced (and useful) example where we fill the polygons using data on last census, add relevant title to the legend. In this case, we also use <code>legend.format</code>option to format the legend numbers to be treated as years.</p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising1.html#cb104-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
 <span id="cb104-2"><a href="visualising1.html#cb104-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
@@ -359,10 +362,13 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <span id="cb107-2"><a href="visualising1.html#cb107-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;pop_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Population&quot;</span>, <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">1000000</span>, <span class="dv">4000000</span>, <span class="dv">8000000</span>, <span class="dv">12000000</span>, <span class="dv">16000000</span>, <span class="dv">20000000</span>, <span class="dv">24000000</span>, <span class="dv">28000000</span>,<span class="dv">32000000</span>))<span class="op">+</span></span>
 <span id="cb107-3"><a href="visualising1.html#cb107-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
-<ul>
-<li><strong>Exercise 3</strong>: create a map with polygons filled with gross domestic product, black borders, legend titled <em>GDP</em> and customised breaks at 0, 20000, 30000, 40000, 50000, 100000, 200000, 300000, 500000, such as seen below.
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="25%" /></li>
-</ul>
+<style>
+div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
+</style>
+<div class="purple">
+<p><strong>Exercise 3</strong>: Create a map with polygons filled with gross domestic product, black borders, legend titled <em>GDP</em> and customised breaks at 0, 20000, 30000, 40000, 50000, 100000, 200000, 300000, 500000, such as seen below.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="25%" /></p>
+</div>
 <div id="colour-pallet" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Colour pallet</h3>
 <p>An important aspect of the maps, as in every visual representation, are the colours. In <code>tmap</code> we can change the default colours using <code>palette</code> argument.</p>
