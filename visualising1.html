@@ -326,13 +326,17 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="visualising1.html#cb103-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
 <span id="cb103-2"><a href="visualising1.html#cb103-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;green&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="fl">0.3</span>)</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
-<ul>
-<li><strong>Exercise 1</strong>: Change the settings to the map to obtain yellow, non-transparent map with solid line borders of width 3, as showed below. (The solution to the exercises are provided at the end of the chapter <a href="visualising1.html#solutions_ch5">click here</a>)</li>
-</ul>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<style>
+div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
+</style>
+<div class="purple">
+<p><strong>Exercise 1</strong>: Change the settings to obtain a yellow, non-transparent map with solid line borders of width 3, as showed below.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-72-1.png" width="25%" /></p>
+</div>
+<p>(The solution to the exercises are provided at the <a href="visualising1.html#solutions_ch5">end of the chapter</a>)</p>
 <ul>
 <li><strong>Exercise 2</strong>: create a blue map with transparency of 0.3, dotted, non-transparent, red borders, such as one below:<br />
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-73-1.png" width="672" /></li>
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-73-1.png" width="25%" /></li>
 </ul>
 <p>As we already know a basic structure required to build a static map, we can proceed to a more advanced (and useful) example where we fill the polygons using data on last census, add relevant title to the legend. In this case, we also use <code>legend.format</code>option to format the legend numbers to be treated as years.</p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising1.html#cb104-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
@@ -357,7 +361,7 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
 <ul>
 <li><strong>Exercise 3</strong>: create a map with polygons filled with gross domestic product, black borders, legend titled <em>GDP</em> and customised breaks at 0, 20000, 30000, 40000, 50000, 100000, 200000, 300000, 500000, such as seen below.
-<img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="672" /></li>
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="25%" /></li>
 </ul>
 <div id="colour-pallet" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Colour pallet</h3>
@@ -374,7 +378,10 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="kw">data</span>(africountries)</span>
 <span id="cb109-2"><a href="visualising1.html#cb109-2"></a></span>
 <span id="cb109-3"><a href="visualising1.html#cb109-3"></a>countries =<span class="st"> </span><span class="kw">tm_shape</span>(africountries)<span class="op">+</span><span class="st">  </span></span>
-<span id="cb109-4"><a href="visualising1.html#cb109-4"></a><span class="st">  </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</span></code></pre></div>
+<span id="cb109-4"><a href="visualising1.html#cb109-4"></a><span class="st">  </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</span>
+<span id="cb109-5"><a href="visualising1.html#cb109-5"></a></span>
+<span id="cb109-6"><a href="visualising1.html#cb109-6"></a>countries</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
 <p>Then we use it as an argument to merge it with a map containing the location of capitals.</p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="kw">data</span>(africapitals)</span>
 <span id="cb110-2"><a href="visualising1.html#cb110-2"></a></span>
