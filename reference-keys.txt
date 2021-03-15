@@ -49,6 +49,7 @@ quick-interactive-maps-with-mapview
 static-maps-with-tmap
 colour-pallet
 layers-for-the-static-maps
+exercises
 interactive-maps-with-tmap
 further-resources-1
 solutions_ch5
@@ -74,3 +75,4 @@ further-resources-2
 wrap-up-1
 exercise-solutions
 feedback-2
+putting-into-practice
