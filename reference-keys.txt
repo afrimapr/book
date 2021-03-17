@@ -50,7 +50,7 @@ overall-goal-of-the-chapter-1
 quick-interactive-maps-with-mapview
 static-maps-with-tmap
 colour-pallet
-layers-for-the-static-maps
+different-layers-for-the-static-maps
 exercises
 interactive-maps-with-tmap
 further-resources-1
