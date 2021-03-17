@@ -340,18 +340,18 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p>Now, let’s look at the data file that contains information about the African capitals. A quick summary of the spatial aspects (geometry) of the datafile can be checked using the following code:</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="data-types.html#cb65-1"></a><span class="kw">print</span>(<span class="kw">st_geometry</span>(africapitals)) <span class="co">#printing information on the geometry</span></span></code></pre></div>
 <pre><code>## Geometry set for 50 features 
-## geometry type:  POINT
-## dimension:      XY
-## bbox:           xmin: -17.48 ymin: -29.31 xmax: 47.51 ymax: 36.84
-## geographic CRS: WGS 84
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: -17.48 ymin: -29.31 xmax: 47.51 ymax: 36.84
+## Geodetic CRS:  WGS 84
 ## First 5 geometries:</code></pre>
 <p>We can see from the results that the African capital data file contains 50 points (capitals) with geometry type <strong>POINT</strong>. Let’s print the first 6 rows of data, so we can see how the coordinates of each African captial is stored in the database.</p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="data-types.html#cb67-1"></a><span class="kw">head</span>(africapitals) <span class="co">#First 6 rows of data are printed</span></span></code></pre></div>
 <pre><code>## Simple feature collection with 6 features and 4 fields
-## geometry type:  POINT
-## dimension:      XY
-## bbox:           xmin: -0.2 ymin: -18.89 xmax: 47.51 ymax: 36.77
-## geographic CRS: WGS 84
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: -0.2 ymin: -18.89 xmax: 47.51 ymax: 36.77
+## Geodetic CRS:  WGS 84
 ##       capitalname countryname     pop iso3c             geometry
 ## 280         Abuja     Nigeria  178462   NGA    POINT (7.17 9.18)
 ## 308         Accra       Ghana 2029143   GHA    POINT (-0.2 5.56)
@@ -421,21 +421,21 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 Let’s start by looking at a quick summary of the spatial aspects (geometry).</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-types.html#cb73-1"></a><span class="kw">print</span>(<span class="kw">st_geometry</span>(afrihighway)) <span class="co">#printing information on the geometry</span></span></code></pre></div>
 <pre><code>## Geometry set for 100 features 
-## geometry type:  LINESTRING
-## dimension:      XYZ
-## bbox:           xmin: -17.38929 ymin: -33.95247 xmax: 43.13781 ymax: 37.08586
-## z_range:        zmin: 0 zmax: 0
-## geographic CRS: WGS 84
+## Geometry type: LINESTRING
+## Dimension:     XYZ
+## Bounding box:  xmin: -17.38929 ymin: -33.95247 xmax: 43.13781 ymax: 37.08586
+## z_range:       zmin: 0 zmax: 0
+## Geodetic CRS:  WGS 84
 ## First 5 geometries:</code></pre>
 <p>The results show that the African highway network contains 100 lines with geometry type <strong>LINESTRING</strong>.</p>
 <p>Let’s now print the first 6 rows of data to see how line data is stored.</p>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="data-types.html#cb75-1"></a><span class="kw">head</span>(afrihighway) <span class="co">#First 6 rows of data are printed</span></span></code></pre></div>
 <pre><code>## Simple feature collection with 6 features and 1 field
-## geometry type:  LINESTRING
-## dimension:      XYZ
-## bbox:           xmin: -17.36938 ymin: 14.76957 xmax: -6.800537 ymax: 33.98436
-## z_range:        zmin: 0 zmax: 0
-## geographic CRS: WGS 84
+## Geometry type: LINESTRING
+## Dimension:     XYZ
+## Bounding box:  xmin: -17.36938 ymin: 14.76957 xmax: -6.800537 ymax: 33.98436
+## z_range:       zmin: 0 zmax: 0
+## Geodetic CRS:  WGS 84
 ## # A tibble: 6 x 2
 ##   Name                                                                  geometry
 ##   &lt;chr&gt;                                                         &lt;LINESTRING [°]&gt;
@@ -523,19 +523,19 @@ An example of a multipolygon where areas are excluded is the country border of S
 <h3><span class="header-section-number">4.4.1</span> Example</h3>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-types.html#cb82-1"></a><span class="kw">print</span>(<span class="kw">st_geometry</span>(africountries)) <span class="co">#printing information on the geometry</span></span></code></pre></div>
 <pre><code>## Geometry set for 51 features 
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -17.62504 ymin: -34.81917 xmax: 51.13387 ymax: 37.34999
-## geographic CRS: WGS 84
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -17.62504 ymin: -34.81917 xmax: 51.13387 ymax: 37.34999
+## Geodetic CRS:  WGS 84
 ## First 5 geometries:</code></pre>
 <p>The country border file contains 51 country outlines with geometry type <strong>MULTIPOLYGON</strong>.</p>
 <p>If we print the first 6 rows of data, we can see how each country border is stored in the database</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="data-types.html#cb84-1"></a><span class="kw">head</span>(africountries) <span class="co">#First 6 rows of data are printed</span></span></code></pre></div>
 <pre><code>## Simple feature collection with 6 features and 11 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: -17.06342 ymin: -13.25723 xmax: 51.13387 ymax: 27.65643
-## geographic CRS: WGS 84
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -17.06342 ymin: -13.25723 xmax: 51.13387 ymax: 27.65643
+## Geodetic CRS:  WGS 84
 ##               name                        name_long  pop_est gdp_md_est
 ## 1         Tanzania                         Tanzania 53950935   150600.0
 ## 2        W. Sahara                   Western Sahara   603253      906.5
