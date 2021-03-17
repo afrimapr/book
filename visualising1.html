@@ -320,7 +320,7 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <span id="cb99-2"><a href="visualising1.html#cb99-2"></a><span class="st"> </span><span class="kw">tm_fill</span>()</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-69-1.png" width="75%" /></p>
 <p>Intuitively to create a map with both layers, we need to include <code>tm_fill()</code> and <code>tm_borders()</code> simultaneously. Alternatively, <code>tm_polygons()</code> function allows us to achieve exactly the same result more efficiently. It draws the polygons borders and fills them.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising1.html#cb100-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span><span class="st"> </span><span class="co">#more layers are added on top of one another</span></span>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising1.html#cb100-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span><span class="st"> </span></span>
 <span id="cb100-2"><a href="visualising1.html#cb100-2"></a><span class="st"> </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
 <span id="cb100-3"><a href="visualising1.html#cb100-3"></a><span class="st">  </span><span class="kw">tm_fill</span>()</span>
 <span id="cb100-4"><a href="visualising1.html#cb100-4"></a></span>
@@ -342,42 +342,50 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <span id="cb103-3"><a href="visualising1.html#cb103-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
 <span id="cb103-4"><a href="visualising1.html#cb103-4"></a><span class="st"> </span><span class="kw">tm_text</span>(<span class="st">&quot;admin&quot;</span>, <span class="dt">size =</span> <span class="fl">0.52</span>, <span class="dt">fontface=</span><span class="st">&quot;bold&quot;</span>, <span class="dt">auto.placement =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-73-1.png" width="75%" /></p>
-<p>Another useful function in <code>tmap</code> is the adjustment of the intervals in the legend, in case the default scale does not provide enough variety. For example, plotting the population of African countries on the map using default intervals (stemming from the data) is not very informative due to to much clustering of information.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising1.html#cb104-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<p>Another useful function in <code>tmap</code> is the adjustment of the intervals in the legend, in case the default scale does not provide enough variety. For example, plotting the population of African countries on the map using default intervals (stemming from the data) is not very informative due to to much clustering of information. Instead, we might want to use <code>breaks</code> argument to set them up manually to provide more differentiation visually. For calrity, I set up the customised breaks outside of the map-making function.</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising1.html#cb104-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span><span class="st">                                </span></span>
 <span id="cb104-2"><a href="visualising1.html#cb104-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;pop_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Population&quot;</span>)<span class="op">+</span></span>
-<span id="cb104-3"><a href="visualising1.html#cb104-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-74-1.png" width="75%" /></p>
-<p>Instead, we might want to use <code>breaks</code> argument to set them up manually to provide more differentiation visually.</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="visualising1.html#cb105-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb105-2"><a href="visualising1.html#cb105-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;pop_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Population&quot;</span>, <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">1000000</span>, <span class="dv">4000000</span>, <span class="dv">8000000</span>, <span class="dv">12000000</span>, <span class="dv">16000000</span>, <span class="dv">20000000</span>, <span class="dv">24000000</span>, <span class="dv">28000000</span>,<span class="dv">32000000</span>))<span class="op">+</span></span>
-<span id="cb105-3"><a href="visualising1.html#cb105-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-75-1.png" width="75%" /></p>
+<span id="cb104-3"><a href="visualising1.html#cb104-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span>
+<span id="cb104-4"><a href="visualising1.html#cb104-4"></a></span>
+<span id="cb104-5"><a href="visualising1.html#cb104-5"></a><span class="co">#set up breaks manually</span></span>
+<span id="cb104-6"><a href="visualising1.html#cb104-6"></a>custom_breaks =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">40</span>, <span class="dv">80</span>, <span class="dv">120</span>, <span class="dv">160</span>, <span class="dv">200</span>, <span class="dv">240</span>, <span class="dv">280</span>, <span class="dv">320</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span></span>
+<span id="cb104-7"><a href="visualising1.html#cb104-7"></a></span>
+<span id="cb104-8"><a href="visualising1.html#cb104-8"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span><span class="st">                               </span></span>
+<span id="cb104-9"><a href="visualising1.html#cb104-9"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;pop_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Population&quot;</span>, <span class="dt">breaks =</span> custom_breaks)<span class="op">+</span></span>
+<span id="cb104-10"><a href="visualising1.html#cb104-10"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-74"></span>
+<img src="bookdown-demo_files/figure-html/unnamed-chunk-74-1.png" alt="Africa's population with default breaks (left) and customised breaks (right)" width="50%" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-74-2.png" alt="Africa's population with default breaks (left) and customised breaks (right)" width="50%" />
+<p class="caption">
+Figure 5.1: Africa’s population with default breaks (left) and customised breaks (right)
+</p>
+</div>
 <div id="colour-pallet" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Colour pallet</h3>
 <p>An important aspect of the maps, as in every visual representation, are the colours. In <code>tmap</code> we can change the default colours using <code>palette</code> argument.</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="visualising1.html#cb106-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb106-2"><a href="visualising1.html#cb106-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, <span class="dt">palette =</span> <span class="st">&quot;Set1&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
-<span id="cb106-3"><a href="visualising1.html#cb106-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-76-1.png" width="75%" /></p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="visualising1.html#cb105-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb105-2"><a href="visualising1.html#cb105-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;lastcensus&quot;</span>, <span class="dt">title=</span><span class="st">&quot;Year of last census&quot;</span>, </span>
+<span id="cb105-3"><a href="visualising1.html#cb105-3"></a>         <span class="dt">palette =</span> <span class="st">&quot;Set1&quot;</span>, <span class="dt">legend.format =</span> <span class="kw">list</span>(<span class="dt">format=</span><span class="st">&quot;s&quot;</span>))<span class="op">+</span></span>
+<span id="cb105-4"><a href="visualising1.html#cb105-4"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-75-1.png" width="75%" /></p>
 <p>In the example above we used palette called <em>Set1</em>. To view possible options, run <code>tmaptools::palette_explorer()</code> which will open a new window with a wide range of palettes. Sliders on the left hand side allow selecting a number of colours.</p>
 </div>
 <div id="layers-for-the-static-maps" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Layers for the static maps</h3>
 <p><code>tmap</code> not only allows us to add extra layers to a single map by building on a basic structure, but it also enables us to join maps from different datasets. We first create an object called <em>countries</em> which is a single map with African countries:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="visualising1.html#cb107-1"></a><span class="kw">data</span>(africountries)</span>
-<span id="cb107-2"><a href="visualising1.html#cb107-2"></a></span>
-<span id="cb107-3"><a href="visualising1.html#cb107-3"></a>countries =<span class="st"> </span><span class="kw">tm_shape</span>(africountries)<span class="op">+</span><span class="st">  </span></span>
-<span id="cb107-4"><a href="visualising1.html#cb107-4"></a><span class="st">  </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</span>
-<span id="cb107-5"><a href="visualising1.html#cb107-5"></a></span>
-<span id="cb107-6"><a href="visualising1.html#cb107-6"></a>countries</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-77-1.png" width="75%" /></p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="visualising1.html#cb106-1"></a><span class="kw">data</span>(africountries)</span>
+<span id="cb106-2"><a href="visualising1.html#cb106-2"></a></span>
+<span id="cb106-3"><a href="visualising1.html#cb106-3"></a>countries =<span class="st"> </span><span class="kw">tm_shape</span>(africountries)<span class="op">+</span><span class="st">  </span></span>
+<span id="cb106-4"><a href="visualising1.html#cb106-4"></a><span class="st">  </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&quot;lightblue&quot;</span>)</span>
+<span id="cb106-5"><a href="visualising1.html#cb106-5"></a></span>
+<span id="cb106-6"><a href="visualising1.html#cb106-6"></a>countries</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-76-1.png" width="75%" /></p>
 <p>Then we use it as an argument to merge it with a map containing the location of capitals.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="visualising1.html#cb108-1"></a><span class="kw">data</span>(africapitals)</span>
-<span id="cb108-2"><a href="visualising1.html#cb108-2"></a></span>
-<span id="cb108-3"><a href="visualising1.html#cb108-3"></a>countries<span class="op">+</span></span>
-<span id="cb108-4"><a href="visualising1.html#cb108-4"></a><span class="st">  </span><span class="kw">tm_shape</span>(africapitals)<span class="op">+</span><span class="st">  </span><span class="co">#uses dataset with capitals</span></span>
-<span id="cb108-5"><a href="visualising1.html#cb108-5"></a><span class="st">  </span><span class="kw">tm_dots</span>(<span class="dt">size=</span><span class="fl">0.15</span>)       <span class="co">#adds dots on the map</span></span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="75%" /></p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="visualising1.html#cb107-1"></a><span class="kw">data</span>(africapitals)</span>
+<span id="cb107-2"><a href="visualising1.html#cb107-2"></a></span>
+<span id="cb107-3"><a href="visualising1.html#cb107-3"></a>countries<span class="op">+</span></span>
+<span id="cb107-4"><a href="visualising1.html#cb107-4"></a><span class="st">  </span><span class="kw">tm_shape</span>(africapitals)<span class="op">+</span><span class="st">  </span><span class="co">#uses dataset with capitals</span></span>
+<span id="cb107-5"><a href="visualising1.html#cb107-5"></a><span class="st">  </span><span class="kw">tm_dots</span>(<span class="dt">size=</span><span class="fl">0.15</span>)       <span class="co">#adds dots on the map</span></span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-77-1.png" width="75%" /></p>
 </div>
 <div id="exercises" class="section level3">
 <h3><span class="header-section-number">5.3.3</span> Exercises</h3>
@@ -388,29 +396,29 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <div class="purple">
 <p><strong>Exercise 1</strong>: Change the settings to obtain a yellow, non-transparent map with solid line borders of width 3, as showed below.</p>
 </div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-79-1.png" width="40%" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="40%" /></p>
 <style>
 div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 </style>
 <div class="purple">
 <p><strong>Exercise 2</strong>: Create a blue map with transparency of 0.3, dotted, non-transparent, red borders, as demonstrated below.</p>
 </div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-80-1.png" width="40%" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-79-1.png" width="40%" /></p>
 <style>
 div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 </style>
 <div class="purple">
 <p><strong>Exercise 3</strong>: Create a map with polygons filled with gross domestic product, black borders, legend titled <em>GDP</em> and customised breaks at 0, 20000, 30000, 40000, 50000, 100000, 200000, 300000, 500000, such as seen below.</p>
 </div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-81-1.png" width="40%" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-80-1.png" width="40%" /></p>
 </div>
 </div>
 <div id="interactive-maps-with-tmap" class="section level2">
 <h2><span class="header-section-number">5.4</span> Interactive maps with tmap</h2>
 <p><code>tmap</code> offers versatility not only for creating static maps as we have seen above but it also allows us to make customised interactive maps conveniently by simply changing the mode of operation from static <em>plot</em> to dynamic <em>view</em> using <code>tmap_mode()</code></p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="co"># tmap_mode(&quot;view&quot;) #switches to interactive mode</span></span>
-<span id="cb109-2"><a href="visualising1.html#cb109-2"></a><span class="co"># tm_shape(africa)+  #creates a map from previous chapter in an interactive mode</span></span>
-<span id="cb109-3"><a href="visualising1.html#cb109-3"></a><span class="co">#   tm_borders()</span></span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="visualising1.html#cb108-1"></a><span class="co"># tmap_mode(&quot;view&quot;) #switches to interactive mode</span></span>
+<span id="cb108-2"><a href="visualising1.html#cb108-2"></a><span class="co"># tm_shape(africa)+  #creates a map from previous chapter in an interactive mode</span></span>
+<span id="cb108-3"><a href="visualising1.html#cb108-3"></a><span class="co">#   tm_borders()</span></span></code></pre></div>
 </div>
 <div id="further-resources-1" class="section level2">
 <h2><span class="header-section-number">5.5</span> Further resources</h2>
@@ -420,20 +428,22 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <ul>
 <li>Exercise 1</li>
 </ul>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb110-2"><a href="visualising1.html#cb110-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;yellow&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="st">&quot;solid&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb109-2"><a href="visualising1.html#cb109-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;yellow&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="st">&quot;solid&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
 <ul>
 <li>Exercise 2</li>
 </ul>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="visualising1.html#cb111-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb111-2"><a href="visualising1.html#cb111-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>,<span class="dt">alpha =</span> <span class="fl">0.3</span>)<span class="op">+</span></span>
-<span id="cb111-3"><a href="visualising1.html#cb111-3"></a><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb110-2"><a href="visualising1.html#cb110-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>,<span class="dt">alpha =</span> <span class="fl">0.3</span>)<span class="op">+</span></span>
+<span id="cb110-3"><a href="visualising1.html#cb110-3"></a><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
 <ul>
 <li>Exercise 3</li>
 </ul>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="visualising1.html#cb112-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb112-2"><a href="visualising1.html#cb112-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;gdp_md_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;GDP&quot;</span>,  <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>, <span class="dv">100000</span>,<span class="dv">200000</span>, <span class="dv">300000</span>, <span class="dv">500000</span>))<span class="op">+</span></span>
-<span id="cb112-3"><a href="visualising1.html#cb112-3"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="visualising1.html#cb111-1"></a>custom_breaks =<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>,<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">50</span>) <span class="op">*</span><span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb111-2"><a href="visualising1.html#cb111-2"></a></span>
+<span id="cb111-3"><a href="visualising1.html#cb111-3"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb111-4"><a href="visualising1.html#cb111-4"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col=</span><span class="st">&quot;gdp_md_est&quot;</span>, <span class="dt">title=</span><span class="st">&quot;GDP&quot;</span>,  <span class="dt">breaks =</span> custom_breaks)<span class="op">+</span></span>
+<span id="cb111-5"><a href="visualising1.html#cb111-5"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
 
 </div>
 </div>
