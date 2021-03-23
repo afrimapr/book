@@ -53,6 +53,7 @@ colour-pallet
 different-layers-for-the-static-maps
 exercises
 interactive-maps-with-tmap
+exercises-1
 further-resources-1
 solutions_ch5
 shiny
