@@ -24,7 +24,7 @@
 <meta name="author" content="The afrimapr team" />
 
 
-<meta name="date" content="2021-03-25" />
+<meta name="date" content="2021-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,16 +51,6 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-<script src="libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
-<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
 
 
 <style type="text/css">
@@ -162,17 +152,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6.2" data-path="rrecap.html"><a href="rrecap.html#characters"><i class="fa fa-check"></i><b>3.6.2</b> Characters</a></li>
 <li class="chapter" data-level="3.6.3" data-path="rrecap.html"><a href="rrecap.html#logical"><i class="fa fa-check"></i><b>3.6.3</b> Logical</a></li>
 <li class="chapter" data-level="3.6.4" data-path="rrecap.html"><a href="rrecap.html#factors"><i class="fa fa-check"></i><b>3.6.4</b> Factors</a></li>
+<li class="chapter" data-level="3.6.5" data-path="rrecap.html"><a href="rrecap.html#exercises"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#objects_basics"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a><ul>
 <li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
 <li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.7.2</b> Matrix</a></li>
 <li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#data-frame"><i class="fa fa-check"></i><b>3.7.3</b> Data frame</a></li>
+<li class="chapter" data-level="3.7.4" data-path="rrecap.html"><a href="rrecap.html#exercises-1"><i class="fa fa-check"></i><b>3.7.4</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#help"><i class="fa fa-check"></i><b>3.8</b> Getting help with R Help</a></li>
-<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.9</b> Wrap up</a></li>
-<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#feedback"><i class="fa fa-check"></i><b>3.10</b> Feedback</a></li>
+<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#further-resources"><i class="fa fa-check"></i><b>3.9</b> Further resources</a></li>
+<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.10</b> Wrap up</a></li>
+<li class="chapter" data-level="3.11" data-path="rrecap.html"><a href="rrecap.html#solutions_ch3"><i class="fa fa-check"></i><b>3.11</b> Exercise solutions</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Chapter 4 Spatial data types with focus on real examples</a><ul>
+<li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types with focus on real examples</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#overall-goal-of-the-chapter"><i class="fa fa-check"></i><b>4.1</b> Overall goal of the chapter</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="data-types.html"><a href="data-types.html#list-of-episodes-1"><i class="fa fa-check"></i><b>4.1.1</b> List of episodes</a></li>
 </ul></li>
@@ -189,22 +182,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.1" data-path="data-types.html"><a href="data-types.html#example-3"><i class="fa fa-check"></i><b>4.5.1</b> Example</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="data-types.html"><a href="data-types.html#summarykey-points"><i class="fa fa-check"></i><b>4.6</b> Summary/key points</a></li>
-<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#putting-it-into-practise"><i class="fa fa-check"></i><b>4.7</b> 4.5 Putting it into practise</a></li>
-<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#further-resources"><i class="fa fa-check"></i><b>4.8</b> 4.6 Further resources</a></li>
-<li class="chapter" data-level="4.9" data-path="data-types.html"><a href="data-types.html#feedback-1"><i class="fa fa-check"></i><b>4.9</b> 4.7 Feedback</a></li>
+<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#further-resources-1"><i class="fa fa-check"></i><b>4.7</b> 4.6 Further resources</a></li>
+<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#feedback"><i class="fa fa-check"></i><b>4.8</b> 4.7 Feedback</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: tmap and mapview</a><ul>
 <li class="chapter" data-level="5.1" data-path="visualising1.html"><a href="visualising1.html#overall-goal-of-the-chapter-1"><i class="fa fa-check"></i><b>5.1</b> Overall goal of the chapter</a></li>
-<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>5.2</b> Quick interactive maps with mapview</a></li>
+<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>5.2</b> Quick interactive maps with mapview</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="visualising1.html"><a href="visualising1.html#exercises-2"><i class="fa fa-check"></i><b>5.2.1</b> Exercises</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="visualising1.html"><a href="visualising1.html#static-maps-with-tmap"><i class="fa fa-check"></i><b>5.3</b> Static maps with tmap</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="visualising1.html"><a href="visualising1.html#colour-setting-and-colour-pallete"><i class="fa fa-check"></i><b>5.3.1</b> Colour setting and colour pallete</a></li>
 <li class="chapter" data-level="5.3.2" data-path="visualising1.html"><a href="visualising1.html#visualising-different-datasets-in-one-map"><i class="fa fa-check"></i><b>5.3.2</b> Visualising different datasets in one map</a></li>
-<li class="chapter" data-level="5.3.3" data-path="visualising1.html"><a href="visualising1.html#exercises"><i class="fa fa-check"></i><b>5.3.3</b> Exercises</a></li>
+<li class="chapter" data-level="5.3.3" data-path="visualising1.html"><a href="visualising1.html#exercises-3"><i class="fa fa-check"></i><b>5.3.3</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="visualising1.html"><a href="visualising1.html#interactive-maps-with-tmap"><i class="fa fa-check"></i><b>5.4</b> Interactive maps with tmap</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="visualising1.html"><a href="visualising1.html#exercises-1"><i class="fa fa-check"></i><b>5.4.1</b> Exercises</a></li>
+<li class="chapter" data-level="5.4.1" data-path="visualising1.html"><a href="visualising1.html#visualising-subsets-of-data"><i class="fa fa-check"></i><b>5.4.1</b> Visualising subsets of data</a></li>
+<li class="chapter" data-level="5.4.2" data-path="visualising1.html"><a href="visualising1.html#exercises-4"><i class="fa fa-check"></i><b>5.4.2</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="visualising1.html"><a href="visualising1.html#further-resources-1"><i class="fa fa-check"></i><b>5.5</b> Further resources</a></li>
+<li class="chapter" data-level="5.5" data-path="visualising1.html"><a href="visualising1.html#further-resources-2"><i class="fa fa-check"></i><b>5.5</b> Further resources</a></li>
 <li class="chapter" data-level="5.6" data-path="visualising1.html"><a href="visualising1.html#solutions_ch5"><i class="fa fa-check"></i><b>5.6</b> Exercise solutions</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>6</b> Shiny interactive map applications</a></li>
@@ -231,10 +226,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.3" data-path="template.html"><a href="template.html#episode_1_template"><i class="fa fa-check"></i><b>15.3</b> Episode 1 (topic 1)</a></li>
 <li class="chapter" data-level="15.4" data-path="template.html"><a href="template.html#episode_2_template"><i class="fa fa-check"></i><b>15.4</b> Episode 2 (topic 2)</a></li>
 <li class="chapter" data-level="15.5" data-path="template.html"><a href="template.html#episode_3_template"><i class="fa fa-check"></i><b>15.5</b> Episode 3 (topic 3)</a></li>
-<li class="chapter" data-level="15.6" data-path="template.html"><a href="template.html#further-resources-2"><i class="fa fa-check"></i><b>15.6</b> Further resources</a></li>
+<li class="chapter" data-level="15.6" data-path="template.html"><a href="template.html#further-resources-3"><i class="fa fa-check"></i><b>15.6</b> Further resources</a></li>
 <li class="chapter" data-level="15.7" data-path="template.html"><a href="template.html#wrap-up-1"><i class="fa fa-check"></i><b>15.7</b> Wrap up</a></li>
 <li class="chapter" data-level="15.8" data-path="template.html"><a href="template.html#exercise-solutions"><i class="fa fa-check"></i><b>15.8</b> Exercise solutions</a></li>
-<li class="chapter" data-level="15.9" data-path="template.html"><a href="template.html#feedback-2"><i class="fa fa-check"></i><b>15.9</b> Feedback</a></li>
+<li class="chapter" data-level="15.9" data-path="template.html"><a href="template.html#feedback-1"><i class="fa fa-check"></i><b>15.9</b> Feedback</a></li>
 <li class="chapter" data-level="15.10" data-path="template.html"><a href="template.html#putting-into-practice"><i class="fa fa-check"></i><b>15.10</b> Putting into practice</a></li>
 </ul></li>
 <li class="divider"></li>
@@ -425,7 +420,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <h3><span class="header-section-number">3.6.3</span> Logical</h3>
 <p>Logical objects can take values <code>TRUE</code> or <code>FALSE</code>, where <code>TRUE</code> is an equivalent of 1 whereas <code>FALSE</code> is an equivalent of 0. In these sense, they can be thought of as numerical values.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rrecap.html#cb30-1"></a>x &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
-<span id="cb30-2"><a href="rrecap.html#cb30-2"></a>y &lt;-<span class="st"> </span><span class="dv">3</span><span class="op">+</span><span class="ot">TRUE</span></span>
+<span id="cb30-2"><a href="rrecap.html#cb30-2"></a>y &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="ot">TRUE</span></span>
 <span id="cb30-3"><a href="rrecap.html#cb30-3"></a><span class="kw">print</span>(y)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <p>Typically, logical objects are results of a condition. For example, if we want to test if object <code>a</code> is larger than 100.</p>
@@ -450,6 +445,15 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <pre><code>## [1] A B B C D C C
 ## Levels: A B C D</code></pre>
 <p>The numbers and strings, in the example above, serve as labels of different levels.</p>
+</div>
+<div id="exercises" class="section level3">
+<h3><span class="header-section-number">3.6.5</span> Exercises</h3>
+<style>
+div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
+</style>
+<div class="purple">
+<p><strong>Exercise 3.6.1</strong>: Create a vector ‘a’ that contains descending sequence of numbers from 50 to 30 that decrases by 2. Hint: use seq()</p>
+</div>
 </div>
 </div>
 <div id="objects_basics" class="section level2">
@@ -519,6 +523,23 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <span id="cb56-3"><a href="rrecap.html#cb56-3"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;drinks&quot; &quot;amount&quot;</code></pre>
 </div>
+<div id="exercises-1" class="section level3">
+<h3><span class="header-section-number">3.7.4</span> Exercises</h3>
+<style>
+div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
+</style>
+<div class="purple">
+<p><strong>Exercise 3.7.1</strong>: Create three vectors containing character, integer and logical values, respectively. Each with 10 rows. Bind them to generate a matrix with 3 columns and 10 rows.</p>
+</div>
+<br/>
+<style>
+div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
+</style>
+<div class="purple">
+<p><strong>Exercise 3.7.2</strong>: Create a data frame from the matrix created in the previous exercise. Rename column headers to describe their content.</p>
+</div>
+<p><br/></p>
+</div>
 </div>
 <div id="help" class="section level2">
 <h2><span class="header-section-number">3.8</span> Getting help with R Help</h2>
@@ -565,14 +586,64 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ## 
 ## vector&gt; is.vector(list(), mode = &quot;list&quot;)
 ## [1] TRUE</code></pre>
+</div>
+<div id="further-resources" class="section level2">
+<h2><span class="header-section-number">3.9</span> Further resources</h2>
 <p>Finally, the Internet also provides several reliable sources such as official <a href="r-project.org">R website</a> or <a href="rdocumentation.org">documentation pages</a> where you can find help.</p>
 </div>
 <div id="wrap-up" class="section level2">
-<h2><span class="header-section-number">3.9</span> Wrap up</h2>
+<h2><span class="header-section-number">3.10</span> Wrap up</h2>
 <p>In this chapter we learned several R commands which prepared the reader for starting with his/her own project. Moreover, we familiarised with a number of data types and R objects. Moreover, we looked at how to obtain help and access R documentation. The material covered in this section aimed at building a base for the reader to allow him/her successfully progress through the book.</p>
 </div>
-<div id="feedback" class="section level2">
-<h2><span class="header-section-number">3.10</span> Feedback</h2>
+<div id="solutions_ch3" class="section level2">
+<h2><span class="header-section-number">3.11</span> Exercise solutions</h2>
+<ul>
+<li>Exercise 3.6.1</li>
+</ul>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rrecap.html#cb63-1"></a>a &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">50</span>,<span class="dv">30</span>, <span class="dt">by =</span> <span class="dv">-2</span>)</span></code></pre></div>
+<ul>
+<li>Exercise 3.7.1</li>
+</ul>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="rrecap.html#cb64-1"></a>v1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;water&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;juice&quot;</span>, <span class="st">&quot;coffee&quot;</span>, <span class="st">&quot;tea&quot;</span>, <span class="st">&quot;tea&quot;</span>, <span class="st">&quot;juice&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;water&quot;</span>, <span class="st">&quot;soda&quot;</span>)</span>
+<span id="cb64-2"><a href="rrecap.html#cb64-2"></a>v2 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span>
+<span id="cb64-3"><a href="rrecap.html#cb64-3"></a>v3 &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>), <span class="dt">length.out =</span> <span class="dv">10</span>) </span>
+<span id="cb64-4"><a href="rrecap.html#cb64-4"></a>v3 &lt;-<span class="kw">as.logical</span>(v3)</span>
+<span id="cb64-5"><a href="rrecap.html#cb64-5"></a>m1 =<span class="st"> </span><span class="kw">cbind</span>(v1, v2, v3) </span>
+<span id="cb64-6"><a href="rrecap.html#cb64-6"></a>m1</span></code></pre></div>
+<pre><code>##       v1       v2   v3     
+##  [1,] &quot;water&quot;  &quot;1&quot;  &quot;TRUE&quot; 
+##  [2,] &quot;milk&quot;   &quot;2&quot;  &quot;FALSE&quot;
+##  [3,] &quot;juice&quot;  &quot;3&quot;  &quot;TRUE&quot; 
+##  [4,] &quot;coffee&quot; &quot;4&quot;  &quot;FALSE&quot;
+##  [5,] &quot;tea&quot;    &quot;5&quot;  &quot;TRUE&quot; 
+##  [6,] &quot;tea&quot;    &quot;6&quot;  &quot;FALSE&quot;
+##  [7,] &quot;juice&quot;  &quot;7&quot;  &quot;TRUE&quot; 
+##  [8,] &quot;milk&quot;   &quot;8&quot;  &quot;FALSE&quot;
+##  [9,] &quot;water&quot;  &quot;9&quot;  &quot;TRUE&quot; 
+## [10,] &quot;soda&quot;   &quot;10&quot; &quot;FALSE&quot;</code></pre>
+<ul>
+<li>Exercise 3.7.2</li>
+</ul>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="rrecap.html#cb66-1"></a>df =<span class="st"> </span><span class="kw">data.frame</span>(m1)</span>
+<span id="cb66-2"><a href="rrecap.html#cb66-2"></a></span>
+<span id="cb66-3"><a href="rrecap.html#cb66-3"></a><span class="kw">names</span>(df)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;Drink&quot;</span></span>
+<span id="cb66-4"><a href="rrecap.html#cb66-4"></a><span class="kw">names</span>(df)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;Amount&quot;</span></span>
+<span id="cb66-5"><a href="rrecap.html#cb66-5"></a><span class="kw">names</span>(df)[<span class="dv">3</span>] &lt;-<span class="st"> &quot;Female&quot;</span></span>
+<span id="cb66-6"><a href="rrecap.html#cb66-6"></a></span>
+<span id="cb66-7"><a href="rrecap.html#cb66-7"></a>df<span class="op">$</span>Female &lt;-<span class="kw">as.logical</span>(df<span class="op">$</span>Female)</span>
+<span id="cb66-8"><a href="rrecap.html#cb66-8"></a>df<span class="op">$</span>Amount &lt;-<span class="kw">as.integer</span>(df<span class="op">$</span>Amount)</span>
+<span id="cb66-9"><a href="rrecap.html#cb66-9"></a>df</span></code></pre></div>
+<pre><code>##     Drink Amount Female
+## 1   water      1   TRUE
+## 2    milk      2  FALSE
+## 3   juice      3   TRUE
+## 4  coffee      4  FALSE
+## 5     tea      5   TRUE
+## 6     tea      6  FALSE
+## 7   juice      7   TRUE
+## 8    milk      8  FALSE
+## 9   water      9   TRUE
+## 10   soda     10  FALSE</code></pre>
 
 </div>
 </div>
@@ -632,20 +703,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

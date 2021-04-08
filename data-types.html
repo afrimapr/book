@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Chapter 4 Spatial data types with focus on real examples | The afrimapr book</title>
+  <title>Chapter 4 Spatial data types with focus on real examples | The afrimapr book</title>
   <meta name="description" content="An introduction to making maps from African data in R." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Chapter 4 Spatial data types with focus on real examples | The afrimapr book" />
+  <meta property="og:title" content="Chapter 4 Spatial data types with focus on real examples | The afrimapr book" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Chapter 4 Spatial data types with focus on real examples | The afrimapr book" />
+  <meta name="twitter:title" content="Chapter 4 Spatial data types with focus on real examples | The afrimapr book" />
   
   <meta name="twitter:description" content="An introduction to making maps from African data in R." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="The afrimapr team" />
 
 
-<meta name="date" content="2021-03-25" />
+<meta name="date" content="2021-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,16 +51,6 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-<script src="libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
-<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
 
 
 <style type="text/css">
@@ -162,17 +152,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6.2" data-path="rrecap.html"><a href="rrecap.html#characters"><i class="fa fa-check"></i><b>3.6.2</b> Characters</a></li>
 <li class="chapter" data-level="3.6.3" data-path="rrecap.html"><a href="rrecap.html#logical"><i class="fa fa-check"></i><b>3.6.3</b> Logical</a></li>
 <li class="chapter" data-level="3.6.4" data-path="rrecap.html"><a href="rrecap.html#factors"><i class="fa fa-check"></i><b>3.6.4</b> Factors</a></li>
+<li class="chapter" data-level="3.6.5" data-path="rrecap.html"><a href="rrecap.html#exercises"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3.7" data-path="rrecap.html"><a href="rrecap.html#objects_basics"><i class="fa fa-check"></i><b>3.7</b> Basic objects and data structures</a><ul>
 <li class="chapter" data-level="3.7.1" data-path="rrecap.html"><a href="rrecap.html#vector"><i class="fa fa-check"></i><b>3.7.1</b> Vector</a></li>
 <li class="chapter" data-level="3.7.2" data-path="rrecap.html"><a href="rrecap.html#matrix"><i class="fa fa-check"></i><b>3.7.2</b> Matrix</a></li>
 <li class="chapter" data-level="3.7.3" data-path="rrecap.html"><a href="rrecap.html#data-frame"><i class="fa fa-check"></i><b>3.7.3</b> Data frame</a></li>
+<li class="chapter" data-level="3.7.4" data-path="rrecap.html"><a href="rrecap.html#exercises-1"><i class="fa fa-check"></i><b>3.7.4</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="rrecap.html"><a href="rrecap.html#help"><i class="fa fa-check"></i><b>3.8</b> Getting help with R Help</a></li>
-<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.9</b> Wrap up</a></li>
-<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#feedback"><i class="fa fa-check"></i><b>3.10</b> Feedback</a></li>
+<li class="chapter" data-level="3.9" data-path="rrecap.html"><a href="rrecap.html#further-resources"><i class="fa fa-check"></i><b>3.9</b> Further resources</a></li>
+<li class="chapter" data-level="3.10" data-path="rrecap.html"><a href="rrecap.html#wrap-up"><i class="fa fa-check"></i><b>3.10</b> Wrap up</a></li>
+<li class="chapter" data-level="3.11" data-path="rrecap.html"><a href="rrecap.html#solutions_ch3"><i class="fa fa-check"></i><b>3.11</b> Exercise solutions</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Chapter 4 Spatial data types with focus on real examples</a><ul>
+<li class="chapter" data-level="4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>4</b> Spatial data types with focus on real examples</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#overall-goal-of-the-chapter"><i class="fa fa-check"></i><b>4.1</b> Overall goal of the chapter</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="data-types.html"><a href="data-types.html#list-of-episodes-1"><i class="fa fa-check"></i><b>4.1.1</b> List of episodes</a></li>
 </ul></li>
@@ -189,22 +182,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.1" data-path="data-types.html"><a href="data-types.html#example-3"><i class="fa fa-check"></i><b>4.5.1</b> Example</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="data-types.html"><a href="data-types.html#summarykey-points"><i class="fa fa-check"></i><b>4.6</b> Summary/key points</a></li>
-<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#putting-it-into-practise"><i class="fa fa-check"></i><b>4.7</b> 4.5 Putting it into practise</a></li>
-<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#further-resources"><i class="fa fa-check"></i><b>4.8</b> 4.6 Further resources</a></li>
-<li class="chapter" data-level="4.9" data-path="data-types.html"><a href="data-types.html#feedback-1"><i class="fa fa-check"></i><b>4.9</b> 4.7 Feedback</a></li>
+<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#further-resources-1"><i class="fa fa-check"></i><b>4.7</b> 4.6 Further resources</a></li>
+<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#feedback"><i class="fa fa-check"></i><b>4.8</b> 4.7 Feedback</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: tmap and mapview</a><ul>
 <li class="chapter" data-level="5.1" data-path="visualising1.html"><a href="visualising1.html#overall-goal-of-the-chapter-1"><i class="fa fa-check"></i><b>5.1</b> Overall goal of the chapter</a></li>
-<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>5.2</b> Quick interactive maps with mapview</a></li>
+<li class="chapter" data-level="5.2" data-path="visualising1.html"><a href="visualising1.html#quick-interactive-maps-with-mapview"><i class="fa fa-check"></i><b>5.2</b> Quick interactive maps with mapview</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="visualising1.html"><a href="visualising1.html#exercises-2"><i class="fa fa-check"></i><b>5.2.1</b> Exercises</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="visualising1.html"><a href="visualising1.html#static-maps-with-tmap"><i class="fa fa-check"></i><b>5.3</b> Static maps with tmap</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="visualising1.html"><a href="visualising1.html#colour-setting-and-colour-pallete"><i class="fa fa-check"></i><b>5.3.1</b> Colour setting and colour pallete</a></li>
 <li class="chapter" data-level="5.3.2" data-path="visualising1.html"><a href="visualising1.html#visualising-different-datasets-in-one-map"><i class="fa fa-check"></i><b>5.3.2</b> Visualising different datasets in one map</a></li>
-<li class="chapter" data-level="5.3.3" data-path="visualising1.html"><a href="visualising1.html#exercises"><i class="fa fa-check"></i><b>5.3.3</b> Exercises</a></li>
+<li class="chapter" data-level="5.3.3" data-path="visualising1.html"><a href="visualising1.html#exercises-3"><i class="fa fa-check"></i><b>5.3.3</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="visualising1.html"><a href="visualising1.html#interactive-maps-with-tmap"><i class="fa fa-check"></i><b>5.4</b> Interactive maps with tmap</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="visualising1.html"><a href="visualising1.html#exercises-1"><i class="fa fa-check"></i><b>5.4.1</b> Exercises</a></li>
+<li class="chapter" data-level="5.4.1" data-path="visualising1.html"><a href="visualising1.html#visualising-subsets-of-data"><i class="fa fa-check"></i><b>5.4.1</b> Visualising subsets of data</a></li>
+<li class="chapter" data-level="5.4.2" data-path="visualising1.html"><a href="visualising1.html#exercises-4"><i class="fa fa-check"></i><b>5.4.2</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="visualising1.html"><a href="visualising1.html#further-resources-1"><i class="fa fa-check"></i><b>5.5</b> Further resources</a></li>
+<li class="chapter" data-level="5.5" data-path="visualising1.html"><a href="visualising1.html#further-resources-2"><i class="fa fa-check"></i><b>5.5</b> Further resources</a></li>
 <li class="chapter" data-level="5.6" data-path="visualising1.html"><a href="visualising1.html#solutions_ch5"><i class="fa fa-check"></i><b>5.6</b> Exercise solutions</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>6</b> Shiny interactive map applications</a></li>
@@ -231,10 +226,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.3" data-path="template.html"><a href="template.html#episode_1_template"><i class="fa fa-check"></i><b>15.3</b> Episode 1 (topic 1)</a></li>
 <li class="chapter" data-level="15.4" data-path="template.html"><a href="template.html#episode_2_template"><i class="fa fa-check"></i><b>15.4</b> Episode 2 (topic 2)</a></li>
 <li class="chapter" data-level="15.5" data-path="template.html"><a href="template.html#episode_3_template"><i class="fa fa-check"></i><b>15.5</b> Episode 3 (topic 3)</a></li>
-<li class="chapter" data-level="15.6" data-path="template.html"><a href="template.html#further-resources-2"><i class="fa fa-check"></i><b>15.6</b> Further resources</a></li>
+<li class="chapter" data-level="15.6" data-path="template.html"><a href="template.html#further-resources-3"><i class="fa fa-check"></i><b>15.6</b> Further resources</a></li>
 <li class="chapter" data-level="15.7" data-path="template.html"><a href="template.html#wrap-up-1"><i class="fa fa-check"></i><b>15.7</b> Wrap up</a></li>
 <li class="chapter" data-level="15.8" data-path="template.html"><a href="template.html#exercise-solutions"><i class="fa fa-check"></i><b>15.8</b> Exercise solutions</a></li>
-<li class="chapter" data-level="15.9" data-path="template.html"><a href="template.html#feedback-2"><i class="fa fa-check"></i><b>15.9</b> Feedback</a></li>
+<li class="chapter" data-level="15.9" data-path="template.html"><a href="template.html#feedback-1"><i class="fa fa-check"></i><b>15.9</b> Feedback</a></li>
 <li class="chapter" data-level="15.10" data-path="template.html"><a href="template.html#putting-into-practice"><i class="fa fa-check"></i><b>15.10</b> Putting into practice</a></li>
 </ul></li>
 <li class="divider"></li>
@@ -258,7 +253,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="data-types" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Chapter 4 Spatial data types with focus on real examples</h1>
+<h1><span class="header-section-number">Chapter 4</span> Spatial data types with focus on real examples</h1>
 <div id="overall-goal-of-the-chapter" class="section level2">
 <h2><span class="header-section-number">4.1</span> Overall goal of the chapter</h2>
 <p>Previous chapter provided a short recap of the R basics that are necessary to succesfully go through the geospatial training that has been drawn up in this book. This section will focus on the very basics of geospatial mapping, the four different types of spatial data:
@@ -267,13 +262,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 3. polygons
 4. rasters</p>
 <p>The goal of a spatial map is to model reality, whether this is on the scale of a street, a neighbourhood, a country or a continent. Depending on the topics you’re interested in, this could be focussed on disease cases, landcover dynamics, location of schools and so on. The opportunities are endless. All the R software needs is information in points, lines, polygons and rasters which together form a model of reality.</p>
-<p>–&gt; interactive image with a different layer for points, lines, polygons and rasters (need help doing this)
-#mapview(list(africapitals, afrihighway),
-# zcol = list(‘pop’,‘Name’),
-# legend = list(TRUE, FALSE),<br />
-# color = list(NULL, ‘red’),
-# label = list(paste(africapitals<span class="math inline">\(countryname,&#39;:&#39;,africapitals\)</span>capitalname),
-# afrihighway$Name) )</p>
+<p>–&gt; interactive image with a different layer for points, lines, polygons and rasters (need help doing this)</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="data-types.html#cb68-1"></a><span class="co">#mapview(list(africapitals, afrihighway),</span></span>
+<span id="cb68-2"><a href="data-types.html#cb68-2"></a><span class="co">#        zcol = list(&#39;pop&#39;,&#39;Name&#39;),</span></span>
+<span id="cb68-3"><a href="data-types.html#cb68-3"></a><span class="co">#        legend = list(TRUE, FALSE),  </span></span>
+<span id="cb68-4"><a href="data-types.html#cb68-4"></a><span class="co">#        color = list(NULL, &#39;red&#39;),</span></span>
+<span id="cb68-5"><a href="data-types.html#cb68-5"></a><span class="co">#        label = list(paste(africapitals$countryname,&#39;:&#39;,africapitals$capitalname),</span></span>
+<span id="cb68-6"><a href="data-types.html#cb68-6"></a><span class="co">#                     afrihighway$Name) )</span></span></code></pre></div>
 <p>All spatial data types require a spatial reference framework or coordinate system identification to place data in the correct location in space. We will discuss this in more detail in chapter xxx. For now, just be aware that apart from your data file, additional data are necessary to place your spatial data in the correct location.</p>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
@@ -323,21 +318,21 @@ div.green { background-color:palegreen; border-radius: 5px; padding: 20px;}
 <h3><span class="header-section-number">4.2.1</span> Example</h3>
 <p>Lets try and visualise the capital cities of Africa.</p>
 <p>Just a quick reminder of the necessary packages</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data-types.html#cb63-1"></a><span class="kw">library</span>(afrilearndata) <span class="co">#load afrilearndata package</span></span>
-<span id="cb63-2"><a href="data-types.html#cb63-2"></a></span>
-<span id="cb63-3"><a href="data-types.html#cb63-3"></a><span class="co">#In case the data isn&#39;t loaded into your R environment automatically, they can be individually loaded using the codes below.</span></span>
-<span id="cb63-4"><a href="data-types.html#cb63-4"></a><span class="kw">data</span>(africapitals) <span class="co">#location of the African capitals</span></span>
-<span id="cb63-5"><a href="data-types.html#cb63-5"></a><span class="kw">data</span>(afriairports) <span class="co">#location of the large airports in Africa</span></span>
-<span id="cb63-6"><a href="data-types.html#cb63-6"></a><span class="kw">data</span>(afrihighway) <span class="co">#the main highways in Africa</span></span>
-<span id="cb63-7"><a href="data-types.html#cb63-7"></a><span class="kw">data</span>(africountries) <span class="co">#borders of the African countries</span></span>
-<span id="cb63-8"><a href="data-types.html#cb63-8"></a><span class="kw">data</span>(afripop2000) <span class="co">#The population density accross Africa (Worldpop)</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="data-types.html#cb69-1"></a><span class="co"># library(afrilearndata) #load afrilearndata package</span></span>
+<span id="cb69-2"><a href="data-types.html#cb69-2"></a><span class="co"># </span></span>
+<span id="cb69-3"><a href="data-types.html#cb69-3"></a><span class="co"># #In case the data isn&#39;t loaded into your R environment automatically, they can be individually loaded using the codes below.</span></span>
+<span id="cb69-4"><a href="data-types.html#cb69-4"></a><span class="co"># data(africapitals) #location of the African capitals</span></span>
+<span id="cb69-5"><a href="data-types.html#cb69-5"></a><span class="co"># data(afriairports) #location of the large airports in Africa</span></span>
+<span id="cb69-6"><a href="data-types.html#cb69-6"></a><span class="co"># data(afrihighway) #the main highways in Africa</span></span>
+<span id="cb69-7"><a href="data-types.html#cb69-7"></a><span class="co"># data(africountries) #borders of the African countries</span></span>
+<span id="cb69-8"><a href="data-types.html#cb69-8"></a><span class="co"># data(afripop2000) #The population density accross Africa (Worldpop)</span></span></code></pre></div>
 <p>We will start by downloading the necessary packages:
 <em><a href="https://r-spatial.github.io/sf/">sf</a> package. This package is necessary to read in the spatial data files.
 </em><a href="https://cran.r-project.org/web/packages/tmap/tmap.pdf">tmap</a> package. This package is necessary to create the maps.</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="data-types.html#cb64-1"></a><span class="co">#install.packages(&quot;sf&quot;) #install sf package</span></span>
-<span id="cb64-2"><a href="data-types.html#cb64-2"></a><span class="co">#install.packages(&quot;tmap&quot;) #install tmap package</span></span>
-<span id="cb64-3"><a href="data-types.html#cb64-3"></a><span class="kw">library</span>(sf) <span class="co">#load sf package</span></span>
-<span id="cb64-4"><a href="data-types.html#cb64-4"></a><span class="kw">library</span>(tmap) <span class="co">#load tmap package</span></span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="data-types.html#cb70-1"></a><span class="co"># #install.packages(&quot;sf&quot;) #install sf package</span></span>
+<span id="cb70-2"><a href="data-types.html#cb70-2"></a><span class="co"># #install.packages(&quot;tmap&quot;) #install tmap package</span></span>
+<span id="cb70-3"><a href="data-types.html#cb70-3"></a><span class="co"># library(sf) #load sf package</span></span>
+<span id="cb70-4"><a href="data-types.html#cb70-4"></a><span class="co"># library(tmap) #load tmap package</span></span></code></pre></div>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
@@ -345,28 +340,10 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p>Please note that more information can be found about the different packages using the Help tools explained in <a href="##%20chapter%203.8">chapter 3.8</a></p>
 </div>
 <p>Now, let’s look at the data file that contains information about the African capitals. A quick summary of the spatial aspects (geometry) of the datafile can be checked using the following code:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="data-types.html#cb65-1"></a><span class="kw">print</span>(<span class="kw">st_geometry</span>(africapitals)) <span class="co">#printing information on the geometry</span></span></code></pre></div>
-<pre><code>## Geometry set for 50 features 
-## Geometry type: POINT
-## Dimension:     XY
-## Bounding box:  xmin: -17.48 ymin: -29.31 xmax: 47.51 ymax: 36.84
-## Geodetic CRS:  WGS 84
-## First 5 geometries:</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="data-types.html#cb71-1"></a><span class="co">#print(st_geometry(africapitals)) #printing information on the geometry</span></span></code></pre></div>
 <p>We can see from the results that the African capital data file contains 50 points (capitals) with geometry type <strong>POINT</strong>.
 Let’s print the first 6 rows of data, so we can see how the coordinates of each African captial is stored in the database.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="data-types.html#cb67-1"></a><span class="kw">head</span>(africapitals) <span class="co">#First 6 rows of data are printed</span></span></code></pre></div>
-<pre><code>## Simple feature collection with 6 features and 4 fields
-## Geometry type: POINT
-## Dimension:     XY
-## Bounding box:  xmin: -0.2 ymin: -18.89 xmax: 47.51 ymax: 36.77
-## Geodetic CRS:  WGS 84
-##       capitalname countryname     pop iso3c             geometry
-## 280         Abuja     Nigeria  178462   NGA    POINT (7.17 9.18)
-## 308         Accra       Ghana 2029143   GHA    POINT (-0.2 5.56)
-## 382   Addis Abeba    Ethiopia 2823167   ETH   POINT (38.74 9.03)
-## 996       Algiers     Algeria 2029936   DZA   POINT (3.04 36.77)
-## 1584 Antananarivo  Madagascar 1463754   MDG POINT (47.51 -18.89)
-## 2193       Asmara     Eritrea  578860   ERI  POINT (38.94 15.33)</code></pre>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="data-types.html#cb72-1"></a><span class="co">#head(africapitals) #First 6 rows of data are printed</span></span></code></pre></div>
 <p>The capitals all have one latitude and one longitude value. The geometry of the point data is stored as <em>POINT (Latitude, Longitude)</em>. On the location where the latitude and longitude overlap, a point will be drawn when POINT data is visualised.</p>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
@@ -375,35 +352,34 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p>Please note that this database also includes the population of the capital as a seperate data column.</p>
 </div>
 <p>Let’s now visualise the African capitals by plotting their geometry using the tmap package.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="data-types.html#cb69-1"></a><span class="co"># tm_shape(africapitals) + #specify the data file</span></span>
-<span id="cb69-2"><a href="data-types.html#cb69-2"></a><span class="co">#   tm_dots() # displaying the point geometry</span></span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-types.html#cb73-1"></a><span class="co"># tm_shape(africapitals) + #specify the data file</span></span>
+<span id="cb73-2"><a href="data-types.html#cb73-2"></a><span class="co">#   tm_dots() # displaying the point geometry</span></span></code></pre></div>
 <p>The <code>tmap</code> package works similar to the ggplot package. You need to first specify the data file you want to visualise using <code>tm_shape()</code>, after which the exact format of the spatial data can be specified (points, lines, polygons). As we are working with point data in this example, the <code>tm_dots()</code> function is used. As with ggplot, there is a lot of flexibility in the colouring, shapes and sizes of the dots. For example, the dots can be turned red and labelled with the name of the city.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="data-types.html#cb70-1"></a><span class="co"># tm_shape(africapitals) +</span></span>
-<span id="cb70-2"><a href="data-types.html#cb70-2"></a><span class="co">#   tm_dots(&quot;red&quot;)+ # displaying the point geometry as red dots</span></span>
-<span id="cb70-3"><a href="data-types.html#cb70-3"></a><span class="co">#     tm_text(&quot;capitalname&quot;, size=0.7 ) #adding the name </span></span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="data-types.html#cb74-1"></a><span class="co"># tm_shape(africapitals) +</span></span>
+<span id="cb74-2"><a href="data-types.html#cb74-2"></a><span class="co">#   tm_dots(&quot;red&quot;)+ # displaying the point geometry as red dots</span></span>
+<span id="cb74-3"><a href="data-types.html#cb74-3"></a><span class="co">#     tm_text(&quot;capitalname&quot;, size=0.7 ) #adding the name </span></span></code></pre></div>
 <p>As you can see in the example above, the labelling makes the image messy. In these instances it is important to think about the message you are trying to convey with your map.
 If the labelling is essential, you can look up the help section of the ‘tm_text’ using the help tool and play around with the different options to clean up the map further.</p>
-</div>
 <div id="exercise-1" class="section level4">
 <h4><span class="header-section-number">4.2.1.1</span> Exercise 1</h4>
 <p>In this first exercise, we will use the same African capital data as our example.
 Below, We have visualised all capitals with &gt; 1.400.000 people using green squares of size 1. However, the code isn’t working. Can you find the <strong>four</strong> mistakes?</p>
 <p><em>Hint: if you get stuck, look at ‘?tm_dots’</em></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="data-types.html#cb71-1"></a><span class="co">#africapitals_filtered=africapitals %&gt;%</span></span>
-<span id="cb71-2"><a href="data-types.html#cb71-2"></a><span class="co">#  dplyr::filter((africapitals$iso3c) &gt; 1.400.000)</span></span>
-<span id="cb71-3"><a href="data-types.html#cb71-3"></a></span>
-<span id="cb71-4"><a href="data-types.html#cb71-4"></a><span class="co">#tm_shape(africapitals_filtered) +</span></span>
-<span id="cb71-5"><a href="data-types.html#cb71-5"></a><span class="co">#  tm_dots(&quot;green&quot;, size=0.5)</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="data-types.html#cb75-1"></a><span class="co">#africapitals_filtered=africapitals %&gt;%</span></span>
+<span id="cb75-2"><a href="data-types.html#cb75-2"></a><span class="co">#  dplyr::filter((africapitals$iso3c) &gt; 1.400.000)</span></span>
+<span id="cb75-3"><a href="data-types.html#cb75-3"></a></span>
+<span id="cb75-4"><a href="data-types.html#cb75-4"></a><span class="co">#tm_shape(africapitals_filtered) +</span></span>
+<span id="cb75-5"><a href="data-types.html#cb75-5"></a><span class="co">#  tm_dots(&quot;green&quot;, size=0.5)</span></span></code></pre></div>
 <p>Answer:
 * In the initial filter, <code>africapitals$iso3c</code> needs to be changed to <code>africapitals$pop</code>
 * Dots in 1.400.000 need to be removed
 * The shape of the dots need to be specified as squares using <code>shape=22</code>
 * The size of the points needs to be 1.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="data-types.html#cb72-1"></a><span class="co">#africapitals_filtered=africapitals %&gt;%</span></span>
-<span id="cb72-2"><a href="data-types.html#cb72-2"></a><span class="co">#  dplyr::filter((africapitals$pop) &gt; 1400000)</span></span>
-<span id="cb72-3"><a href="data-types.html#cb72-3"></a></span>
-<span id="cb72-4"><a href="data-types.html#cb72-4"></a><span class="co">#tm_shape(africapitals_filtered) +</span></span>
-<span id="cb72-5"><a href="data-types.html#cb72-5"></a><span class="co">#  tm_dots(&quot;green&quot;, shape = 22, size=1)</span></span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="data-types.html#cb76-1"></a><span class="co">#africapitals_filtered=africapitals %&gt;%</span></span>
+<span id="cb76-2"><a href="data-types.html#cb76-2"></a><span class="co">#  dplyr::filter((africapitals$pop) &gt; 1400000)</span></span>
+<span id="cb76-3"><a href="data-types.html#cb76-3"></a></span>
+<span id="cb76-4"><a href="data-types.html#cb76-4"></a><span class="co">#tm_shape(africapitals_filtered) +</span></span>
+<span id="cb76-5"><a href="data-types.html#cb76-5"></a><span class="co">#  tm_dots(&quot;green&quot;, shape = 22, size=1)</span></span></code></pre></div>
 </div>
 <div id="exercise-2" class="section level4">
 <h4><span class="header-section-number">4.2.1.2</span> Exercise 2</h4>
@@ -412,11 +388,10 @@ Visualise the capitals and airports in one map, with capitals as grey large fill
 <em>Hint: if you get stuck, look at ‘Add Points to a Plot’ in the help section.</em>
 <em>Hint: When both points and lines are mapped, datasets need to be identified seperately in <code>tm_shape()</code> before the use of <code>tm_dots()</code>.</em></p>
 <p>Answer:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-types.html#cb73-1"></a><span class="co">#tm_shape(africapitals) +</span></span>
-<span id="cb73-2"><a href="data-types.html#cb73-2"></a><span class="co">#  tm_dots(col=&quot;grey&quot;, shape = 19, size=3) +</span></span>
-<span id="cb73-3"><a href="data-types.html#cb73-3"></a><span class="co">#tm_shape(afriairports) +</span></span>
-<span id="cb73-4"><a href="data-types.html#cb73-4"></a><span class="co">#  tm_dots(col=&quot;blue&quot;, shape = 2, size=1)</span></span></code></pre></div>
-</div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="data-types.html#cb77-1"></a><span class="co">#tm_shape(africapitals) +</span></span>
+<span id="cb77-2"><a href="data-types.html#cb77-2"></a><span class="co">#  tm_dots(col=&quot;grey&quot;, shape = 19, size=3) +</span></span>
+<span id="cb77-3"><a href="data-types.html#cb77-3"></a><span class="co">#tm_shape(afriairports) +</span></span>
+<span id="cb77-4"><a href="data-types.html#cb77-4"></a><span class="co">#  tm_dots(col=&quot;blue&quot;, shape = 2, size=1)</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -438,36 +413,14 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <h3><span class="header-section-number">4.3.1</span> Example</h3>
 <p>For this example, we will look at the trans-African highway network.
 Let’s start by looking at a quick summary of the spatial aspects (geometry).</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="data-types.html#cb74-1"></a><span class="kw">print</span>(<span class="kw">st_geometry</span>(afrihighway)) <span class="co">#printing information on the geometry</span></span></code></pre></div>
-<pre><code>## Geometry set for 100 features 
-## Geometry type: LINESTRING
-## Dimension:     XYZ
-## Bounding box:  xmin: -17.38929 ymin: -33.95247 xmax: 43.13781 ymax: 37.08586
-## z_range:       zmin: 0 zmax: 0
-## Geodetic CRS:  WGS 84
-## First 5 geometries:</code></pre>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="data-types.html#cb78-1"></a><span class="co">#print(st_geometry(afrihighway)) #printing information on the geometry</span></span></code></pre></div>
 <p>The results show that the African highway network contains 100 lines with geometry type <strong>LINESTRING</strong>.</p>
 <p>Let’s now print the first 6 rows of data to see how line data are stored.</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="data-types.html#cb76-1"></a><span class="kw">head</span>(afrihighway) <span class="co">#First 6 rows of data are printed</span></span></code></pre></div>
-<pre><code>## Simple feature collection with 6 features and 1 field
-## Geometry type: LINESTRING
-## Dimension:     XYZ
-## Bounding box:  xmin: -17.36938 ymin: 14.76957 xmax: -6.800537 ymax: 33.98436
-## z_range:       zmin: 0 zmax: 0
-## Geodetic CRS:  WGS 84
-## # A tibble: 6 x 2
-##   Name                                                                  geometry
-##   &lt;chr&gt;                                                         &lt;LINESTRING [°]&gt;
-## 1 Western Sahara (Morocco… Z (-16.94778 21.34438 0, -16.85303 21.96343 0, -16.5…
-## 2 Mauritania Border- Daka… Z (-17.36938 14.76957 0, -16.9519 14.77488 0, -16.73…
-## 3 Nouakchott- Senegal Bor… Z (-15.81069 16.52036 0, -16.11694 16.72039 0, -16.1…
-## 4 Western Sahara Border- … Z (-15.99128 18.08646 0, -16.01807 18.49003 0, -16.1…
-## 5 Marrakesh- Western Saha… Z (-12.95837 27.67623 0, -12.7002 28.0041 0, -12.128…
-## 6 Rabat- Marrakesh Link    Z (-8.12439 31.79238 0, -8.02002 31.8589 0, -7.91564…</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="data-types.html#cb79-1"></a><span class="co">#head(afrihighway) #First 6 rows of data are printed</span></span></code></pre></div>
 <p>Line data contain a string of data points with latitude and longitude: <em>LINESTRING(Latitude1, Longitude1, Latitude2, Longitude2, Latitude3, Longitude3,.. )</em>. During mapping, these points are connected to form a line.</p>
 <p>Let’s visualise these linestrings in red by plotting their geometry using the tmap package.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="data-types.html#cb78-1"></a><span class="co">#tm_shape(afrihighway) +</span></span>
-<span id="cb78-2"><a href="data-types.html#cb78-2"></a><span class="co">#  tm_lines(&quot;red&quot;) </span></span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="data-types.html#cb80-1"></a><span class="co">#tm_shape(afrihighway) +</span></span>
+<span id="cb80-2"><a href="data-types.html#cb80-2"></a><span class="co">#  tm_lines(&quot;red&quot;) </span></span></code></pre></div>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
@@ -475,10 +428,10 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <p>Similar to point data, the lines can be illustrated in a large variety of ways. Please check the <code>tm_lines()</code> help section to familiarise yourself with the many layout options available.</p>
 </div>
 <p>Now we add the capitals from previous episode in blue.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="data-types.html#cb79-1"></a><span class="co"># tm_shape(africapitals) +</span></span>
-<span id="cb79-2"><a href="data-types.html#cb79-2"></a><span class="co">#   tm_dots(&quot;blue&quot;, size=0.5)+</span></span>
-<span id="cb79-3"><a href="data-types.html#cb79-3"></a><span class="co"># tm_shape(afrihighway) +</span></span>
-<span id="cb79-4"><a href="data-types.html#cb79-4"></a><span class="co">#   tm_lines(&quot;red&quot;) # displaying the point geometry as red dots</span></span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="data-types.html#cb81-1"></a><span class="co"># tm_shape(africapitals) +</span></span>
+<span id="cb81-2"><a href="data-types.html#cb81-2"></a><span class="co">#   tm_dots(&quot;blue&quot;, size=0.5)+</span></span>
+<span id="cb81-3"><a href="data-types.html#cb81-3"></a><span class="co"># tm_shape(afrihighway) +</span></span>
+<span id="cb81-4"><a href="data-types.html#cb81-4"></a><span class="co">#   tm_lines(&quot;red&quot;) # displaying the point geometry as red dots</span></span></code></pre></div>
 <p>Great to see how the capitals are connected by the trans-African highway network.</p>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
@@ -490,26 +443,25 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <h4><span class="header-section-number">4.3.1.1</span> Exercise 1</h4>
 <p>In the below exercise we have tried to visualise all the capitals and <em>only</em> the roads starting with the letter ‘b’.
 However, we have messed up the order of the code. Can you rearrange the code?</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="data-types.html#cb80-1"></a><span class="co"># tm_shape(africapitals) +</span></span>
-<span id="cb80-2"><a href="data-types.html#cb80-2"></a><span class="co">#     tm_shape(afrihighway_ex1)+</span></span>
-<span id="cb80-3"><a href="data-types.html#cb80-3"></a><span class="co">#   tm_dots(&quot;blue&quot;, size=0.5)+</span></span>
-<span id="cb80-4"><a href="data-types.html#cb80-4"></a><span class="co">#   tm_lines(&quot;blue&quot;) </span></span>
-<span id="cb80-5"><a href="data-types.html#cb80-5"></a><span class="co">#afrihighway_ex1=afrihighway[grep(&quot;^B&quot;, afrihighway$Name),]</span></span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-types.html#cb82-1"></a><span class="co"># tm_shape(africapitals) +</span></span>
+<span id="cb82-2"><a href="data-types.html#cb82-2"></a><span class="co">#     tm_shape(afrihighway_ex1)+</span></span>
+<span id="cb82-3"><a href="data-types.html#cb82-3"></a><span class="co">#   tm_dots(&quot;blue&quot;, size=0.5)+</span></span>
+<span id="cb82-4"><a href="data-types.html#cb82-4"></a><span class="co">#   tm_lines(&quot;blue&quot;) </span></span>
+<span id="cb82-5"><a href="data-types.html#cb82-5"></a><span class="co">#afrihighway_ex1=afrihighway[grep(&quot;^B&quot;, afrihighway$Name),]</span></span></code></pre></div>
 <p>Answer:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="data-types.html#cb81-1"></a><span class="co">#afrihighway_ex1=afrihighway[grep(&quot;^B&quot;, afrihighway$Name),]</span></span>
-<span id="cb81-2"><a href="data-types.html#cb81-2"></a><span class="co"># tm_shape(africapitals) + #important that capitals are visualised first </span></span>
-<span id="cb81-3"><a href="data-types.html#cb81-3"></a><span class="co">#   tm_dots(&quot;blue&quot;, size=0.5)+</span></span>
-<span id="cb81-4"><a href="data-types.html#cb81-4"></a><span class="co">#     tm_shape(afrihighway_ex1)+</span></span>
-<span id="cb81-5"><a href="data-types.html#cb81-5"></a><span class="co">#   tm_lines(&quot;blue&quot;) </span></span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="data-types.html#cb83-1"></a><span class="co">#afrihighway_ex1=afrihighway[grep(&quot;^B&quot;, afrihighway$Name),]</span></span>
+<span id="cb83-2"><a href="data-types.html#cb83-2"></a><span class="co"># tm_shape(africapitals) + #important that capitals are visualised first </span></span>
+<span id="cb83-3"><a href="data-types.html#cb83-3"></a><span class="co">#   tm_dots(&quot;blue&quot;, size=0.5)+</span></span>
+<span id="cb83-4"><a href="data-types.html#cb83-4"></a><span class="co">#     tm_shape(afrihighway_ex1)+</span></span>
+<span id="cb83-5"><a href="data-types.html#cb83-5"></a><span class="co">#   tm_lines(&quot;blue&quot;) </span></span></code></pre></div>
 </div>
 <div id="exercise-2-1" class="section level4">
 <h4><span class="header-section-number">4.3.1.2</span> Exercise 2</h4>
 <p>Visualise the trans-African highway network, with line width associated with the length of the road. The function <code>st_length</code> is used to calculate the length of a line.</p>
 <p>Answer:</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-types.html#cb82-1"></a><span class="co">#afrihighway$length=tapply(st_length(afrihighway), afrihighway$Name, sum)</span></span>
-<span id="cb82-2"><a href="data-types.html#cb82-2"></a><span class="co">#tm_shape(afrihighway) +</span></span>
-<span id="cb82-3"><a href="data-types.html#cb82-3"></a><span class="co">#  tm_lines(lwd = `length`) </span></span></code></pre></div>
-</div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="data-types.html#cb84-1"></a><span class="co">#afrihighway$length=tapply(st_length(afrihighway), afrihighway$Name, sum)</span></span>
+<span id="cb84-2"><a href="data-types.html#cb84-2"></a><span class="co">#tm_shape(afrihighway) +</span></span>
+<span id="cb84-3"><a href="data-types.html#cb84-3"></a><span class="co">#  tm_lines(lwd = `length`) </span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -528,63 +480,23 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 </div>
 <p>Polygons are lines with the same first and last coordinate. When the polygon line is connected, the same start and end point results in a closed shape. Similar to lines, depending on the detail of the map, more or less points can be used to create a polygon. This two-dimensional data is most often used to visualise country and continent boundaries.</p>
 <p>For example the continent outline of Africa is a multipolygon.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="data-types.html#cb83-1"></a><span class="kw">plot</span>(<span class="kw">st_geometry</span>(africontinent), <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-54-1.png" width="672" />
-One polygon is used to visualise mainland of Africa. An additional polygon is used for Madagascar. Together they represent the whole African continent.</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="data-types.html#cb85-1"></a><span class="co">#plot(st_geometry(africontinent), col = &quot;lightblue&quot;)</span></span></code></pre></div>
+<p>One polygon is used to visualise mainland of Africa. An additional polygon is used for Madagascar. Together they represent the whole African continent.</p>
 <p>Sometimes several polygons are necessary to capture a more complex shape. The different polygons in one data row indicate either areas to include or exclude from the final image. These are called multipolygons. An example of a multipolygon is the country border of South Africa. Lesotho is entirely surrounded by South Africa. If we want to visualise South Africa, we need to make sure that the Lesotho area is excluded. Visualisation of South Africa therefore requires two polygons, one to outline the outer borders and one to highlight the area to exclude (Lesotho country borders).
 Below, the South African border is visualised.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="data-types.html#cb84-1"></a><span class="co">#africountries_ex=africountries %&gt;%</span></span>
-<span id="cb84-2"><a href="data-types.html#cb84-2"></a><span class="co">#  filter(`name` == &quot;South Africa&quot;)</span></span>
-<span id="cb84-3"><a href="data-types.html#cb84-3"></a></span>
-<span id="cb84-4"><a href="data-types.html#cb84-4"></a><span class="co">#plot(st_geometry(africountries_ex), col = &quot;lightblue&quot;) </span></span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="data-types.html#cb86-1"></a><span class="co">#africountries_ex=africountries %&gt;%</span></span>
+<span id="cb86-2"><a href="data-types.html#cb86-2"></a><span class="co">#  filter(`name` == &quot;South Africa&quot;)</span></span>
+<span id="cb86-3"><a href="data-types.html#cb86-3"></a></span>
+<span id="cb86-4"><a href="data-types.html#cb86-4"></a><span class="co">#plot(st_geometry(africountries_ex), col = &quot;lightblue&quot;) </span></span></code></pre></div>
 <p>As you can see in the image, when the polygon of South Africa is visualised, a white area is visible inside the country (representing Lesotho), which is not part of South Africa.</p>
 <div id="example-2" class="section level3">
 <h3><span class="header-section-number">4.4.1</span> Example</h3>
 <p>For this example, we will look at the country borders of African countries.
 Let’s visualise the geometry of the datafile first.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="data-types.html#cb85-1"></a><span class="kw">print</span>(<span class="kw">st_geometry</span>(africountries)) <span class="co">#printing information on the geometry</span></span></code></pre></div>
-<pre><code>## Geometry set for 51 features 
-## Geometry type: MULTIPOLYGON
-## Dimension:     XY
-## Bounding box:  xmin: -17.62504 ymin: -34.81917 xmax: 51.13387 ymax: 37.34999
-## Geodetic CRS:  WGS 84
-## First 5 geometries:</code></pre>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="data-types.html#cb87-1"></a><span class="co">#print(st_geometry(africountries)) #printing information on the geometry</span></span></code></pre></div>
 <p>The country border file contains 51 country outlines with geometry type <strong>MULTIPOLYGON</strong>.</p>
 <p>If we print the first 6 rows of data, we can see how each country border is stored in the database.</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="data-types.html#cb87-1"></a><span class="kw">head</span>(africountries) <span class="co">#First 6 rows of data are printed</span></span></code></pre></div>
-<pre><code>## Simple feature collection with 6 features and 11 fields
-## Geometry type: MULTIPOLYGON
-## Dimension:     XY
-## Bounding box:  xmin: -17.06342 ymin: -13.25723 xmax: 51.13387 ymax: 27.65643
-## Geodetic CRS:  WGS 84
-##               name                        name_long  pop_est gdp_md_est
-## 1         Tanzania                         Tanzania 53950935   150600.0
-## 2        W. Sahara                   Western Sahara   603253      906.5
-## 11 Dem. Rep. Congo Democratic Republic of the Congo 83301151    66010.0
-## 12         Somalia                          Somalia  7531386     4719.0
-## 13           Kenya                            Kenya 47615739   152700.0
-## 14           Sudan                            Sudan 37345935   176300.0
-##    lastcensus             income_grp iso_a3                       geometry
-## 1        2002          5. Low income    TZA MULTIPOLYGON (((33.90371 -0...
-## 2          NA          5. Low income    ESH MULTIPOLYGON (((-8.66559 27...
-## 11       1984          5. Low income    COD MULTIPOLYGON (((29.34 -4.49...
-## 12       1987          5. Low income    SOM MULTIPOLYGON (((41.58513 -1...
-## 13       2009          5. Low income    KEN MULTIPOLYGON (((39.20222 -4...
-## 14       2008 4. Lower middle income    SDN MULTIPOLYGON (((24.56737 8....
-##              name_fr          name_pt                              name_af
-## 1           Tanzanie         Tanzânia                             Tanzanië
-## 2  Sahara occidental  Saara Ocidental                           Wes-Sahara
-## 11    Congo-Kinshasa Congo - Kinshasa Demokratiese Republiek van die Kongo
-## 12           Somalie          Somália                              Somalië
-## 13             Kenya           Quênia                                Kenia
-## 14            Soudan            Sudão                               Soedan
-##                             name_sw
-## 1                          Tanzania
-## 2                  Sahara Magharibi
-## 11 Jamhuri ya Kidemokrasia ya Kongo
-## 12                          Somalia
-## 13                            Kenya
-## 14                            Sudan</code></pre>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="data-types.html#cb88-1"></a><span class="co">#head(africountries) #First 6 rows of data are printed</span></span></code></pre></div>
 <p>Here, the geometry data contain a list with (multiple) polygons, with each polygon represented as a list of data points with latitude and longitude. These points are connected to form polygons, which are either used to include or exclude areas from the final image. The geometry of the multipolygon data is stored as <em>MULTIPOLYGON (((Latitude1, Longitude1, Latitude2, Longitude2, Latitude3, Longitude3,.. ),(Latitude1, Longitude1, ..)),(Latitude1, Longitude1, …)))</em>.</p>
 <p>Lets visualise these multipolygons with black lines.</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="data-types.html#cb89-1"></a><span class="co"># tm_shape(africountries) +</span></span>
@@ -639,7 +551,6 @@ Answer:</p>
 </div>
 </div>
 </div>
-</div>
 <div id="episode_4_raster" class="section level2">
 <h2><span class="header-section-number">4.5</span> 4.4 Rasters</h2>
 <p>Points, lines and polygons, in their essence, consist of points with a longitude and latitude value. The data files of these vectors look very similar. Raster data are a group on their own. Raster data consist of a matrix of grid cells (pixels), with each grid cell representing a geographical location with a value illustrating a characteristic of that location. Raster data are mainly used when displaying data that are continuous accross space. For example, population density, landcover variation and elevation data extracted from satellites, drones and surveys.</p>
@@ -658,7 +569,7 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 </div>
 <p>To read in raster data, we first need to install and load the ‘raster’ package.</p>
 <div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="data-types.html#cb92-1"></a><span class="co">#install.packages(&quot;raster&quot;) #install sf package</span></span>
-<span id="cb92-2"><a href="data-types.html#cb92-2"></a><span class="kw">library</span>(raster) <span class="co"># load raster package</span></span></code></pre></div>
+<span id="cb92-2"><a href="data-types.html#cb92-2"></a><span class="co">#library(raster) # load raster package</span></span></code></pre></div>
 <p>We can now start visualising raster data.</p>
 <div id="example-3" class="section level3">
 <h3><span class="header-section-number">4.5.1</span> Example</h3>
@@ -703,20 +614,12 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 </div>
 </div>
-</div>
 <div id="summarykey-points" class="section level2">
 <h2><span class="header-section-number">4.6</span> Summary/key points</h2>
 <p>Summary image (to be created)</p>
 </div>
-<div id="putting-it-into-practise" class="section level2">
-<h2><span class="header-section-number">4.7</span> 4.5 Putting it into practise</h2>
-<p>–&gt; is this section necessary this early in the book?
-In this chapter we learned the differences between the four different spatial data types.
-### 1 Visualise
-### 2 User story</p>
-</div>
-<div id="further-resources" class="section level2">
-<h2><span class="header-section-number">4.8</span> 4.6 Further resources</h2>
+<div id="further-resources-1" class="section level2">
+<h2><span class="header-section-number">4.7</span> 4.6 Further resources</h2>
 <p>If you are interested in learning more about the different spatial data types, please visit:</p>
 <ul>
 <li><p><a href="https://datacarpentry.org/geospatial-workshop/">Geospatial workshop</a></p></li>
@@ -725,8 +628,8 @@ In this chapter we learned the differences between the four different spatial da
 <li><p><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Raster and vector data</a></p></li>
 </ul>
 </div>
-<div id="feedback-1" class="section level2">
-<h2><span class="header-section-number">4.9</span> 4.7 Feedback</h2>
+<div id="feedback" class="section level2">
+<h2><span class="header-section-number">4.8</span> 4.7 Feedback</h2>
 <ul>
 <li>Request on what was useful to the reader (learner) and what can be improved: Is this necessary after each chapter? Feels slightly repetitive.</li>
 </ul>
@@ -789,20 +692,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
