@@ -169,21 +169,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="data-types.html"><a href="data-types.html#overall-goal-of-the-chapter"><i class="fa fa-check"></i><b>4.1</b> Overall goal of the chapter</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="data-types.html"><a href="data-types.html#list-of-episodes-1"><i class="fa fa-check"></i><b>4.1.1</b> List of episodes</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="data-types.html"><a href="data-types.html#episode_1_points"><i class="fa fa-check"></i><b>4.2</b> 4.1 Points</a><ul>
+<li class="chapter" data-level="4.2" data-path="data-types.html"><a href="data-types.html#episode_1_points"><i class="fa fa-check"></i><b>4.2</b> Points</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="data-types.html"><a href="data-types.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="data-types.html"><a href="data-types.html#episode_2_lines"><i class="fa fa-check"></i><b>4.3</b> 4.2 Lines</a><ul>
+<li class="chapter" data-level="4.3" data-path="data-types.html"><a href="data-types.html#episode_2_lines"><i class="fa fa-check"></i><b>4.3</b> Lines</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="data-types.html"><a href="data-types.html#example-1"><i class="fa fa-check"></i><b>4.3.1</b> Example</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="data-types.html"><a href="data-types.html#episode_3_polygons"><i class="fa fa-check"></i><b>4.4</b> 4.3 Polygons</a><ul>
+<li class="chapter" data-level="4.4" data-path="data-types.html"><a href="data-types.html#episode_3_polygons"><i class="fa fa-check"></i><b>4.4</b> Polygons</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="data-types.html"><a href="data-types.html#example-2"><i class="fa fa-check"></i><b>4.4.1</b> Example</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="data-types.html"><a href="data-types.html#episode_4_raster"><i class="fa fa-check"></i><b>4.5</b> 4.4 Rasters</a><ul>
+<li class="chapter" data-level="4.5" data-path="data-types.html"><a href="data-types.html#episode_4_raster"><i class="fa fa-check"></i><b>4.5</b> Rasters</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="data-types.html"><a href="data-types.html#example-3"><i class="fa fa-check"></i><b>4.5.1</b> Example</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="data-types.html"><a href="data-types.html#summarykey-points"><i class="fa fa-check"></i><b>4.6</b> Summary/key points</a></li>
-<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#further-resources-1"><i class="fa fa-check"></i><b>4.7</b> 4.6 Further resources</a></li>
-<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#feedback"><i class="fa fa-check"></i><b>4.8</b> 4.7 Feedback</a></li>
+<li class="chapter" data-level="4.7" data-path="data-types.html"><a href="data-types.html#further-resources-1"><i class="fa fa-check"></i><b>4.7</b> Further resources</a></li>
+<li class="chapter" data-level="4.8" data-path="data-types.html"><a href="data-types.html#feedback"><i class="fa fa-check"></i><b>4.8</b> Feedback</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="visualising1.html"><a href="visualising1.html"><i class="fa fa-check"></i><b>5</b> Visualising spatial data part 1: tmap and mapview</a><ul>
 <li class="chapter" data-level="5.1" data-path="visualising1.html"><a href="visualising1.html#overall-goal-of-the-chapter-1"><i class="fa fa-check"></i><b>5.1</b> Overall goal of the chapter</a></li>
@@ -269,28 +269,28 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 </ul>
 </div>
 <p>This chapter requires the following packages (some of them we used already):</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising1.html#cb100-1"></a><span class="co"># cran_packages_to_install &lt;- c(</span></span>
-<span id="cb100-2"><a href="visualising1.html#cb100-2"></a><span class="co">#   &quot;mapview&quot;,           # map-making package for interactive maps</span></span>
-<span id="cb100-3"><a href="visualising1.html#cb100-3"></a><span class="co">#   &quot;tmap&quot;,              # map-making package for static and interactive maps</span></span>
-<span id="cb100-4"><a href="visualising1.html#cb100-4"></a><span class="co">#   &quot;tidyverse&quot;,         # metapackage containing dplyr, ggplot2 and other packages</span></span>
-<span id="cb100-5"><a href="visualising1.html#cb100-5"></a><span class="co">#   &quot;sf&quot;,                # package for working with spatial data</span></span>
-<span id="cb100-6"><a href="visualising1.html#cb100-6"></a><span class="co">#   &quot;rnaturalearth&quot;,     # data package</span></span>
-<span id="cb100-7"><a href="visualising1.html#cb100-7"></a><span class="co">#   &quot;rnaturalearthdata&quot;, # data package</span></span>
-<span id="cb100-8"><a href="visualising1.html#cb100-8"></a><span class="co">#   &quot;tmaptools&quot;          # map building package</span></span>
-<span id="cb100-9"><a href="visualising1.html#cb100-9"></a><span class="co">#   )</span></span>
-<span id="cb100-10"><a href="visualising1.html#cb100-10"></a><span class="co"># install.packages(cran_packages_to_install)</span></span>
-<span id="cb100-11"><a href="visualising1.html#cb100-11"></a><span class="co"># </span></span>
-<span id="cb100-12"><a href="visualising1.html#cb100-12"></a><span class="co"># remotes::install_github(&quot;afrimapr/afrilearndata&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="visualising1.html#cb100-1"></a>cran_packages_to_install &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb100-2"><a href="visualising1.html#cb100-2"></a>  <span class="st">&quot;mapview&quot;</span>,           <span class="co"># map-making package for interactive maps</span></span>
+<span id="cb100-3"><a href="visualising1.html#cb100-3"></a>  <span class="st">&quot;tmap&quot;</span>,              <span class="co"># map-making package for static and interactive maps</span></span>
+<span id="cb100-4"><a href="visualising1.html#cb100-4"></a>  <span class="st">&quot;tidyverse&quot;</span>,         <span class="co"># metapackage containing dplyr, ggplot2 and other packages</span></span>
+<span id="cb100-5"><a href="visualising1.html#cb100-5"></a>  <span class="st">&quot;sf&quot;</span>,                <span class="co"># package for working with spatial data</span></span>
+<span id="cb100-6"><a href="visualising1.html#cb100-6"></a>  <span class="st">&quot;rnaturalearth&quot;</span>,     <span class="co"># data package</span></span>
+<span id="cb100-7"><a href="visualising1.html#cb100-7"></a>  <span class="st">&quot;rnaturalearthdata&quot;</span>, <span class="co"># data package</span></span>
+<span id="cb100-8"><a href="visualising1.html#cb100-8"></a>  <span class="st">&quot;tmaptools&quot;</span>          <span class="co"># map building package</span></span>
+<span id="cb100-9"><a href="visualising1.html#cb100-9"></a>  )</span>
+<span id="cb100-10"><a href="visualising1.html#cb100-10"></a><span class="kw">install.packages</span>(cran_packages_to_install)</span>
+<span id="cb100-11"><a href="visualising1.html#cb100-11"></a></span>
+<span id="cb100-12"><a href="visualising1.html#cb100-12"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span></code></pre></div>
 <p>Next, we need to load the packages:</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="visualising1.html#cb101-1"></a><span class="co"># library(tmap)</span></span>
-<span id="cb101-2"><a href="visualising1.html#cb101-2"></a><span class="co"># library(mapview)</span></span>
-<span id="cb101-3"><a href="visualising1.html#cb101-3"></a><span class="co"># library(ggplot2)</span></span>
-<span id="cb101-4"><a href="visualising1.html#cb101-4"></a><span class="co"># library(sf)</span></span>
-<span id="cb101-5"><a href="visualising1.html#cb101-5"></a><span class="co"># library(afrilearndata)</span></span>
-<span id="cb101-6"><a href="visualising1.html#cb101-6"></a><span class="co"># library(rnaturalearth)</span></span>
-<span id="cb101-7"><a href="visualising1.html#cb101-7"></a><span class="co"># library(rnaturalearthdata)</span></span>
-<span id="cb101-8"><a href="visualising1.html#cb101-8"></a><span class="co"># library(dplyr)</span></span>
-<span id="cb101-9"><a href="visualising1.html#cb101-9"></a><span class="co"># library(tmaptools)</span></span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="visualising1.html#cb101-1"></a><span class="kw">library</span>(tmap)</span>
+<span id="cb101-2"><a href="visualising1.html#cb101-2"></a><span class="kw">library</span>(mapview)</span>
+<span id="cb101-3"><a href="visualising1.html#cb101-3"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb101-4"><a href="visualising1.html#cb101-4"></a><span class="kw">library</span>(sf)</span>
+<span id="cb101-5"><a href="visualising1.html#cb101-5"></a><span class="kw">library</span>(afrilearndata)</span>
+<span id="cb101-6"><a href="visualising1.html#cb101-6"></a><span class="kw">library</span>(rnaturalearth)</span>
+<span id="cb101-7"><a href="visualising1.html#cb101-7"></a><span class="kw">library</span>(rnaturalearthdata)</span>
+<span id="cb101-8"><a href="visualising1.html#cb101-8"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb101-9"><a href="visualising1.html#cb101-9"></a><span class="kw">library</span>(tmaptools)</span></code></pre></div>
 </div>
 <div id="quick-interactive-maps-with-mapview" class="section level2">
 <h2><span class="header-section-number">5.2</span> Quick interactive maps with mapview</h2>
