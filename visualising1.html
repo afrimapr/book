@@ -339,23 +339,27 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <div id="static-maps-with-tmap" class="section level2">
 <h2><span class="header-section-number">5.3</span> Static maps with tmap</h2>
 <p>In this section we explore the potential of <code>tmap</code> in creating static maps, which is a flexible, yet user-friendly package. Its syntax is similar to <code>ggplot2</code> (plot-making package), where additional features of the map are simply build up on top of the basic structure. Before we plot the first maps we need to create a dataset called <em>africa</em> and activate static map viewing mode.</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="visualising1.html#cb106-1"></a><span class="co"># africa &lt;- ne_countries(continent = &#39;africa&#39;, scale = &quot;medium&quot;, returnclass = &quot;sf&quot;)</span></span>
-<span id="cb106-2"><a href="visualising1.html#cb106-2"></a><span class="co"># tmap_mode(&quot;plot&quot;) #activates static map viewing mode</span></span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="visualising1.html#cb106-1"></a>africa &lt;-<span class="st"> </span><span class="kw">ne_countries</span>(<span class="dt">continent =</span> <span class="st">&#39;africa&#39;</span>, <span class="dt">scale =</span> <span class="st">&quot;medium&quot;</span>, <span class="dt">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb106-2"><a href="visualising1.html#cb106-2"></a><span class="kw">tmap_mode</span>(<span class="st">&quot;plot&quot;</span>) <span class="co">#activates static map viewing mode</span></span></code></pre></div>
 <p>Next, we create an empty contour map of the continent, where <code>tm_shape()</code> function serves as a basic component containing the shape object i.e. our spatial dataset. On top of this basic element we can then add more layers using <code>+</code> operator. The advantage of <code>tmap</code> package is that it offers a large variety layers and these are named relatively intuitively to make the search and use easier. For example, we will now use layer called <code>tm_borders()</code> which defines the borders of the polygons.</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="visualising1.html#cb107-1"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb107-2"><a href="visualising1.html#cb107-2"></a><span class="co">#  tm_borders()</span></span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="visualising1.html#cb107-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb107-2"><a href="visualising1.html#cb107-2"></a><span class="st"> </span><span class="kw">tm_borders</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-tmap-countries2-1.png" width="75%" /></p>
 <p>Further, we create an empty, borderless map using <code>tm_fill()</code> which defines the fill of the polygons.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="visualising1.html#cb108-1"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb108-2"><a href="visualising1.html#cb108-2"></a><span class="co">#  tm_fill()</span></span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="visualising1.html#cb108-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb108-2"><a href="visualising1.html#cb108-2"></a><span class="st"> </span><span class="kw">tm_fill</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-tmap-countries3-1.png" width="75%" /></p>
 <p>Intuitively to create a map with both layers, we need to include <code>tm_fill()</code> and <code>tm_borders()</code> simultaneously. Alternatively, <code>tm_polygons()</code> function allows us to achieve exactly the same result more efficiently. It draws the polygons borders and fills them.</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="co"># tm_shape(africa)+ </span></span>
-<span id="cb109-2"><a href="visualising1.html#cb109-2"></a><span class="co">#  tm_borders()+</span></span>
-<span id="cb109-3"><a href="visualising1.html#cb109-3"></a><span class="co">#   tm_fill()</span></span>
-<span id="cb109-4"><a href="visualising1.html#cb109-4"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb109-5"><a href="visualising1.html#cb109-5"></a><span class="co">#  tm_polygons()</span></span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="visualising1.html#cb109-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb109-2"><a href="visualising1.html#cb109-2"></a><span class="st"> </span><span class="kw">tm_borders</span>()<span class="op">+</span></span>
+<span id="cb109-3"><a href="visualising1.html#cb109-3"></a><span class="st">  </span><span class="kw">tm_fill</span>()</span>
+<span id="cb109-4"><a href="visualising1.html#cb109-4"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb109-5"><a href="visualising1.html#cb109-5"></a><span class="st"> </span><span class="kw">tm_polygons</span>()</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-tmap-countries4-1.png" width="75%" /><img src="bookdown-demo_files/figure-html/c5-tmap-countries4-2.png" width="75%" /></p>
 <p>We can further develop our map by adjusting different features of the map such as colour and transparency of the map, width and types of the border lines etc. The extra parameters for changing the plot elements can be found <a href="http://publish.illinois.edu/johnrgallagher/files/2015/10/BaseGraphicsCheatsheet.pdf">here</a>.</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb110-2"><a href="visualising1.html#cb110-2"></a><span class="co">#  tm_polygons(col = &quot;green&quot;, lty = &quot;dotted&quot;, alpha = 0.3)</span></span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="visualising1.html#cb110-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb110-2"><a href="visualising1.html#cb110-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;green&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="fl">0.3</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-tmap-countries5-1.png" width="75%" /></p>
 <p>As we already know a basic structure required to build a static map, we can proceed to a more advanced (and useful) example, where we fill the polygons using data on <strong>last census</strong> and adding relevant title to the legend. In this case, we also use <code>legend.format</code>option to format the legend numbers to be treated as years.</p>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="visualising1.html#cb111-1"></a><span class="co"># tm_shape(africa)+</span></span>
 <span id="cb111-2"><a href="visualising1.html#cb111-2"></a><span class="co">#  tm_polygons(col = &quot;lastcensus&quot;, title = &quot;Year of last census&quot;, legend.format = list(format=&quot;s&quot;))</span></span></code></pre></div>
