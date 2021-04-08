@@ -549,14 +549,16 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <ul>
 <li>Exercise 5.3.1</li>
 </ul>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="visualising1.html#cb125-1"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb125-2"><a href="visualising1.html#cb125-2"></a><span class="co">#  tm_polygons(col = &quot;yellow&quot;, lwd = 3, lty = &quot;solid&quot;, alpha = 0.4)</span></span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="visualising1.html#cb125-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb125-2"><a href="visualising1.html#cb125-2"></a><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col =</span> <span class="st">&quot;yellow&quot;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="st">&quot;solid&quot;</span>, <span class="dt">alpha =</span> <span class="fl">0.4</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-ex-5.3.1-1.png" width="60%" /></p>
 <ul>
 <li>Exercise 5.3.2</li>
 </ul>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="visualising1.html#cb126-1"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb126-2"><a href="visualising1.html#cb126-2"></a><span class="co">#  tm_fill(col = &quot;lightblue&quot;)+</span></span>
-<span id="cb126-3"><a href="visualising1.html#cb126-3"></a><span class="co">#  tm_borders(col = &quot;red&quot;, lty = &quot;dotted&quot;, alpha = 1)</span></span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="visualising1.html#cb126-1"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb126-2"><a href="visualising1.html#cb126-2"></a><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>)<span class="op">+</span></span>
+<span id="cb126-3"><a href="visualising1.html#cb126-3"></a><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="st">&quot;dotted&quot;</span>, <span class="dt">alpha =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-ex-5.3.2-1.png" width="60%" /></p>
 <ul>
 <li>Exercise 5.3.3</li>
 </ul>
@@ -566,13 +568,14 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <ul>
 <li>Exercise 5.3.4</li>
 </ul>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="visualising1.html#cb128-1"></a><span class="co"># map_contour = tm_shape(africa)+  </span></span>
-<span id="cb128-2"><a href="visualising1.html#cb128-2"></a><span class="co">#   tm_fill(col = &quot;lightgreen&quot;)</span></span>
-<span id="cb128-3"><a href="visualising1.html#cb128-3"></a><span class="co"># data(afrihighway)</span></span>
-<span id="cb128-4"><a href="visualising1.html#cb128-4"></a><span class="co"># map_contour +</span></span>
-<span id="cb128-5"><a href="visualising1.html#cb128-5"></a><span class="co">#   tm_shape(afrihighway)+</span></span>
-<span id="cb128-6"><a href="visualising1.html#cb128-6"></a><span class="co">#   tm_lines()+</span></span>
-<span id="cb128-7"><a href="visualising1.html#cb128-7"></a><span class="co">#   tm_layout(title = &quot;Highways in Africa&quot;, title.position = c(&quot;center&quot;, &quot;bottom&quot;))</span></span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="visualising1.html#cb128-1"></a>map_contour =<span class="st"> </span><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb128-2"><a href="visualising1.html#cb128-2"></a><span class="st">  </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;lightgreen&quot;</span>)</span>
+<span id="cb128-3"><a href="visualising1.html#cb128-3"></a><span class="kw">data</span>(afrihighway)</span>
+<span id="cb128-4"><a href="visualising1.html#cb128-4"></a>map_contour <span class="op">+</span></span>
+<span id="cb128-5"><a href="visualising1.html#cb128-5"></a><span class="st">  </span><span class="kw">tm_shape</span>(afrihighway)<span class="op">+</span></span>
+<span id="cb128-6"><a href="visualising1.html#cb128-6"></a><span class="st">  </span><span class="kw">tm_lines</span>()<span class="op">+</span></span>
+<span id="cb128-7"><a href="visualising1.html#cb128-7"></a><span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">title =</span> <span class="st">&quot;Highways in Africa&quot;</span>, <span class="dt">title.position =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;bottom&quot;</span>))</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/c5-ex-5.3.4-1.png" width="60%" /></p>
 <ul>
 <li>Exercise 5.4.1</li>
 </ul>
