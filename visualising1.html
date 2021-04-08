@@ -317,11 +317,11 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="visualising1.html#cb104-1"></a><span class="co">#mapview(africountries, color = &quot;red&quot;, </span></span>
 <span id="cb104-2"><a href="visualising1.html#cb104-2"></a><span class="co">#        lwd = 1.5, col.regions = &quot;white&quot;, map.types = &quot;Esri.WorldShadedRelief&quot;)</span></span></code></pre></div>
 <p>Further, mapview allows us to easily build up many layers within a single map. Here, we firstly include countries and then add location of airports. Further a useful option is <code>layer.name</code> which allows us to control the naming of different layers of the map. The specific layers can be controlled and adjusted as showed in the example. In partucular, we set the colour of countries polygons according to the population size. It is possible to use layer button to hide and unhide layers of the map.</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="visualising1.html#cb105-1"></a><span class="co"># simple map with two layers</span></span>
-<span id="cb105-2"><a href="visualising1.html#cb105-2"></a><span class="co"># data(afriairports)</span></span>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="visualising1.html#cb105-1"></a><span class="co"># # simple map with two layers</span></span>
+<span id="cb105-2"><a href="visualising1.html#cb105-2"></a><span class="co"># # data(afriairports)</span></span>
 <span id="cb105-3"><a href="visualising1.html#cb105-3"></a><span class="co"># mapview(list(africountries,afriairports), layer.name = c(&quot;Countries&quot;, &quot;Airports&quot;))</span></span>
-<span id="cb105-4"><a href="visualising1.html#cb105-4"></a></span>
-<span id="cb105-5"><a href="visualising1.html#cb105-5"></a><span class="co">#map with advanced layers options</span></span>
+<span id="cb105-4"><a href="visualising1.html#cb105-4"></a><span class="co"># </span></span>
+<span id="cb105-5"><a href="visualising1.html#cb105-5"></a><span class="co"># #map with advanced layers options</span></span>
 <span id="cb105-6"><a href="visualising1.html#cb105-6"></a><span class="co"># mapview(africountries, zcol = &quot;pop_est&quot;, layer.name = &quot;Population&quot;) +</span></span>
 <span id="cb105-7"><a href="visualising1.html#cb105-7"></a><span class="co">#   mapview(afriairports, layer.name = &quot;Airports location&quot; )</span></span></code></pre></div>
 <p>The link to full documentation is available in <em>Further resources</em> section.</p>
@@ -416,13 +416,13 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <div id="visualising-different-datasets-in-one-map" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Visualising different datasets in one map</h3>
 <p><code>tmap</code> not only allows us to add extra layers to a single map by building on a basic structure, but it also enables us to join two separate datasets in a single map. We first create an object called <em>countries</em> which is a map with African countries:</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="visualising1.html#cb118-1"></a><span class="co">#read in data</span></span>
-<span id="cb118-2"><a href="visualising1.html#cb118-2"></a><span class="co">#data(africountries) </span></span>
-<span id="cb118-3"><a href="visualising1.html#cb118-3"></a><span class="co">#create an object </span></span>
-<span id="cb118-4"><a href="visualising1.html#cb118-4"></a><span class="co"># countries = tm_shape(africountries)+  </span></span>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="visualising1.html#cb118-1"></a><span class="co"># #read in data</span></span>
+<span id="cb118-2"><a href="visualising1.html#cb118-2"></a><span class="co"># data(africountries)</span></span>
+<span id="cb118-3"><a href="visualising1.html#cb118-3"></a><span class="co"># #create an object</span></span>
+<span id="cb118-4"><a href="visualising1.html#cb118-4"></a><span class="co"># countries = tm_shape(africountries)+</span></span>
 <span id="cb118-5"><a href="visualising1.html#cb118-5"></a><span class="co">#   tm_polygons(col = &quot;lightblue&quot;, alpha = 0.3)</span></span>
-<span id="cb118-6"><a href="visualising1.html#cb118-6"></a><span class="co">#view object called &quot;countries&quot;</span></span>
-<span id="cb118-7"><a href="visualising1.html#cb118-7"></a><span class="co">#countries </span></span></code></pre></div>
+<span id="cb118-6"><a href="visualising1.html#cb118-6"></a><span class="co"># #view object called &quot;countries&quot;</span></span>
+<span id="cb118-7"><a href="visualising1.html#cb118-7"></a><span class="co"># countries</span></span></code></pre></div>
 <p>Then we use it as an argument to merge it with a map containing the location of capitals.</p>
 <div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="visualising1.html#cb119-1"></a><span class="co"># #read in data with capitals</span></span>
 <span id="cb119-2"><a href="visualising1.html#cb119-2"></a><span class="co"># data(africapitals)</span></span>
@@ -476,8 +476,9 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <span id="cb120-7"><a href="visualising1.html#cb120-7"></a><span class="co">#     tm_dots(col = &quot;white&quot;, border.col = &quot;blue&quot;, size = 0.1)+ #capital dots settings</span></span>
 <span id="cb120-8"><a href="visualising1.html#cb120-8"></a><span class="co">#     tm_text(&quot;capitalname&quot;)+ #adds capital names</span></span>
 <span id="cb120-9"><a href="visualising1.html#cb120-9"></a><span class="co">#         tm_shape(afrihighway)+ </span></span>
-<span id="cb120-10"><a href="visualising1.html#cb120-10"></a><span class="co">#     tm_lines(col = &quot;red&quot;, lwd = 2, alpha = 0.7) #highway lines setting</span></span></code></pre></div>
-<p>Regradless of the mode, the creation of maps using <code>tmap</code> package is easy and convenient. The additional feature in the interactive mode is the choice of the background map. This can be set up using function <code>tm_basemap</code>. Available base maps can be accessed using <code>leaflet::providers</code>. They can also be previewed <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">here</a>. In the example below, we use a topographic map of Africa.</p>
+<span id="cb120-10"><a href="visualising1.html#cb120-10"></a><span class="co">#     tm_lines(col = &quot;red&quot;, lwd = 2, alpha = 0.7) #highway lines setting</span></span>
+<span id="cb120-11"><a href="visualising1.html#cb120-11"></a><span class="co">#     </span></span></code></pre></div>
+<p>Regardless of the mode, the creation of maps using <code>tmap</code> package is easy and convenient. The additional feature in the interactive mode is the choice of the background map. This can be set up using function <code>tm_basemap</code>. Available base maps can be accessed using <code>leaflet::providers</code>. They can also be previewed <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">here</a>. In the example below, we use a topographic map of Africa.</p>
 <div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="visualising1.html#cb121-1"></a><span class="co"># tm_basemap(&quot;OpenTopoMap&quot;)+</span></span>
 <span id="cb121-2"><a href="visualising1.html#cb121-2"></a><span class="co"># tm_shape(africa)+  </span></span>
 <span id="cb121-3"><a href="visualising1.html#cb121-3"></a><span class="co">#   tm_borders()+     </span></span>
@@ -534,7 +535,7 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <li>Exercise 5.3.1</li>
 </ul>
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="visualising1.html#cb124-1"></a><span class="co"># tm_shape(africa)+</span></span>
-<span id="cb124-2"><a href="visualising1.html#cb124-2"></a><span class="co"># tm_polygons(col = &quot;yellow&quot;, lwd = 3, lty = &quot;solid&quot;, alpha = 0.4)</span></span></code></pre></div>
+<span id="cb124-2"><a href="visualising1.html#cb124-2"></a><span class="co">#  tm_polygons(col = &quot;yellow&quot;, lwd = 3, lty = &quot;solid&quot;, alpha = 0.4)</span></span></code></pre></div>
 <ul>
 <li>Exercise 5.3.2</li>
 </ul>
