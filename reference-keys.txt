@@ -1,4 +1,3 @@
-fig:c5-tmap-countries-breaks
 fig:c5-tmap-style
 intro
 spatial-data-outline
