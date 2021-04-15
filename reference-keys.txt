@@ -3,7 +3,7 @@ fig:c5-tmap-palette
 fig:c5-tmap-style
 intro
 spatial-data-outline
-steps1
+taster
 rrecap
 wd
 new_script
