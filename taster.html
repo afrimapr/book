@@ -268,35 +268,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Demonstrate a simple step by step process of making a map with relatively little explanation. To show the readers what we are aiming for and that this is achievable. Then in later chapters we will work to fill in the gaps in understanding</p>
 <p><a href="https://speakerdeck.com/minecr/let-them-eat-cake-first" class="uri">https://speakerdeck.com/minecr/let-them-eat-cake-first</a></p>
 <p>Static maps</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="taster.html#cb3-1"></a><span class="co">#Create a static empty map using a style</span></span>
-<span id="cb3-2"><a href="taster.html#cb3-2"></a><span class="kw">tm_style</span>(<span class="st">&quot;classic&quot;</span>)<span class="op">+</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="taster.html#cb3-1"></a><span class="co">#Create an empty map of Africa using a classic style</span></span>
+<span id="cb3-2"><a href="taster.html#cb3-2"></a>basic_map =<span class="st"> </span><span class="kw">tm_style</span>(<span class="st">&quot;classic&quot;</span>)<span class="op">+</span></span>
 <span id="cb3-3"><a href="taster.html#cb3-3"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb3-4"><a href="taster.html#cb3-4"></a><span class="st"> </span><span class="kw">tm_polygons</span>()</span>
-<span id="cb3-5"><a href="taster.html#cb3-5"></a></span>
+<span id="cb3-4"><a href="taster.html#cb3-4"></a><span class="st"> </span><span class="kw">tm_polygons</span>()<span class="op">+</span></span>
+<span id="cb3-5"><a href="taster.html#cb3-5"></a><span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">title =</span> <span class="st">&quot;Africa&quot;</span>, <span class="dt">title.position =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;bottom&quot;</span>), <span class="dt">inner.margins =</span> <span class="fl">0.05</span> )</span>
 <span id="cb3-6"><a href="taster.html#cb3-6"></a></span>
-<span id="cb3-7"><a href="taster.html#cb3-7"></a><span class="co">#Add points</span></span>
+<span id="cb3-7"><a href="taster.html#cb3-7"></a>basic_map</span>
 <span id="cb3-8"><a href="taster.html#cb3-8"></a></span>
 <span id="cb3-9"><a href="taster.html#cb3-9"></a></span>
-<span id="cb3-10"><a href="taster.html#cb3-10"></a><span class="co">#Add title</span></span>
-<span id="cb3-11"><a href="taster.html#cb3-11"></a></span>
-<span id="cb3-12"><a href="taster.html#cb3-12"></a></span>
+<span id="cb3-10"><a href="taster.html#cb3-10"></a><span class="co">#Add points for medium airports</span></span>
+<span id="cb3-11"><a href="taster.html#cb3-11"></a><span class="kw">data</span>(afriairports)</span>
+<span id="cb3-12"><a href="taster.html#cb3-12"></a>m_airports =<span class="st"> </span>afriairports <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(type <span class="op">==</span><span class="st"> &quot;medium_airport&quot;</span>)</span>
 <span id="cb3-13"><a href="taster.html#cb3-13"></a></span>
-<span id="cb3-14"><a href="taster.html#cb3-14"></a><span class="co">#Add legends</span></span>
-<span id="cb3-15"><a href="taster.html#cb3-15"></a></span>
-<span id="cb3-16"><a href="taster.html#cb3-16"></a></span>
-<span id="cb3-17"><a href="taster.html#cb3-17"></a><span class="co">#Maps on a subet of data</span></span>
-<span id="cb3-18"><a href="taster.html#cb3-18"></a><span class="kw">data</span>(afirairport)</span></code></pre></div>
-<pre><code>## Warning in data(afirairport): data set &#39;afirairport&#39; not found</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="taster.html#cb5-1"></a>m_airports =<span class="st"> </span>afriairports <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(type <span class="op">==</span><span class="st"> &quot;medium_airport&quot;</span>)</span>
-<span id="cb5-2"><a href="taster.html#cb5-2"></a></span>
-<span id="cb5-3"><a href="taster.html#cb5-3"></a><span class="co">#Plot the subset</span></span>
-<span id="cb5-4"><a href="taster.html#cb5-4"></a><span class="kw">tm_style</span>(<span class="st">&quot;classic&quot;</span>)<span class="op">+</span></span>
-<span id="cb5-5"><a href="taster.html#cb5-5"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb5-6"><a href="taster.html#cb5-6"></a><span class="st"> </span><span class="kw">tm_polygons</span>()<span class="op">+</span></span>
-<span id="cb5-7"><a href="taster.html#cb5-7"></a><span class="st">     </span><span class="kw">tm_bubbles</span>(<span class="dt">size =</span> <span class="st">&quot;pop_est&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;income_grp&quot;</span>, <span class="dt">title.col =</span> <span class="st">&quot;Income level&quot;</span>,</span>
-<span id="cb5-8"><a href="taster.html#cb5-8"></a>                <span class="dt">title.size =</span> <span class="st">&quot;Population&quot;</span>, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;High&quot;</span>, <span class="st">&quot;Upper middle&quot;</span>, <span class="st">&quot;Lower middle&quot;</span>, <span class="st">&quot;Lower&quot;</span>))<span class="op">+</span></span>
-<span id="cb5-9"><a href="taster.html#cb5-9"></a><span class="st">  </span><span class="kw">tm_shape</span>(m_airports)<span class="op">+</span></span>
-<span id="cb5-10"><a href="taster.html#cb5-10"></a><span class="st">    </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;type&quot;</span>, <span class="dt">palette=</span><span class="st">&quot;red&quot;</span>, <span class="dt">labels =</span> <span class="st">&quot;Medium airport&quot;</span>)</span></code></pre></div>
+<span id="cb3-14"><a href="taster.html#cb3-14"></a>map_points =<span class="st"> </span>basic_map <span class="op">+</span></span>
+<span id="cb3-15"><a href="taster.html#cb3-15"></a><span class="st">  </span><span class="kw">tm_shape</span>(m_airports)<span class="op">+</span></span>
+<span id="cb3-16"><a href="taster.html#cb3-16"></a><span class="st">    </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;type&quot;</span>, <span class="dt">palette=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">labels =</span> <span class="st">&quot;Medium airport&quot;</span>, <span class="dt">title =</span> <span class="st">&quot;&quot;</span>)<span class="op">+</span></span>
+<span id="cb3-17"><a href="taster.html#cb3-17"></a><span class="st">      </span><span class="kw">tm_legend</span>(<span class="dt">legend.position =</span> <span class="kw">c</span>(<span class="st">&quot;left&quot;</span>, <span class="st">&quot;bottom&quot;</span>)) <span class="op">+</span></span>
+<span id="cb3-18"><a href="taster.html#cb3-18"></a><span class="st">        </span><span class="kw">tm_layout</span>(<span class="dt">scale =</span> <span class="fl">0.99</span>)</span>
+<span id="cb3-19"><a href="taster.html#cb3-19"></a></span>
+<span id="cb3-20"><a href="taster.html#cb3-20"></a></span>
+<span id="cb3-21"><a href="taster.html#cb3-21"></a>map_points  </span></code></pre></div>
 <div class="figure"><span id="fig:c2-empty-static-map1"></span>
 <img src="bookdown-demo_files/figure-html/c2-empty-static-map1-1.png" alt="Examples of maps" width="50%" /><img src="bookdown-demo_files/figure-html/c2-empty-static-map1-2.png" alt="Examples of maps" width="50%" />
 <p class="caption">

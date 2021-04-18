@@ -293,9 +293,9 @@ div.green { background-color:#e3ffd9; border-radius: 5px; padding: 20px;}
 <h2><span class="header-section-number">3.1</span> Setting working directory</h2>
 <p>At the beginning of each project it is crucial to determine the working directory for your project. A working directory is a folder where all your files associated with the project will be stored. For example, original data sets, saved data sets as well as plots, graphs or maps created and exported from R. Hence, working directory not only allows you to gather and access the files produced along the work but also load the existing data sets into the RStudio.<br/><br/></p>
 <p>You can set up the working directory with the <code>openProject</code> function as follows (recommended):</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rrecap.html#cb6-1"></a>rstudioapi<span class="op">::</span><span class="kw">openProject</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rrecap.html#cb4-1"></a>rstudioapi<span class="op">::</span><span class="kw">openProject</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
 <p>Alternatively, you can use the following command:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rrecap.html#cb7-1"></a><span class="kw">setwd</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="rrecap.html#cb5-1"></a><span class="kw">setwd</span>(<span class="st">&quot;path to your directory&quot;</span>)</span></code></pre></div>
 <p>While the former option will set up and open the working directory for your project, the latter simply determines the default folder for each specific R script.</p>
 </div>
 <div id="new_script" class="section level2">
@@ -327,32 +327,32 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 </div>
 <p>If you do not select any code and press <strong>Run</strong>, RStudio will run the line of code where the cursor is located. The code which has been exectued will appear in the <strong>Console</strong>, usually located at the bottom part of the window.</p>
 <p>In RStudio it is also possible to add comments next to your commands simply using a hashtag (#) beforehand. This will stop R from executing this specific part:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">6</span> <span class="co"># Using R as a calculator</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rrecap.html#cb6-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">6</span> <span class="co"># Using R as a calculator</span></span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a><span class="co"># 3+6</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rrecap.html#cb8-1"></a><span class="co"># 3+6</span></span></code></pre></div>
 </div>
 <div id="install_packages" class="section level2">
 <h2><span class="header-section-number">3.4</span> Install and load packages</h2>
 <p>Before being able to use a specific package in R, it is necessary to firstly install and then load it. In this example we install package <em>remotes</em> using <code>install.packages()</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rrecap.html#cb9-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span></code></pre></div>
 <p>Further, we have to load it into R using <code>library()</code> function. Note the presence of the quotation mark ("") in case of the first function and its lack in case of the second function.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rrecap.html#cb12-1"></a><span class="kw">library</span>(remotes)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rrecap.html#cb10-1"></a><span class="kw">library</span>(remotes)</span></code></pre></div>
 <p>To download and install packages directly from remote repositories such as GitHub, we can use previously loaded <code>remote</code> package and load them as usual:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rrecap.html#cb13-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span>
-<span id="cb13-2"><a href="rrecap.html#cb13-2"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rrecap.html#cb11-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span>
+<span id="cb11-2"><a href="rrecap.html#cb11-2"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
 <p>In the example, above we use double-colon operator <em>::</em> to call function <code>install_github</code> from name space<code>remotes</code>. Only functions which are included in the packages can be retrieved in this manner.</p>
 </div>
 <div id="load_data" class="section level2">
 <h2><span class="header-section-number">3.5</span> Load data</h2>
 <p>There are different approaches that can be used to import your data sets, depending on where the data is located and in what file type it is stored. The easiest case is when the data set is already part of the R package, as it will be automatically read in when the package is installed and loaded into R.<br/></p>
 <p>For example, install and load packages containing data set:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="rrecap.html#cb14-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span>
-<span id="cb14-2"><a href="rrecap.html#cb14-2"></a></span>
-<span id="cb14-3"><a href="rrecap.html#cb14-3"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rrecap.html#cb12-1"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;afrimapr/afrilearndata&quot;</span>)</span>
+<span id="cb12-2"><a href="rrecap.html#cb12-2"></a></span>
+<span id="cb12-3"><a href="rrecap.html#cb12-3"></a><span class="kw">library</span>(afrilearndata)</span></code></pre></div>
 <p>To view what data sets are available in a given package:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="rrecap.html#cb15-1"></a><span class="kw">data</span>(<span class="dt">package=</span><span class="st">&quot;afrilearndata&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rrecap.html#cb13-1"></a><span class="kw">data</span>(<span class="dt">package=</span><span class="st">&quot;afrilearndata&quot;</span>)</span></code></pre></div>
 <p>We can view and explore the <code>africapitals</code> data set using:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="rrecap.html#cb16-1"></a><span class="kw">head</span>(africapitals)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="rrecap.html#cb14-1"></a><span class="kw">head</span>(africapitals)</span></code></pre></div>
 <pre><code>## Simple feature collection with 6 features and 4 fields
 ## Geometry type: POINT
 ## Dimension:     XY
@@ -366,7 +366,7 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 ## 1584 Antananarivo  Madagascar 1463754   MDG POINT (47.51 -18.89)
 ## 2193       Asmara     Eritrea  578860   ERI  POINT (38.94 15.33)</code></pre>
 <p>We can also create a dataframe from <code>africapitals</code> in the global environment:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="rrecap.html#cb18-1"></a>dataset &lt;-<span class="st"> </span>africapitals</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="rrecap.html#cb16-1"></a>dataset &lt;-<span class="st"> </span>africapitals</span></code></pre></div>
 </div>
 <div id="data_basics" class="section level2">
 <h2><span class="header-section-number">3.6</span> Basic data types</h2>
@@ -378,69 +378,69 @@ div.yellow { background-color:#fff5e6; border-radius: 5px; padding: 20px;}
 <li>Factor</li>
 </ul>
 <p>In R the type of object is referred to as <code>class</code> of an object and this function can be used to learn what data types the object contains.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="rrecap.html#cb19-1"></a>x &lt;-<span class="st"> </span><span class="dv">11</span> <span class="co">#we create a vector that stores value 11</span></span>
-<span id="cb19-2"><a href="rrecap.html#cb19-2"></a><span class="kw">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="rrecap.html#cb17-1"></a>x &lt;-<span class="st"> </span><span class="dv">11</span> <span class="co">#we create a vector that stores value 11</span></span>
+<span id="cb17-2"><a href="rrecap.html#cb17-2"></a><span class="kw">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <p>It is useful because each class has different properties and can be used in a different way. For example, intuitively we can perform the mathematical operations on numeric objects such that:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="rrecap.html#cb21-1"></a>x &lt;-<span class="st"> </span><span class="dv">11</span> </span>
-<span id="cb21-2"><a href="rrecap.html#cb21-2"></a>y &lt;-<span class="st"> </span><span class="dv">52</span></span>
-<span id="cb21-3"><a href="rrecap.html#cb21-3"></a>x<span class="op">*</span>y <span class="co"># multiplication</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="rrecap.html#cb19-1"></a>x &lt;-<span class="st"> </span><span class="dv">11</span> </span>
+<span id="cb19-2"><a href="rrecap.html#cb19-2"></a>y &lt;-<span class="st"> </span><span class="dv">52</span></span>
+<span id="cb19-3"><a href="rrecap.html#cb19-3"></a>x<span class="op">*</span>y <span class="co"># multiplication</span></span></code></pre></div>
 <pre><code>## [1] 572</code></pre>
 <p>Hint: To assign a value to an object two operators can be used interchangeably: <code>&lt;-</code> or <code>=</code>.</p>
 <div id="numeric-and-integer" class="section level3">
 <h3><span class="header-section-number">3.6.1</span> Numeric and integer</h3>
 <p><em>Numeric data</em> stores real numbers. This means that the object <code>x</code> from above is in fact 11.000000, where the zeros are not printed, by default. It is also possible to store value as whole number in a class object called <code>integer</code>. An integer can be created from a <code>numeric</code> object in the following way:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="rrecap.html#cb23-1"></a>x &lt;-<span class="st"> </span><span class="fl">13.5</span></span>
-<span id="cb23-2"><a href="rrecap.html#cb23-2"></a>z &lt;-<span class="st"> </span><span class="kw">as.integer</span>(x)</span>
-<span id="cb23-3"><a href="rrecap.html#cb23-3"></a><span class="kw">class</span>(z)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="rrecap.html#cb21-1"></a>x &lt;-<span class="st"> </span><span class="fl">13.5</span></span>
+<span id="cb21-2"><a href="rrecap.html#cb21-2"></a>z &lt;-<span class="st"> </span><span class="kw">as.integer</span>(x)</span>
+<span id="cb21-3"><a href="rrecap.html#cb21-3"></a><span class="kw">class</span>(z)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 <p>Please note, even though the numeric value is a decimal number the integer by default rounds downwards, hence both <em>13.1</em> and <em>13.9</em> will result in integer equal <em>13</em>.</p>
 </div>
 <div id="characters" class="section level3">
 <h3><span class="header-section-number">3.6.2</span> Characters</h3>
 <p>Character objects store text, usually referred to as a <code>string</code>. String can be a letter, word or even a sentence.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="rrecap.html#cb25-1"></a>x &lt;-<span class="st"> &quot;adult&quot;</span> </span>
-<span id="cb25-2"><a href="rrecap.html#cb25-2"></a>y &lt;-<span class="st"> &quot;A&quot;</span></span>
-<span id="cb25-3"><a href="rrecap.html#cb25-3"></a>y &lt;-<span class="st"> &quot;I have a bicycle.&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="rrecap.html#cb23-1"></a>x &lt;-<span class="st"> &quot;adult&quot;</span> </span>
+<span id="cb23-2"><a href="rrecap.html#cb23-2"></a>y &lt;-<span class="st"> &quot;A&quot;</span></span>
+<span id="cb23-3"><a href="rrecap.html#cb23-3"></a>y &lt;-<span class="st"> &quot;I have a bicycle.&quot;</span></span></code></pre></div>
 <p>Interestingly, a character can also contain a number, however it will be stored as a text and will not have the same properties as a <code>numeric</code> or <code>integer</code> object. As a results, it will not be possible to perform calculation on character objects, even if they contain numbers. This is when <code>class</code> function becomes helpful.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="rrecap.html#cb26-1"></a>x &lt;-<span class="st"> &quot;5&quot;</span> </span>
-<span id="cb26-2"><a href="rrecap.html#cb26-2"></a>y &lt;-<span class="st"> </span><span class="dv">7</span></span>
-<span id="cb26-3"><a href="rrecap.html#cb26-3"></a><span class="kw">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="rrecap.html#cb24-1"></a>x &lt;-<span class="st"> &quot;5&quot;</span> </span>
+<span id="cb24-2"><a href="rrecap.html#cb24-2"></a>y &lt;-<span class="st"> </span><span class="dv">7</span></span>
+<span id="cb24-3"><a href="rrecap.html#cb24-3"></a><span class="kw">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="rrecap.html#cb28-1"></a><span class="kw">class</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="rrecap.html#cb26-1"></a><span class="kw">class</span>(y)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <p>It is also possible to convert character variables into numeric:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rrecap.html#cb30-1"></a>x &lt;-<span class="st"> &quot;5&quot;</span> </span>
-<span id="cb30-2"><a href="rrecap.html#cb30-2"></a>z &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(x)</span>
-<span id="cb30-3"><a href="rrecap.html#cb30-3"></a><span class="kw">class</span>(z)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="rrecap.html#cb28-1"></a>x &lt;-<span class="st"> &quot;5&quot;</span> </span>
+<span id="cb28-2"><a href="rrecap.html#cb28-2"></a>z &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(x)</span>
+<span id="cb28-3"><a href="rrecap.html#cb28-3"></a><span class="kw">class</span>(z)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="logical" class="section level3">
 <h3><span class="header-section-number">3.6.3</span> Logical</h3>
 <p>Logical objects can take values <code>TRUE</code> or <code>FALSE</code>, where <code>TRUE</code> is an equivalent of 1 whereas <code>FALSE</code> is an equivalent of 0. In these sense, they can be thought of as numerical values.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="rrecap.html#cb32-1"></a>x &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
-<span id="cb32-2"><a href="rrecap.html#cb32-2"></a>y &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="ot">TRUE</span></span>
-<span id="cb32-3"><a href="rrecap.html#cb32-3"></a><span class="kw">print</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rrecap.html#cb30-1"></a>x &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
+<span id="cb30-2"><a href="rrecap.html#cb30-2"></a>y &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="ot">TRUE</span></span>
+<span id="cb30-3"><a href="rrecap.html#cb30-3"></a><span class="kw">print</span>(y)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <p>Typically, logical objects are results of a condition. For example, if we want to test if object <code>a</code> is larger than 100.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rrecap.html#cb34-1"></a>a &lt;-<span class="st"> </span><span class="dv">76</span> <span class="co">#create object a</span></span>
-<span id="cb34-2"><a href="rrecap.html#cb34-2"></a>a <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span> <span class="co"># condition 1</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="rrecap.html#cb32-1"></a>a &lt;-<span class="st"> </span><span class="dv">76</span> <span class="co">#create object a</span></span>
+<span id="cb32-2"><a href="rrecap.html#cb32-2"></a>a <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span> <span class="co"># condition 1</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rrecap.html#cb36-1"></a>a <span class="op">&lt;</span><span class="st"> </span><span class="dv">80</span> <span class="co"># condition 2</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rrecap.html#cb34-1"></a>a <span class="op">&lt;</span><span class="st"> </span><span class="dv">80</span> <span class="co"># condition 2</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 </div>
 <div id="factors" class="section level3">
 <h3><span class="header-section-number">3.6.4</span> Factors</h3>
 <p>Factors are categorical variables with associated <code>levels</code>. They can store both, numbers:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rrecap.html#cb38-1"></a>a &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">times=</span><span class="dv">3</span>) <span class="co"># create a vector of numbers from 1 to 3, repeated 3 times</span></span>
-<span id="cb38-2"><a href="rrecap.html#cb38-2"></a>a &lt;-<span class="st"> </span><span class="kw">as.factor</span>(a)</span>
-<span id="cb38-3"><a href="rrecap.html#cb38-3"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rrecap.html#cb36-1"></a>a &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">times=</span><span class="dv">3</span>) <span class="co"># create a vector of numbers from 1 to 3, repeated 3 times</span></span>
+<span id="cb36-2"><a href="rrecap.html#cb36-2"></a>a &lt;-<span class="st"> </span><span class="kw">as.factor</span>(a)</span>
+<span id="cb36-3"><a href="rrecap.html#cb36-3"></a>a</span></code></pre></div>
 <pre><code>## [1] 1 2 3 1 2 3 1 2 3
 ## Levels: 1 2 3</code></pre>
 <p>and strings:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="rrecap.html#cb40-1"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>)</span>
-<span id="cb40-2"><a href="rrecap.html#cb40-2"></a>b &lt;-<span class="st"> </span><span class="kw">as.factor</span>(b)</span>
-<span id="cb40-3"><a href="rrecap.html#cb40-3"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rrecap.html#cb38-1"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C&quot;</span>)</span>
+<span id="cb38-2"><a href="rrecap.html#cb38-2"></a>b &lt;-<span class="st"> </span><span class="kw">as.factor</span>(b)</span>
+<span id="cb38-3"><a href="rrecap.html#cb38-3"></a>b</span></code></pre></div>
 <pre><code>## [1] A B B C D C C
 ## Levels: A B C D</code></pre>
 <p>The numbers and strings, in the example above, serve as labels of different levels.</p>
@@ -461,11 +461,11 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <div id="vector" class="section level3">
 <h3><span class="header-section-number">3.7.1</span> Vector</h3>
 <p>Vector is a one dimensional structure which contains elements of the same type. Usually a <code>combine</code> function is used to create a vector such that:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="rrecap.html#cb42-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="rrecap.html#cb40-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</span></code></pre></div>
 <p>It is also possible to create a vector with text-based objects, for example with capitals from our <code>afrilearndata</code>:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="rrecap.html#cb43-1"></a>capitals &lt;-<span class="st"> </span>africapitals<span class="op">$</span>capitalname</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="rrecap.html#cb41-1"></a>capitals &lt;-<span class="st"> </span>africapitals<span class="op">$</span>capitalname</span></code></pre></div>
 <p>We can <code>print</code> content of our vector to see what it contains:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="rrecap.html#cb44-1"></a><span class="kw">print</span>(capitals)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="rrecap.html#cb42-1"></a><span class="kw">print</span>(capitals)</span></code></pre></div>
 <pre><code>##  [1] &quot;Abuja&quot;        &quot;Accra&quot;        &quot;Addis Abeba&quot;  &quot;Algiers&quot;      &quot;Antananarivo&quot;
 ##  [6] &quot;Asmara&quot;       &quot;Bamako&quot;       &quot;Bangui&quot;       &quot;Banjul&quot;       &quot;Bissau&quot;      
 ## [11] &quot;Brazzaville&quot;  &quot;Bujumbura&quot;    &quot;Cairo&quot;        &quot;Conakry&quot;      &quot;Dakar&quot;       
@@ -477,13 +477,13 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 ## [41] &quot;Porto Novo&quot;   &quot;Pretoria&quot;     &quot;Rabat&quot;        &quot;Tripoli&quot;      &quot;Tunis&quot;       
 ## [46] &quot;Windhoek&quot;     &quot;Yamoussoukro&quot; &quot;Yaounde&quot;      &quot;al-&#39;Ayun&quot;     &quot;Juba&quot;</code></pre>
 <p>Another important feature is to see what types of objects the vector stores. We can see that our text-based objects are <em>characters</em> using <code>typeof</code> function:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rrecap.html#cb46-1"></a><span class="kw">typeof</span>(capitals)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="rrecap.html#cb44-1"></a><span class="kw">typeof</span>(capitals)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
 <div id="matrix" class="section level3">
 <h3><span class="header-section-number">3.7.2</span> Matrix</h3>
 <p>Matrix can be though of as an upgraded version of a vector, where vector is an one-dimensional array and two-dimensional array. We can create a matrix that has three columns and five rows with the following:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="rrecap.html#cb48-1"></a><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dt">ncol=</span><span class="dv">3</span>, <span class="dt">nrow=</span><span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rrecap.html#cb46-1"></a><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dt">ncol=</span><span class="dv">3</span>, <span class="dt">nrow=</span><span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    2    3
 ## [2,]    4    5    6
@@ -492,9 +492,9 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 ## [5,]   13   14   15</code></pre>
 <p>By default, the elements in the matrix will be arranged by column, so <code>byrow=TRUE</code> segregates the elements in the matrix row-wise.<br/></p>
 <p>We can also exploit the fact that matrix is an upgraded vector by binding them column- or row-wise, as long as they have the same length:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="rrecap.html#cb50-1"></a>vector1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;water&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;juice&quot;</span>)</span>
-<span id="cb50-2"><a href="rrecap.html#cb50-2"></a>vector2 &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
-<span id="cb50-3"><a href="rrecap.html#cb50-3"></a><span class="kw">cbind</span>(vector1, vector2) <span class="co">#for row-wise binding we would use rbind()</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="rrecap.html#cb48-1"></a>vector1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;water&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;juice&quot;</span>)</span>
+<span id="cb48-2"><a href="rrecap.html#cb48-2"></a>vector2 &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span>
+<span id="cb48-3"><a href="rrecap.html#cb48-3"></a><span class="kw">cbind</span>(vector1, vector2) <span class="co">#for row-wise binding we would use rbind()</span></span></code></pre></div>
 <pre><code>##      vector1 vector2
 ## [1,] &quot;water&quot; &quot;1&quot;    
 ## [2,] &quot;milk&quot;  &quot;2&quot;    
@@ -503,23 +503,23 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <div id="data-frame" class="section level3">
 <h3><span class="header-section-number">3.7.3</span> Data frame</h3>
 <p>Data frame is a two dimensional array, similar to a matrix. However, it can contain different data types, unlike matrix. Beyond, columns as well as rows within the data frame are named. In a data frame a column is a variable and row is an observation. You can create a simple data frame with two columns and three rows, using vectors above, with <code>data.frame</code> function:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="rrecap.html#cb52-1"></a><span class="kw">data.frame</span>(vector1, vector2)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="rrecap.html#cb50-1"></a><span class="kw">data.frame</span>(vector1, vector2)</span></code></pre></div>
 <pre><code>##   vector1 vector2
 ## 1   water       1
 ## 2    milk       2
 ## 3   juice       3</code></pre>
 <p>If you compare the output of the example above where we used the <code>cbind</code> function to create a matrix, to the result of the <code>data.frame</code> function, we can clearly see the difference between a matrix and a data frame. Where matrix is homogeneous and data frame is heterogeneous in terms of data type. All the values in the matrix are characters while the first column in data frame contains factors and the second one integers. <br/></p>
 <p>To address a specific column in a data frame we can use <em>$</em> such that:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="rrecap.html#cb54-1"></a>df_<span class="dv">1</span> =<span class="st"> </span><span class="kw">data.frame</span>(vector1, vector2) <span class="co">#create data frame called df_1</span></span>
-<span id="cb54-2"><a href="rrecap.html#cb54-2"></a>df_<span class="dv">1</span><span class="op">$</span>vector1 <span class="co">#view column called vector1</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="rrecap.html#cb52-1"></a>df_<span class="dv">1</span> =<span class="st"> </span><span class="kw">data.frame</span>(vector1, vector2) <span class="co">#create data frame called df_1</span></span>
+<span id="cb52-2"><a href="rrecap.html#cb52-2"></a>df_<span class="dv">1</span><span class="op">$</span>vector1 <span class="co">#view column called vector1</span></span></code></pre></div>
 <pre><code>## [1] &quot;water&quot; &quot;milk&quot;  &quot;juice&quot;</code></pre>
 <p>At the moment columns in the <em>df_1</em> adapted names of the vectors:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="rrecap.html#cb56-1"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="rrecap.html#cb54-1"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;vector1&quot; &quot;vector2&quot;</code></pre>
 <p>We can change the column headers by their <em>names</em> or their <em>index</em> such that:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="rrecap.html#cb58-1"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="kw">names</span>(df_<span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;vector1&quot;</span>] &lt;-<span class="st"> &quot;drinks&quot;</span></span>
-<span id="cb58-2"><a href="rrecap.html#cb58-2"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;amount&quot;</span></span>
-<span id="cb58-3"><a href="rrecap.html#cb58-3"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="rrecap.html#cb56-1"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="kw">names</span>(df_<span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;vector1&quot;</span>] &lt;-<span class="st"> &quot;drinks&quot;</span></span>
+<span id="cb56-2"><a href="rrecap.html#cb56-2"></a><span class="kw">names</span>(df_<span class="dv">1</span>)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;amount&quot;</span></span>
+<span id="cb56-3"><a href="rrecap.html#cb56-3"></a><span class="kw">colnames</span>(df_<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;drinks&quot; &quot;amount&quot;</code></pre>
 </div>
 <div id="exercises-1" class="section level3">
@@ -543,17 +543,17 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <div id="help" class="section level2">
 <h2><span class="header-section-number">3.8</span> Getting help with R Help</h2>
 <p>R is a powerful software with many different packages and functions which are continuously developed and added. Therefore, it is difficult, if not impossible, to be familiar with all the functions that are currently available. Hence, in order to learn more about them, R provides extensive documentation which can be accessed with <code>help()</code> function, <code>? operator</code> or by clicking in <em>Help</em> panel in the bottom-right corner. For example:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="rrecap.html#cb60-1"></a><span class="kw">help</span>(matrix) <span class="co">#to find out what matrix is</span></span>
-<span id="cb60-2"><a href="rrecap.html#cb60-2"></a></span>
-<span id="cb60-3"><a href="rrecap.html#cb60-3"></a><span class="kw">help</span>(<span class="dt">package=</span><span class="st">&quot;remotes&quot;</span>) <span class="co">#to get help with remotes package</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="rrecap.html#cb58-1"></a><span class="kw">help</span>(matrix) <span class="co">#to find out what matrix is</span></span>
+<span id="cb58-2"><a href="rrecap.html#cb58-2"></a></span>
+<span id="cb58-3"><a href="rrecap.html#cb58-3"></a><span class="kw">help</span>(<span class="dt">package=</span><span class="st">&quot;remotes&quot;</span>) <span class="co">#to get help with remotes package</span></span></code></pre></div>
 <p>Alternatively, it is possible to use <code>?</code> in front of the searched item and the R documentation will appear in right-bottom pane. For example, to read more on how to use help function itself we can use:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="rrecap.html#cb61-1"></a>?help </span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="rrecap.html#cb59-1"></a>?help </span></code></pre></div>
 <p>Importantly, in order to get help regarding objects with unusual names such as the logical operators, it is necessary to use quotation marks:</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="rrecap.html#cb62-1"></a>?<span class="st">&quot;&amp;&quot;</span></span>
-<span id="cb62-2"><a href="rrecap.html#cb62-2"></a></span>
-<span id="cb62-3"><a href="rrecap.html#cb62-3"></a><span class="kw">help</span>(<span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="rrecap.html#cb60-1"></a>?<span class="st">&quot;&amp;&quot;</span></span>
+<span id="cb60-2"><a href="rrecap.html#cb60-2"></a></span>
+<span id="cb60-3"><a href="rrecap.html#cb60-3"></a><span class="kw">help</span>(<span class="st">&quot;!&quot;</span>)</span></code></pre></div>
 <p>R documentation for functions frequently offers a working example which can be accessed with:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rrecap.html#cb63-1"></a><span class="kw">example</span>(vector) <span class="co">#to see an example of a vector</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="rrecap.html#cb61-1"></a><span class="kw">example</span>(vector) <span class="co">#to see an example of a vector</span></span></code></pre></div>
 <pre><code>## 
 ## vector&gt; df &lt;- data.frame(x = 1:3, y = 5:7)
 ## 
@@ -599,16 +599,16 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <ul>
 <li>Exercise 3.6.1</li>
 </ul>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="rrecap.html#cb65-1"></a>a &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">50</span>,<span class="dv">30</span>, <span class="dt">by =</span> <span class="dv">-2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rrecap.html#cb63-1"></a>a &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">50</span>,<span class="dv">30</span>, <span class="dt">by =</span> <span class="dv">-2</span>)</span></code></pre></div>
 <ul>
 <li>Exercise 3.7.1</li>
 </ul>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="rrecap.html#cb66-1"></a>v1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;water&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;juice&quot;</span>, <span class="st">&quot;coffee&quot;</span>, <span class="st">&quot;tea&quot;</span>, <span class="st">&quot;tea&quot;</span>, <span class="st">&quot;juice&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;water&quot;</span>, <span class="st">&quot;soda&quot;</span>)</span>
-<span id="cb66-2"><a href="rrecap.html#cb66-2"></a>v2 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span>
-<span id="cb66-3"><a href="rrecap.html#cb66-3"></a>v3 &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>), <span class="dt">length.out =</span> <span class="dv">10</span>) </span>
-<span id="cb66-4"><a href="rrecap.html#cb66-4"></a>v3 &lt;-<span class="kw">as.logical</span>(v3)</span>
-<span id="cb66-5"><a href="rrecap.html#cb66-5"></a>m1 =<span class="st"> </span><span class="kw">cbind</span>(v1, v2, v3) </span>
-<span id="cb66-6"><a href="rrecap.html#cb66-6"></a>m1</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="rrecap.html#cb64-1"></a>v1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;water&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;juice&quot;</span>, <span class="st">&quot;coffee&quot;</span>, <span class="st">&quot;tea&quot;</span>, <span class="st">&quot;tea&quot;</span>, <span class="st">&quot;juice&quot;</span>, <span class="st">&quot;milk&quot;</span>, <span class="st">&quot;water&quot;</span>, <span class="st">&quot;soda&quot;</span>)</span>
+<span id="cb64-2"><a href="rrecap.html#cb64-2"></a>v2 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span>
+<span id="cb64-3"><a href="rrecap.html#cb64-3"></a>v3 &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>), <span class="dt">length.out =</span> <span class="dv">10</span>) </span>
+<span id="cb64-4"><a href="rrecap.html#cb64-4"></a>v3 &lt;-<span class="kw">as.logical</span>(v3)</span>
+<span id="cb64-5"><a href="rrecap.html#cb64-5"></a>m1 =<span class="st"> </span><span class="kw">cbind</span>(v1, v2, v3) </span>
+<span id="cb64-6"><a href="rrecap.html#cb64-6"></a>m1</span></code></pre></div>
 <pre><code>##       v1       v2   v3     
 ##  [1,] &quot;water&quot;  &quot;1&quot;  &quot;TRUE&quot; 
 ##  [2,] &quot;milk&quot;   &quot;2&quot;  &quot;FALSE&quot;
@@ -623,15 +623,15 @@ div.purple { background-color:#e9d0f7; border-radius: 5px; padding: 20px;}
 <ul>
 <li>Exercise 3.7.2</li>
 </ul>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="rrecap.html#cb68-1"></a>df =<span class="st"> </span><span class="kw">data.frame</span>(m1)</span>
-<span id="cb68-2"><a href="rrecap.html#cb68-2"></a></span>
-<span id="cb68-3"><a href="rrecap.html#cb68-3"></a><span class="kw">names</span>(df)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;Drink&quot;</span></span>
-<span id="cb68-4"><a href="rrecap.html#cb68-4"></a><span class="kw">names</span>(df)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;Amount&quot;</span></span>
-<span id="cb68-5"><a href="rrecap.html#cb68-5"></a><span class="kw">names</span>(df)[<span class="dv">3</span>] &lt;-<span class="st"> &quot;Female&quot;</span></span>
-<span id="cb68-6"><a href="rrecap.html#cb68-6"></a></span>
-<span id="cb68-7"><a href="rrecap.html#cb68-7"></a>df<span class="op">$</span>Female &lt;-<span class="kw">as.logical</span>(df<span class="op">$</span>Female)</span>
-<span id="cb68-8"><a href="rrecap.html#cb68-8"></a>df<span class="op">$</span>Amount &lt;-<span class="kw">as.integer</span>(df<span class="op">$</span>Amount)</span>
-<span id="cb68-9"><a href="rrecap.html#cb68-9"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="rrecap.html#cb66-1"></a>df =<span class="st"> </span><span class="kw">data.frame</span>(m1)</span>
+<span id="cb66-2"><a href="rrecap.html#cb66-2"></a></span>
+<span id="cb66-3"><a href="rrecap.html#cb66-3"></a><span class="kw">names</span>(df)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;Drink&quot;</span></span>
+<span id="cb66-4"><a href="rrecap.html#cb66-4"></a><span class="kw">names</span>(df)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;Amount&quot;</span></span>
+<span id="cb66-5"><a href="rrecap.html#cb66-5"></a><span class="kw">names</span>(df)[<span class="dv">3</span>] &lt;-<span class="st"> &quot;Female&quot;</span></span>
+<span id="cb66-6"><a href="rrecap.html#cb66-6"></a></span>
+<span id="cb66-7"><a href="rrecap.html#cb66-7"></a>df<span class="op">$</span>Female &lt;-<span class="kw">as.logical</span>(df<span class="op">$</span>Female)</span>
+<span id="cb66-8"><a href="rrecap.html#cb66-8"></a>df<span class="op">$</span>Amount &lt;-<span class="kw">as.integer</span>(df<span class="op">$</span>Amount)</span>
+<span id="cb66-9"><a href="rrecap.html#cb66-9"></a>df</span></code></pre></div>
 <pre><code>##     Drink Amount Female
 ## 1   water      1   TRUE
 ## 2    milk      2  FALSE
