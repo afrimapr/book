@@ -273,7 +273,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-3"><a href="taster.html#cb3-3"></a>map_basic =<span class="st"> </span><span class="kw">tm_style</span>(<span class="st">&quot;classic&quot;</span>)<span class="op">+</span></span>
 <span id="cb3-4"><a href="taster.html#cb3-4"></a><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
 <span id="cb3-5"><a href="taster.html#cb3-5"></a><span class="st"> </span><span class="kw">tm_polygons</span>()<span class="op">+</span></span>
-<span id="cb3-6"><a href="taster.html#cb3-6"></a><span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">title =</span> <span class="st">&quot;Africa&quot;</span>, <span class="dt">title.position =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;top&quot;</span>), <span class="dt">inner.margins =</span> <span class="fl">0.05</span>)</span>
+<span id="cb3-6"><a href="taster.html#cb3-6"></a><span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">title =</span> <span class="st">&quot;Africa&quot;</span>, <span class="dt">title.position =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;top&quot;</span>), <span class="dt">inner.margins =</span> <span class="fl">0.05</span>, <span class="dt">legend.text.size =</span> <span class="fl">0.47</span>)</span>
 <span id="cb3-7"><a href="taster.html#cb3-7"></a></span>
 <span id="cb3-8"><a href="taster.html#cb3-8"></a><span class="co">#map_basic</span></span>
 <span id="cb3-9"><a href="taster.html#cb3-9"></a></span>
@@ -302,53 +302,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-32"><a href="taster.html#cb3-32"></a><span class="co">#map_bubbles</span></span>
 <span id="cb3-33"><a href="taster.html#cb3-33"></a></span>
 <span id="cb3-34"><a href="taster.html#cb3-34"></a><span class="kw">tmap_arrange</span>(map_basic, map_points, map_bubbles)</span></code></pre></div>
-<pre><code>## Legend labels were too wide. The labels have been resized to 0.57. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.
-## Legend labels were too wide. The labels have been resized to 0.57. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.</code></pre>
-<pre><code>## Legend labels were too wide. Therefore, legend.text.size has been set to 0.42. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.</code></pre>
-<pre><code>## The legend is too narrow to place all symbol sizes.</code></pre>
-<pre><code>## Some legend labels were too wide. These labels have been resized to 0.59, 0.59. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.</code></pre>
+<pre><code>## Legend labels were too wide. Therefore, legend.text.size has been set to 0.43. Increase legend.width (argument of tm_layout) to make the legend wider and therefore the labels larger.</code></pre>
 <div class="figure"><span id="fig:c2-empty-static-map1"></span>
 <img src="bookdown-demo_files/figure-html/c2-empty-static-map1-1.png" alt="Examples of maps" width="672" />
 <p class="caption">
 Figure 2.1: Examples of maps
 </p>
 </div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="taster.html#cb8-1"></a><span class="co">#Basic map 2</span></span>
-<span id="cb8-2"><a href="taster.html#cb8-2"></a>map_basic_<span class="dv">2</span> =<span class="st"> </span><span class="kw">tm_style</span>(<span class="st">&quot;watercolor&quot;</span>)<span class="op">+</span></span>
-<span id="cb8-3"><a href="taster.html#cb8-3"></a><span class="st">  </span><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
-<span id="cb8-4"><a href="taster.html#cb8-4"></a><span class="st">      </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;pop_est&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;jenks&quot;</span>, <span class="dt">title =</span> <span class="st">&quot;Population&quot;</span>)<span class="op">+</span></span>
-<span id="cb8-5"><a href="taster.html#cb8-5"></a><span class="st">        </span><span class="kw">tm_layout</span>(<span class="dt">title =</span> <span class="st">&quot;Africa&quot;</span>, <span class="dt">title.position =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;top&quot;</span>), <span class="dt">legend.text.size =</span> <span class="fl">0.50</span>)</span>
-<span id="cb8-6"><a href="taster.html#cb8-6"></a>  </span>
-<span id="cb8-7"><a href="taster.html#cb8-7"></a><span class="co">#map_basic_2</span></span>
-<span id="cb8-8"><a href="taster.html#cb8-8"></a> </span>
-<span id="cb8-9"><a href="taster.html#cb8-9"></a> </span>
-<span id="cb8-10"><a href="taster.html#cb8-10"></a><span class="co">#Add highways names</span></span>
-<span id="cb8-11"><a href="taster.html#cb8-11"></a>map_highways =<span class="st"> </span>map_basic_<span class="dv">2</span> <span class="op">+</span></span>
-<span id="cb8-12"><a href="taster.html#cb8-12"></a><span class="st">  </span><span class="kw">tm_shape</span>(afrihighway)<span class="op">+</span></span>
-<span id="cb8-13"><a href="taster.html#cb8-13"></a><span class="st">              </span><span class="kw">tm_lines</span>(<span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</span>
-<span id="cb8-14"><a href="taster.html#cb8-14"></a></span>
-<span id="cb8-15"><a href="taster.html#cb8-15"></a><span class="co">#map_highways</span></span>
-<span id="cb8-16"><a href="taster.html#cb8-16"></a></span>
-<span id="cb8-17"><a href="taster.html#cb8-17"></a></span>
-<span id="cb8-18"><a href="taster.html#cb8-18"></a><span class="co">#Subset </span></span>
-<span id="cb8-19"><a href="taster.html#cb8-19"></a><span class="co"># large_pop = africountries %&gt;% filter(pop_est &gt; 50000000)</span></span>
-<span id="cb8-20"><a href="taster.html#cb8-20"></a><span class="co"># </span></span>
-<span id="cb8-21"><a href="taster.html#cb8-21"></a><span class="co"># map_pop = map_highways +</span></span>
-<span id="cb8-22"><a href="taster.html#cb8-22"></a><span class="co">#   tm_shape(large_pop)+</span></span>
-<span id="cb8-23"><a href="taster.html#cb8-23"></a><span class="co">#     tm_polygons()</span></span>
-<span id="cb8-24"><a href="taster.html#cb8-24"></a><span class="co"># </span></span>
-<span id="cb8-25"><a href="taster.html#cb8-25"></a><span class="co"># map_pop</span></span>
-<span id="cb8-26"><a href="taster.html#cb8-26"></a></span>
-<span id="cb8-27"><a href="taster.html#cb8-27"></a></span>
-<span id="cb8-28"><a href="taster.html#cb8-28"></a><span class="co">#Add country names</span></span>
-<span id="cb8-29"><a href="taster.html#cb8-29"></a>map_named =<span class="st"> </span>map_highways <span class="op">+</span></span>
-<span id="cb8-30"><a href="taster.html#cb8-30"></a><span class="st">  </span><span class="kw">tm_shape</span>(africapitals)<span class="op">+</span></span>
-<span id="cb8-31"><a href="taster.html#cb8-31"></a><span class="st">      </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">border.col =</span> <span class="st">&quot;black&quot;</span>)<span class="op">+</span><span class="st"> </span></span>
-<span id="cb8-32"><a href="taster.html#cb8-32"></a><span class="st">          </span><span class="kw">tm_text</span>(<span class="st">&quot;capitalname&quot;</span>,  <span class="dt">size =</span> <span class="fl">0.35</span>)</span>
-<span id="cb8-33"><a href="taster.html#cb8-33"></a></span>
-<span id="cb8-34"><a href="taster.html#cb8-34"></a><span class="co">#map_named</span></span>
-<span id="cb8-35"><a href="taster.html#cb8-35"></a></span>
-<span id="cb8-36"><a href="taster.html#cb8-36"></a><span class="kw">tmap_arrange</span>(map_basic_<span class="dv">2</span>, map_highways, map_named)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="taster.html#cb5-1"></a><span class="co">#Basic map 2</span></span>
+<span id="cb5-2"><a href="taster.html#cb5-2"></a>map_basic_<span class="dv">2</span> =<span class="st"> </span><span class="kw">tm_style</span>(<span class="st">&quot;watercolor&quot;</span>)<span class="op">+</span></span>
+<span id="cb5-3"><a href="taster.html#cb5-3"></a><span class="st">  </span><span class="kw">tm_shape</span>(africa)<span class="op">+</span></span>
+<span id="cb5-4"><a href="taster.html#cb5-4"></a><span class="st">      </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;pop_est&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;jenks&quot;</span>, <span class="dt">title =</span> <span class="st">&quot;Population&quot;</span>)<span class="op">+</span></span>
+<span id="cb5-5"><a href="taster.html#cb5-5"></a><span class="st">        </span><span class="kw">tm_layout</span>(<span class="dt">title =</span> <span class="st">&quot;Africa&quot;</span>, <span class="dt">title.position =</span> <span class="kw">c</span>(<span class="st">&quot;center&quot;</span>, <span class="st">&quot;top&quot;</span>), <span class="dt">legend.text.size =</span> <span class="fl">0.50</span>)</span>
+<span id="cb5-6"><a href="taster.html#cb5-6"></a>  </span>
+<span id="cb5-7"><a href="taster.html#cb5-7"></a><span class="co">#map_basic_2</span></span>
+<span id="cb5-8"><a href="taster.html#cb5-8"></a> </span>
+<span id="cb5-9"><a href="taster.html#cb5-9"></a> </span>
+<span id="cb5-10"><a href="taster.html#cb5-10"></a><span class="co">#Add highways names</span></span>
+<span id="cb5-11"><a href="taster.html#cb5-11"></a>map_highways =<span class="st"> </span>map_basic_<span class="dv">2</span> <span class="op">+</span></span>
+<span id="cb5-12"><a href="taster.html#cb5-12"></a><span class="st">  </span><span class="kw">tm_shape</span>(afrihighway)<span class="op">+</span></span>
+<span id="cb5-13"><a href="taster.html#cb5-13"></a><span class="st">              </span><span class="kw">tm_lines</span>(<span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb5-14"><a href="taster.html#cb5-14"></a></span>
+<span id="cb5-15"><a href="taster.html#cb5-15"></a><span class="co">#map_highways</span></span>
+<span id="cb5-16"><a href="taster.html#cb5-16"></a></span>
+<span id="cb5-17"><a href="taster.html#cb5-17"></a></span>
+<span id="cb5-18"><a href="taster.html#cb5-18"></a><span class="co">#Subset </span></span>
+<span id="cb5-19"><a href="taster.html#cb5-19"></a><span class="co"># large_pop = africountries %&gt;% filter(pop_est &gt; 50000000)</span></span>
+<span id="cb5-20"><a href="taster.html#cb5-20"></a><span class="co"># </span></span>
+<span id="cb5-21"><a href="taster.html#cb5-21"></a><span class="co"># map_pop = map_highways +</span></span>
+<span id="cb5-22"><a href="taster.html#cb5-22"></a><span class="co">#   tm_shape(large_pop)+</span></span>
+<span id="cb5-23"><a href="taster.html#cb5-23"></a><span class="co">#     tm_polygons()</span></span>
+<span id="cb5-24"><a href="taster.html#cb5-24"></a><span class="co"># </span></span>
+<span id="cb5-25"><a href="taster.html#cb5-25"></a><span class="co"># map_pop</span></span>
+<span id="cb5-26"><a href="taster.html#cb5-26"></a></span>
+<span id="cb5-27"><a href="taster.html#cb5-27"></a></span>
+<span id="cb5-28"><a href="taster.html#cb5-28"></a><span class="co">#Add country names</span></span>
+<span id="cb5-29"><a href="taster.html#cb5-29"></a>map_named =<span class="st"> </span>map_highways <span class="op">+</span></span>
+<span id="cb5-30"><a href="taster.html#cb5-30"></a><span class="st">  </span><span class="kw">tm_shape</span>(africapitals)<span class="op">+</span></span>
+<span id="cb5-31"><a href="taster.html#cb5-31"></a><span class="st">      </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">border.col =</span> <span class="st">&quot;black&quot;</span>)<span class="op">+</span><span class="st"> </span></span>
+<span id="cb5-32"><a href="taster.html#cb5-32"></a><span class="st">          </span><span class="kw">tm_text</span>(<span class="st">&quot;capitalname&quot;</span>,  <span class="dt">size =</span> <span class="fl">0.35</span>)</span>
+<span id="cb5-33"><a href="taster.html#cb5-33"></a></span>
+<span id="cb5-34"><a href="taster.html#cb5-34"></a><span class="co">#map_named</span></span>
+<span id="cb5-35"><a href="taster.html#cb5-35"></a></span>
+<span id="cb5-36"><a href="taster.html#cb5-36"></a><span class="kw">tmap_arrange</span>(map_basic_<span class="dv">2</span>, map_highways, map_named)</span></code></pre></div>
 <div class="figure"><span id="fig:c2-empty-static-map2"></span>
 <img src="bookdown-demo_files/figure-html/c2-empty-static-map2-1.png" alt="Examples of maps 2" width="672" />
 <p class="caption">
