@@ -1,3 +1,4 @@
+fig:c2-empty-static-map1
 fig:c5-tmap-countries-breaks
 fig:c5-tmap-palette
 fig:c5-tmap-style
